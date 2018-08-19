@@ -1,0 +1,27 @@
+{
+  "name": "wools-end",
+  "version": "1.0.0",
+  "description": "Crochet blog to be.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MirandaKim/wools-end.git"
+  },
+  "author": "Miranda Hoover",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MirandaKim/wools-end/issues"
+  },
+  "homepage": "https://github.com/MirandaKim/wools-end#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-shell": "^0.6.5",
+    "lodash": "^4.17.10",
+    "gulp-watch": "^5.0.1"
+  },
+  "dependencies": {}
+}
