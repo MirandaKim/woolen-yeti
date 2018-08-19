@@ -75,7 +75,7 @@
 /*********************
 *   > Tiny Screen   *
 *********************/
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, < 600px) */
 @mixin forTiny {
   @media only screen and (max-width: $screen_tiny) {
     @content;

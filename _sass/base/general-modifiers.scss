@@ -1,7 +1,8 @@
-.--hide-for-tiny {
-
+@include forTiny {
+  .--hide-for-tiny {
+    display: none;
+  }
 }
-
 
 @include atSmall{
   .--hide-at-small {

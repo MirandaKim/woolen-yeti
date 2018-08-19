@@ -19,7 +19,9 @@
     > At Small
 
   # Logo Wrapper
-    > Logo Link
+    > At Small
+
+  # Logo Link
 
   # Menu Wrapper
 
@@ -44,7 +46,9 @@
   *   > At Small   *
   *****************/
   @include atSmall{
-
+    /*position*/
+    position: relative;
+    background-color: pink;
   }
 
 
@@ -56,17 +60,26 @@
     /*position*/
     position: relative;
     /*structure*/
-    width: 300px;
+    width: 200px;
     /*spacing*/
     margin-top: 3em;
     margin-bottom: 3em;
     margin-left: auto;
     margin-right: auto;
+
+    /******************
+    *   > At Small   *
+    ******************/
+
+    @include atSmall {
+      /*structure*/
+      width: 300px;
+    }
   }
 
-  /******************
-  *   > Logo Link   *
-  ******************/
+  /**************************************/
+  /*   # Logo Link                     */
+  /************************************/
 
   &__logo-link {
     /*position*/
@@ -102,8 +115,8 @@
   &__menu-icon-wrapper {
     /*position*/
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 15px;
     /*structure*/
     height: auto;
     width: auto;

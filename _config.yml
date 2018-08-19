@@ -55,7 +55,7 @@ defaults:
       tags: videos
 
 sass:
-  style: compressed
+  #style: compressed
 
 
 # Exclude from processing.

@@ -23,5 +23,7 @@
     "lodash": "^4.17.10",
     "gulp-watch": "^5.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
 }
