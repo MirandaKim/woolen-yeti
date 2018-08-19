@@ -1,7 +1,22 @@
 .list {
 
   &--links {
-    list-style: none;
+    li {
+      list-style: none;
+    }
+  }
+  &--links--dots-on-active{
+    // .link--active a {
+    a {
+      &::before {
+        content: "";
+        @include dot('pink');
+      }
+      &::after {
+        content: "";
+        @include dot('pink');
+      }
+    }
   }
 
   &--icons {
@@ -10,11 +25,30 @@
 
   &--horizontal {
 
+    &>li {
+      /*spacing*/
+      padding-left: 20px;
+      padding-right: 20px;
+      /*display*/
+      display: inline-block;
+    }
   }
 
-  &--horizontal-at-small {
+  @include atSmall {
+    &--horizontal-at-small {
 
+      &>li {
+        /*spacing*/
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        /*display*/
+        display: inline-block;
+      }
+    }
   }
+
 
 
 }

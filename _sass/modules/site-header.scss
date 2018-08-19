@@ -1,4 +1,114 @@
+/****************************************************/
+/*                                                 */
+/*   Site Header (site-header.scss)               */
+/*                                               */
+/************************************************/
+/*
+
+  - Styles for the site-header
+  - This includes mainly wrapper elements.
+    The individual wrapped elements may have their own files. (ex ./main-nav.scss)
+  - Styles include media queries to handle different sized screens/windows.
+    Note: atSmall is for screens larger than a mobile (mobile screens are considered tiny).
+
+  *************
+  * Contents: *
+  *************
+
+  # Site Header
+    > At Small
+
+  # Logo Wrapper
+    > Logo Link
+
+  # Menu Wrapper
+
+  # Menu Icon Wrapper
+
+*/
+
+/**************************************/
+/*   # Site Header                   */
+/************************************/
 
 .site-header {
-  background-color: pink;
+  /*position*/
+  z-index: 500;
+  position: fixed;
+  top: 0;
+  /*structure*/
+  width: 100%;
+
+
+  /*****************
+  *   > At Small   *
+  *****************/
+  @include atSmall{
+
+  }
+
+
+  /**************************************/
+  /*   # Logo Wrapper                  */
+  /************************************/
+
+  &__logo-wrapper {
+    /*position*/
+    position: relative;
+    /*structure*/
+    width: 300px;
+    /*spacing*/
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /******************
+  *   > Logo Link   *
+  ******************/
+
+  &__logo-link {
+    /*position*/
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*structure*/
+    height: 100%;
+    width: 100%;
+  }
+
+  /**************************************/
+  /*   # Menu Wrapper                  */
+  /************************************/
+
+  &__menu-wrapper {
+
+
+
+    /*****************
+    *   > At Small   *
+    *****************/
+    @include atSmall{
+
+    }
+  }
+
+  /**************************************/
+  /*   # Menu Icon Wrapper             */
+  /************************************/
+
+  &__menu-icon-wrapper {
+    /*position*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*structure*/
+    height: auto;
+    width: auto;
+  }
+
+
+
 }

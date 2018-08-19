@@ -1,0 +1,10 @@
+.--hide-for-tiny {
+
+}
+
+
+@include atSmall{
+  .--hide-at-small {
+    display: none;
+  }
+}

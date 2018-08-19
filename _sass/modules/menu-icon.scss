@@ -1,0 +1,80 @@
+$menu-icon__line-height: 5px;
+$menu-icon__height: calc(5 * #{$menu-icon__line-height}); // total height of icon is 5 times the height of each line (for padding)
+$menu-icon__width: $menu-icon__height;
+$menu-icon__default-color: grey;
+$menu-icon__default-color--x: pink;
+$menu-icon__hover-color: hotpink;
+$menu-icon__hover-color--x: hotpink;
+
+
+@mixin menuIcon__line {
+  /*display*/
+  display: block;
+  /*position*/
+  position: absolute;
+  /*structure*/
+  height: $menu-icon__line-height;
+  width: 100%;
+  /*borders*/
+  border-radius: 3px;
+  /*colors*/
+  background-color: $menu-icon__default-color;
+  /*transition*/
+  transition-property: all;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in;
+
+}
+
+.menu-icon {
+  cursor: pointer;
+  /*display*/
+  display: block;
+  /*position*/
+  position: relative;
+  /*structure*/
+  height: $menu-icon__height;
+  width: $menu-icon__width;
+
+  &::before {
+    content: "";
+    @include menuIcon__line;
+    /*position*/
+    top: $menu-icon__line-height;
+  }
+
+  &::after {
+    content: "";
+    @include menuIcon__line;
+    /*position*/
+    top: calc(3 * #{$menu-icon__line-height});
+  }
+
+  .has-no-touch &:hover {
+    &::before,
+    &::after {
+      background-color: $menu-icon__hover-color;
+    }
+  }
+
+  // .open &--trans-to-x {
+  &--trans-to-x:hover {
+    &::before {
+      /*position*/
+      top: 40%;
+      /*transform*/
+      transform: rotate(45deg);
+      /*colors*/
+      color: $menu-icon__default-color--x;
+    }
+    &::after {
+      /*position*/
+      top: 40%;
+      /*transform*/
+      transform: rotate(-45deg);
+      /*colors*/
+      color: $menu-icon__default-color--x;
+    }
+  }
+
+}

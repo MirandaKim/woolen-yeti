@@ -1,9 +1,10 @@
 .line {
   /*position*/
   position: relative;
+  left: 0;
   /*structure*/
   height: 3px;
-  width: 100vw;
+  width: 100%;
   /*colors*/
-  background-color: green;
+  background-color: $color_neutralMed;
 }
