@@ -1,21 +1,63 @@
-// ---
-// # Import SASS/SCSS files here!
-// # note: the triple-dash lines are here so jekyll can interpret this file. Please do not change the format.
-// ---
 
-@import 'base/fonts';
-@import 'base/variables';
-@import 'base/mixins';
-@import 'base/globals';
-@import 'base/general-modifiers';
+/****************************************************/
+/*                                                 */
+/*   Styles (styles.scss)                         */
+/*                                               */
+/************************************************/
+/*
 
-@import 'modules/site-header';
-@import 'modules/site-body';
-@import 'modules/site-footer';
-@import 'modules/logo';
-@import 'modules/menu-icon';
-@import 'modules/main-nav';
+  - Import style files in here!
+  - These scss files will be processed into css via the task 'gulp styles'.
+    If any styles are not imported into this file, they may not appear on the site.
+  - Remember, the order these files are imported in may make a difference.
 
-@import 'modules/line';
-@import 'modules/list';
-@import 'modules/link';
+  *************
+  * Contents: *
+  *************
+
+  # Vendors
+  # Base
+  # Modules
+    > General Elements
+    > Target Elements
+*/
+
+
+/**************************************/
+/*   # Vendors                       */
+/************************************/
+
+@import 'normalize.css';
+
+/**************************************/
+/*   # Base                          */
+/************************************/
+
+@import 'base/_fonts';
+@import 'base/_variables';
+@import 'base/_mixins';
+@import 'base/_globals';
+@import 'base/_general-modifiers';
+
+/**************************************/
+/*   # Modules                       */
+/************************************/
+
+/************************
+*  > General Elements   *
+************************/
+
+@import 'modules/_line';
+@import 'modules/_list';
+@import 'modules/_link';
+
+/***********************
+*  > Target Elements   *
+***********************/
+
+@import 'modules/_site-header';
+@import 'modules/_site-body';
+@import 'modules/_site-footer';
+@import 'modules/_logo';
+@import 'modules/_menu-icon';
+@import 'modules/_main-nav';
