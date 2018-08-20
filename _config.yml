@@ -62,13 +62,16 @@ sass:
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
+  - src/
+  - gulp/
   - working/
   - node_modules
   - gulpfile.js
   - package.json
   - package-lock.json
-#   - Gemfile
-#   - Gemfile.lock
+  - Gemfile
+  - Gemfile.lock
+  - webpack.*
 #   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/
