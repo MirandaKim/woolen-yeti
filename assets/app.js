@@ -101,10 +101,11 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /*!****************************!*\
   !*** ./src/scripts/app.js ***!
   \****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("const $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nalert('script attached!!!!');\n\n$('.menu-icon').on('click', () => {\n  $('body').addClass('menu-visible');\n});\n\n//# sourceURL=webpack:///./src/scripts/app.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\n\njquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu-icon').on('click', () => {\n  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('menu-visible');\n});\n\n//# sourceURL=webpack:///./src/scripts/app.js?");
 
 /***/ })
 

@@ -1,6 +1,4 @@
-const $ = require('jquery');
-
-alert('script attached!!!!');
+import $ from 'jquery';
 
 $('.menu-icon').on('click', () => {
   $('body').addClass('menu-visible');
