@@ -15,8 +15,12 @@
   * Contents: *
   *************
 
+  # Variables
   # Site Header
     > At Small
+    > Sticky
+
+  # Sticky Trigger
 
   # Logo Wrapper
     > At Small
@@ -33,6 +37,12 @@
 /*   # Site Header                   */
 /************************************/
 
+$sh_sticky-transition-time: 2000ms;
+
+/**************************************/
+/*   # Site Header                   */
+/************************************/
+
 .site-header {
   /*position*/
   z-index: 500;
@@ -40,6 +50,21 @@
   top: 0;
   /*structure*/
   width: 100%;
+  /*colors*/
+  background-color: $color_offWhite;
+
+  transition-property: top;
+  transition-duration: $sh_sticky-transition-time;
+
+  /***************
+  *   > Sticky   *
+  ****************/
+
+  &.--sticky {
+    top: -180px;
+    /*fancy*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  }
 
 
   /*****************
@@ -47,10 +72,20 @@
   *****************/
   @include atSmall{
     /*position*/
-    position: relative;
-    background-color: pink;
+    // position: relative;
   }
 
+
+
+  /**************************************/
+  /*   # Sticky Trigger                */
+  /************************************/
+
+  &__sticky-trigger {
+    /*position*/
+    position: absolute;
+    top: 15px;
+  }
 
   /**************************************/
   /*   # Logo Wrapper                  */
@@ -58,14 +93,21 @@
 
   &__logo-wrapper {
     /*position*/
+    // position: relative;
     position: relative;
+    left: 50%;
+    top: 0;
     /*structure*/
     width: 200px;
     /*spacing*/
-    margin-top: 3em;
-    margin-bottom: 3em;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 30px;
+    /*transform*/
+    transform: translateX(-50%);
+    /*transition*/
+    transition-property: all;
+    transition-duration: $sh_sticky-transition-time;
+
+
 
     /******************
     *   > At Small   *
@@ -74,6 +116,43 @@
     @include atSmall {
       /*structure*/
       width: 300px;
+
+      &--corner-version {
+        z-index: 10;
+        position:fixed;
+
+        left: 15px;
+        transform: translateX(0);
+        width: 150px;
+        margin-top: 10px;
+
+      }
+    }
+
+    /***************
+    *   > Sticky   *
+    ****************/
+
+    .--sticky & {
+      /*structure*/
+      // width: 150px;
+      /*spacing*/
+      // margin-top: -70px;
+      // top: 70px;
+      // left: 10%;
+    }
+  }
+
+  .--sticky &__logo-wrapper--up-on-sticky {
+    top: -200px;
+  }
+
+  &__logo-wrapper--down-on-sticky {
+    position: fixed;
+    // transition-delay: 500ms;
+    top: -200px;
+    .--sticky & {
+      top: 0;
     }
   }
 
@@ -99,12 +178,24 @@
   &__menu-wrapper {
 
 
+    /*transition*/
+    transition-property: all;
+    transition-duration: $sh_sticky-transition-time;
 
     /*****************
     *   > At Small   *
     *****************/
     @include atSmall{
+      margin-top: 20px;
+      margin-bottom: 20px;
 
+      /***************
+      *   > Sticky   *
+      ****************/
+      .--sticky & {
+        // margin-top: 10px;
+        // margin-bottom: 5px;
+      }
     }
   }
 

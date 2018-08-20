@@ -1,5 +1,10 @@
-<header class="site-header">
+<header class="site-header make-sticky">
+    <div class="site-header__sticky-trigger trigger-sticky"></div>
   <div class="site-header__logo-wrapper">
+    {% include logo.html %}
+    <a href="/" class="site-header__logo-link"></a>
+  </div>
+  <div class="site-header__logo-wrapper site-header__logo-wrapper--corner-version site-header__logo-wrapper--down-on-sticky">
     {% include logo.html %}
     <a href="/" class="site-header__logo-link"></a>
   </div>
@@ -8,4 +13,5 @@
     {% include main-nav.html %}
   </div>
   <div class="site-header__search-wrapper">{% include search.html %}</div>
+    <div class="line --hide-for-tiny"></div>
 </header>
