@@ -2,7 +2,7 @@ const gulp  = require('gulp');
 const imagemin = require('gulp-imagemin');
 /****************************************************/
 /*                                                 */
-/*   Images Gulp Task                             */
+/*   Images Gulp Task (images.task.js)            */
 /*                                               */
 /************************************************/
 /*

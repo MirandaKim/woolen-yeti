@@ -1,11 +1,9 @@
-
 const gulp = require('gulp');
 const webpack = require('webpack');
 
-
 /****************************************************/
 /*                                                 */
-/*   Scripts Gulp Task                            */
+/*   Scripts Gulp Task (scripts.task.js)          */
 /*                                               */
 /************************************************/
 /*

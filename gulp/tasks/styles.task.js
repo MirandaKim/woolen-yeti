@@ -1,16 +1,16 @@
-
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const cssnano = require('gulp-cssnano');
 
 /****************************************************/
 /*                                                 */
-/*   Styles Gulp Task                             */
+/*   Styles Gulp Task (styles.task.js)            */
 /*                                               */
 /************************************************/
 /*
 
-  - Process the src style files using sass!
+  - Process the scss style files using css
+    and move them to the assets dir for jekyll to use!
 
   *************
   * Contents: *

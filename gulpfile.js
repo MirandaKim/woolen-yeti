@@ -1,8 +1,6 @@
 'use strict'
 
 const gulp = require('gulp');
-// var shell = require('gulp-shell');
-
 
 require('./gulp/tasks/build.task');
 require('./gulp/tasks/images.task');
@@ -17,13 +15,10 @@ require('./gulp/tasks/watch.task');
 /************************************************/
 /*
 
-  - List of gulp tasks
-  - NOTE: this file is for gulp version 4+
-  - gulp (default): run jekyll build then gulp watch
-  - gulp build: run jekyll build
-  - gulp watch: serve files to :3000 and watch for changes.
-                When specified working files are changes jekyll build will run
-                and the browser will be refreshed or synced (file changed w/o refresh).
+  - Default gulp task: run gulp build then watch
+  - NOTE: all gulp files are written for gulp version 4+
+  - Create any new gulp tasks in their own file (~/gulp/tasks/<task-name>.task.js)
+    then import that file above.
 
   *************
   * Contents: *

@@ -5,6 +5,29 @@ const browserSync = require('browser-sync').create();
 require('./styles.task');
 require('./scripts.task');
 
+/****************************************************/
+/*                                                 */
+/*   Watch Gulp Task                              */
+/*                                               */
+/************************************************/
+/*
+
+  - Serve files to port 3000
+  - Watch working files for changes and run various tasks for processing and hot loading changes.
+
+  *************
+  * Contents: *
+  *************
+
+  # Configs
+  # Watch Task
+    > HTML
+    > Scripts
+    > Styles
+
+*/
+
+
 /**************************************/
 /*   # Config                        */
 /************************************/
