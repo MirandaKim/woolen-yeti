@@ -56,8 +56,7 @@ $structure_restricted_width: 750px; /*the max width for content*/
 *************************/
 
 /*GREYS*/
-$color_grey_light_01: rgb(249, 250, 250);
-$color_grey_light_02: rgb(234, 234, 234);
+$color_grey_light_01: rgb(234, 234, 234);
 $color_grey_med_01: rgb(180, 181, 180);
 $color_grey_dark_01: rgb(82, 82, 87);
 $color_grey_dark_02: rgb(50, 50, 50);
@@ -83,7 +82,7 @@ $color_offBlack: $color_grey_dark_02;
 
 /*NEUTRAL*/
 $color_neutralDark: $color_grey_dark_01;
-$color_neutralMed: $color_grey_light_02;
+$color_neutralMed: $color_grey_med_01;
 $color_neutralLight: $color_grey_light_01;
 
 /*ACCENT*/

@@ -17,5 +17,24 @@
     /*spacing*/
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .has-no-touch &:hover {
+      a {
+        color: $color_neutralDark;
+      }
+    }
+
+    a {
+      /*colors*/
+      color: $color_neutralMed;
+      transition-property: color;
+      transition-duration: 100ms;
+      .has-no-touch &:hover {
+        color: $color_accentMain;
+      }
+    }
+
   }
 }

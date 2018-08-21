@@ -53,7 +53,7 @@ $sh_sticky-transition-time: 2000ms;
   /*colors*/
   background-color: $color_offWhite;
 
-  transition-property: top;
+  transition-property: all;
   transition-duration: $sh_sticky-transition-time;
 
   /***************
@@ -61,7 +61,7 @@ $sh_sticky-transition-time: 2000ms;
   ****************/
 
   &.--sticky {
-    top: -180px;
+    // top: -180px;
     /*fancy*/
     box-shadow: 0 0 5px rgba(0, 0, 0, .3);
   }
@@ -101,6 +101,7 @@ $sh_sticky-transition-time: 2000ms;
     width: 200px;
     /*spacing*/
     margin-top: 30px;
+    margin-bottom: 50px;
     /*transform*/
     transform: translateX(-50%);
     /*transition*/
@@ -115,46 +116,27 @@ $sh_sticky-transition-time: 2000ms;
 
     @include atSmall {
       /*structure*/
-      width: 300px;
+      width: 250px;
 
-      &--corner-version {
-        z-index: 10;
-        position:fixed;
+      /***************
+      *   > Sticky   *
+      ****************/
 
-        left: 15px;
-        transform: translateX(0);
+      .--sticky & {
+        /*structure*/
         width: 150px;
+        /*spacing*/
         margin-top: 10px;
-
+        margin-bottom: 10px;
+        // top: 70px;
+        // left: 10%;
       }
+
     }
 
-    /***************
-    *   > Sticky   *
-    ****************/
 
-    .--sticky & {
-      /*structure*/
-      // width: 150px;
-      /*spacing*/
-      // margin-top: -70px;
-      // top: 70px;
-      // left: 10%;
-    }
   }
 
-  .--sticky &__logo-wrapper--up-on-sticky {
-    top: -200px;
-  }
-
-  &__logo-wrapper--down-on-sticky {
-    position: fixed;
-    // transition-delay: 500ms;
-    top: -200px;
-    .--sticky & {
-      top: 0;
-    }
-  }
 
   /**************************************/
   /*   # Logo Link                     */
@@ -193,8 +175,8 @@ $sh_sticky-transition-time: 2000ms;
       *   > Sticky   *
       ****************/
       .--sticky & {
-        // margin-top: 10px;
-        // margin-bottom: 5px;
+        margin-top: 10px;
+        margin-bottom: 5px;
       }
     }
   }

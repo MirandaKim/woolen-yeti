@@ -43,7 +43,7 @@
   # Structural
     > Clearfix
     > Center Vertically
-    > Dot
+    > Dots
 
 */
 
@@ -184,18 +184,18 @@ NOTE: the element and container must both have a position for this to work!
   transform: translateY(-50%);
 }
 
-/************
-*   > Dot   *
-************/
+/*************
+*   > Dots   *
+*************/
 
-@mixin dot($color){
+@mixin dot($color:grey, $size:5px){
   /*position*/
   position: absolute;
   /*structure*/
-  height: 5px;
-  width: 5px;
+  height: $size;
+  width: $size;
   /*borders*/
   border-radius: 50%;
   /*colors*/
-  color: $color;
+  background-color: $color;
 }
