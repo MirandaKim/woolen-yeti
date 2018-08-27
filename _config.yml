@@ -17,8 +17,8 @@ title: Wool's End
 email: woolsendpatterns@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is a site with hopes to some day become a real blog. It may look like a lot of dummy text now, but come back later for some crochet posts.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "/wools-end" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/wools-end" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
