@@ -21,6 +21,8 @@
 /************************************/
 
 .line {
+  /*display*/
+  display: block;
   /*position*/
   position: relative;
   left: 0;
@@ -28,7 +30,7 @@
   height: 3px;
   width: 100%;
   /*colors*/
-  background-color: $color_neutralMed;
+  background-color: $color_neutralLight;
 
   /*****************
   *   > Direction   *

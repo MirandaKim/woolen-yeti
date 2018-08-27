@@ -27,7 +27,7 @@
 /*   # Vendors                       */
 /************************************/
 
-@import 'normalize.css';
+// @import 'normalize.css';
 
 /**************************************/
 /*   # Base                          */
@@ -61,3 +61,5 @@
 @import 'modules/_logo';
 @import 'modules/_menu-icon';
 @import 'modules/_main-nav';
+
+@import 'modules/_sticky';

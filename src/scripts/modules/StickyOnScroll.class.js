@@ -112,7 +112,7 @@ class StickyOnScroll {
          }
        }
      }
-     new Waypoint(config);
+      new Waypoint(config);
    }
 
 }
