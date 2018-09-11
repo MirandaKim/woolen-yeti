@@ -22,6 +22,8 @@
 
   # Sticky Trigger
 
+  # Splash
+
   # Logo Wrapper
     > At Small
 
@@ -50,9 +52,11 @@ $sh_sticky-transition-time: 2000ms;
   top: 0;
   /*structure*/
   width: 100%;
+  /*overflow*/
+  overflow: hidden;
   /*colors*/
   background-color: $color_offWhite;
-
+  /*transition*/
   transition-property: all;
   transition-duration: $sh_sticky-transition-time;
 
@@ -88,22 +92,43 @@ $sh_sticky-transition-time: 2000ms;
   }
 
   /**************************************/
+  /*   # Splash                        */
+  /************************************/
+
+  &__splash {
+    /*position*/
+    position: absolute;
+    /*structure*/
+    width: 1000px;
+    height: 265px;
+    /*transform*/
+    transform: translate(-20%, -10%);
+    /*colors*/
+    opacity: .5;
+    /*filters*/
+    filter: blur(1px);
+  }
+
+  /**************************************/
   /*   # Logo Wrapper                  */
   /************************************/
 
   &__logo-wrapper {
+    /*display*/
+    display: inline-block;
     /*position*/
-    // position: relative;
     position: relative;
-    left: 50%;
+    // left: 50%;
     top: 0;
     /*structure*/
     width: 200px;
     /*spacing*/
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
     /*transform*/
-    transform: translateX(-50%);
+    // transform: translateX(-50%);
     /*transition*/
     transition-property: all;
     transition-duration: $sh_sticky-transition-time;
@@ -116,7 +141,9 @@ $sh_sticky-transition-time: 2000ms;
 
     @include atSmall {
       /*structure*/
-      width: 250px;
+      width: 200px;
+      /*spacing*/
+      margin-left: 50px;
 
       /***************
       *   > Sticky   *
@@ -159,7 +186,6 @@ $sh_sticky-transition-time: 2000ms;
 
   &__menu-wrapper {
 
-
     /*transition*/
     transition-property: all;
     transition-duration: $sh_sticky-transition-time;
@@ -168,14 +194,20 @@ $sh_sticky-transition-time: 2000ms;
     *   > At Small   *
     *****************/
     @include atSmall{
-      margin-top: 20px;
+      /*display*/
+      display: inline-block;
+      /*position*/
+      position: relative;
+      float: right;
+      /*spacing*/
+      margin-top: 50px;
       margin-bottom: 20px;
 
       /***************
       *   > Sticky   *
       ****************/
       .--sticky & {
-        margin-top: 10px;
+        margin-top: 20px;
         margin-bottom: 5px;
       }
     }

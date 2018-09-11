@@ -1,0 +1,14 @@
+.image {
+
+  display: block;
+  position: relative;
+  height: auto;
+  width: auto;
+
+  &--watercolor {
+    background-image: url('images/watercolor.svg');
+    background-size: cover;
+    background-repeat: none;
+  }
+
+}
