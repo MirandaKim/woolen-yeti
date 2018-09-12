@@ -1,0 +1,28 @@
+.icon {
+
+  /*structure*/
+  height: auto;
+  width: auto;
+  /*background*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  &--circle-style {
+
+  }
+
+  &__image {
+    max-height: 30px;
+    .has-no-touch &:hover {
+      max-height: 40px;
+    }
+  }
+
+
+  &__title {
+    display: none;
+
+  }
+
+}
