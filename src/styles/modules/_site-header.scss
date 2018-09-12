@@ -55,7 +55,7 @@ $sh_sticky-transition-time: 2000ms;
   /*overflow*/
   overflow: hidden;
   /*colors*/
-  background-color: $color_offWhite;
+  background-color: rgba($color_offWhite, .98);
   /*transition*/
   transition-property: all;
   transition-duration: $sh_sticky-transition-time;

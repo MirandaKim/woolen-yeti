@@ -12,7 +12,9 @@
   *************
 
   # Line
-    > Direction
+    > Position
+    > Structure
+    > Colors
 
 */
 
@@ -24,8 +26,10 @@
   /*display*/
   display: block;
   /*position*/
+  z-index: -1;
   position: relative;
   left: 0;
+  top: 0;
   /*structure*/
   height: 3px;
   width: 100%;
@@ -33,11 +37,33 @@
   background-color: $color_neutralLight;
 
   /*****************
-  *   > Direction   *
+  *   > Position   *
   *****************/
+
+  &--absolute {
+    position: absolute;
+  }
+
+  /******************
+  *   > Structure   *
+  ******************/
 
   &--vertical {
     height: 100%;
     width: 3px;
   }
+
+  &--thick-vertical {
+    height: 100%;
+    width: 90px;
+  }
+
+  /***************
+  *   > Colors   *
+  ***************/
+
+  &--color-a {
+    background-color: $color_a;
+  }
+
 }
