@@ -1,11 +1,11 @@
 @include forTiny {
-  .--hide-for-tiny {
+  .hide-for-tiny {
     display: none;
   }
 }
 
 @include atSmall{
-  .--hide-at-small {
+  .hide-at-small {
     display: none;
   }
 }
