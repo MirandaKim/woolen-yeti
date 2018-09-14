@@ -7,11 +7,14 @@
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 60px;
   padding-left: 15px;
   padding-right: 15px;
 
   @include atSmall {
-    // margin-top: 0;
+    /*structure*/
+    min-height: calc(100vh - 360px);
+    /*spacing*/
     margin-top: 200px;
 
   }
