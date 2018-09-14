@@ -1,0 +1,55 @@
+/****************************************************/
+/*                                                 */
+/*   Site Footer (site-footer.scss)               */
+/*                                               */
+/************************************************/
+/*
+
+  - Styles specific to the site footer block
+
+  *************
+  * Contents: *
+  *************
+
+  # Site Footer
+  # Content
+
+*/
+
+/**************************************/
+/*   # Site Footer                   */
+/************************************/
+
+.site-footer {
+  /*position*/
+  position: relative;
+  /*structure*/
+  min-height: 100px;
+  /*spacing*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /*colors*/
+  background-color: $color_neutralMed;
+
+
+/**************************************/
+/*   # Content                       */
+/************************************/
+
+  &__content {
+    /*position*/
+    position: relative;
+    /*structure*/
+    height: auto;
+    width: 100%;
+    /*spacing*/
+    margin-left: auto;
+    margin-right: auto;
+    /*typography*/
+    // text-align: center;
+  }
+
+
+}
