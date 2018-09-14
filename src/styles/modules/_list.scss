@@ -1,4 +1,60 @@
+/****************************************************/
+/*                                                 */
+/*   List (list.scss)                             */
+/*                                               */
+/************************************************/
+/*
+
+  - List styles
+
+  *************
+  * Contents: *
+  *************
+
+  # List
+  # Modifiers
+  # Links
+    > Dots on active
+    > Dots on hover
+  # Icons
+  # At Small
+    > Horizontal at small
+
+*/
+
+/**************************************/
+/*   # List                          */
+/************************************/
+
+
 .list {
+
+  margin: 0;
+  padding: 0;
+
+  /**************************************/
+  /*   # Modifiers                     */
+  /************************************/
+
+  &--horizontal {
+    &>li {
+      /*spacing*/
+      padding-left: 20px;
+      padding-right: 20px;
+      /*display*/
+      display: inline-block;
+    }
+  }
+
+  &--no-bullets {
+    &>li {
+      list-style: none;
+    }
+  }
+
+  /**************************************/
+  /*   # Links                         */
+  /************************************/
 
   &--links {
     li {
@@ -9,6 +65,11 @@
       text-decoration: none;
     }
   }
+
+  /***********************
+  *   > Dots on active   *
+  ***********************/
+
   &--links--dots-on-active{
     .link--active a {
     // a {
@@ -28,6 +89,10 @@
       }
     }
   }
+
+  /**********************
+  *   > Dots on hover   *
+  **********************/
 
   &--links--dots-on-hover{
     a {
@@ -63,22 +128,24 @@
     }
   }
 
+  /**************************************/
+  /*   # Icons                         */
+  /************************************/
+
   &--icons {
 
   }
 
-  &--horizontal {
-
-    &>li {
-      /*spacing*/
-      padding-left: 20px;
-      padding-right: 20px;
-      /*display*/
-      display: inline-block;
-    }
-  }
+  /**************************************/
+  /*   # At Small                      */
+  /************************************/
 
   @include atSmall {
+
+    /****************************
+    *   > Horizontal at small   *
+    ****************************/
+
     &--horizontal-at-small {
 
       &>li {
