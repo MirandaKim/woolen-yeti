@@ -1,5 +1,14 @@
 ---
 layout: wrapper
 ---
-<p class="date">{{page.date}}</p>
-{{ content }}
+<article>
+  {% if page.featureImg %}
+  <img src="{{ page.featureImg }}" alt="{{ page.featureImgAlt }}" class="image image--fit-to-width image--shadow-frame">
+  {% endif %}
+  <div class="post__content">
+    {{ content }}
+  </div>
+  <div class="post__footer">
+    <p class="post__date">{{page.date | date: "%-d %B %Y" }}</p>
+  </div>
+</article>

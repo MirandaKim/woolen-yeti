@@ -1,0 +1,185 @@
+/****************************************************/
+/*                                                 */
+/*   Post (post.scss)                             */
+/*                                               */
+/************************************************/
+/*
+
+  - Style and modifiers for blog posts.
+  - Note: if posts are displayed in list (ul > li)
+    they may receive styles from classes outside of this file.
+
+  *************
+  * Contents: *
+  *************
+
+  # Post
+  # Title
+  # Link
+    > Cover
+    > Arrow On Hover
+  # Content
+  # Footer
+
+*/
+
+/**************************************/
+/*   # Post                          */
+/************************************/
+
+.post {
+  /*display*/
+  display: block;
+  /*position*/
+  position: relative;
+  /*spacing*/
+  // margin-top: 40px;
+  margin-bottom: 40px;
+  // padding: 10px;
+  /*colors*/
+  background-color: transparent;
+  /*shadows*/
+  // box-shadow: 3px 3px 15px rgba(0, 0, 0, .1);
+
+  /**************************************/
+  /*   # Clickable                     */
+  /************************************/
+
+  &--clickable {
+    /*transform*/
+    transform: scale(1);
+    /*transition*/
+    transition-property: transform;
+    transition-duration: 200ms;
+
+    &:hover {
+      /*transform*/
+      transform: scale(1.01);
+    }
+  }
+
+  /**************************************/
+  /*   # Title                         */
+  /************************************/
+
+  &__title {
+    /*spacing*/
+    margin-top: 0;
+    margin-bottom: 0;
+    /*typography*/
+    font-size: 2rem;
+    font-weight: 100;
+    /*colors*/
+    color: $color_accentMain;
+  }
+
+  /**************************************/
+  /*   # Link                          */
+  /************************************/
+
+  &__link {
+
+    /**************
+    *   > Cover   *
+    **************/
+
+    &--cover {
+      /*variables*/
+      $post-cover-link-padding: 20px;
+      /*box-sizing*/
+      box-sizing: content-box;
+      /*position*/
+      z-index: 10;
+      position: absolute;
+      top: -1 * $post-cover-link-padding;
+      left: -1 * $post-cover-link-padding;
+      /*structure*/
+      height: 100%;
+      width: 100%;
+      /*spacing*/
+      padding: $post-cover-link-padding;
+    }
+    &--cover:hover {
+      /*shadows*/
+      box-shadow: 3px 3px 15px rgba(0, 0, 0, .1);
+    }
+
+    /***********************
+    *   > Arrow On Hover   *
+    ***********************/
+
+    &--arrow-on-hover::after {
+      /*variables*/
+      $border-size-initial: 0;
+      /*content*/
+      content: "";
+      /*position*/
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      left: calc(100% + #{$border-size-initial});
+      /*structure*/
+      width: 0;
+      height: 0;
+      /*transform*/
+      transform: translateY(-50%) translateX(-100%);
+      /*borders*/
+      border-style: solid;
+      border-left-width: $border-size-initial;
+      border-right-width: 0;
+      border-top-width: $border-size-initial;
+      border-bottom-width: $border-size-initial;
+      border-left-color: $color_accentMain;
+      border-right-color: $color_accentMain;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      /*shadows*/
+
+      /*transition*/
+      transition-property: all;
+      transition-duration: 200ms;
+    }
+    &--arrow-on-hover:hover::after {
+      /*variables*/
+      $border-size-final: 20px;
+      /*position*/
+      left: calc(100% + #{$border-size-final});
+      /*borders*/
+      border-left-width: $border-size-final;
+      // border-right-width: 0;
+      border-top-width: $border-size-final;
+      border-bottom-width: $border-size-final;
+    }
+
+  }
+
+  /**************************************/
+  /*   # Content                       */
+  /************************************/
+
+  &__content {
+    /*position*/
+    position: relative;
+    /*structure*/
+    width: 100%;
+    height: auto;
+  }
+
+  /**************************************/
+  /*   # Footer                        */
+  /************************************/
+
+  &__footer {
+    /*position*/
+    position: relative;
+    /*structure*/
+    width: 100%;
+    height: auto;
+    /*spacing*/
+    margin-top: 10px;
+    padding: 5px;
+    /*colors*/
+    color: $color_neutralMed;
+  }
+
+}

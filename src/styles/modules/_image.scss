@@ -1,9 +1,61 @@
+/****************************************************/
+/*                                                 */
+/*   Image (image.scss)                           */
+/*                                               */
+/************************************************/
+/*
+
+  - Styles for images
+  - These styles can modify an images size, style, and more
+  - Some classes may provide a specific background image
+
+  *************
+  * Contents: *
+  *************
+
+  # Image
+  # Size
+  # Style
+  # Background
+
+*/
+
+/**************************************/
+/*   # Image                         */
+/************************************/
+
 .image {
 
   display: block;
   position: relative;
   height: auto;
   width: auto;
+
+  /**************************************/
+  /*   # Size                          */
+  /************************************/
+
+  &--fit-to-width {
+    width: 100%;
+  }
+
+  /**************************************/
+  /*   # Style                         */
+  /************************************/
+
+  &--shadow-frame {
+    /*borders*/
+    border-width: 5px;
+    border-style: solid;
+    /*colors*/
+    border-color: $color_offWhite;
+    /*shadows*/
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+  }
+
+  /**************************************/
+  /*   # Background                    */
+  /************************************/
 
   &--watercolor {
     background-image: url('images/watercolor.svg');
