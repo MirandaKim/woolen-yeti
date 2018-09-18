@@ -21,7 +21,7 @@ $menu-icon__hover-color--x: hotpink;
   background-color: $menu-icon__default-color;
   /*transition*/
   transition-property: all;
-  transition-duration: 100ms;
+  transition-duration: 200ms;
   transition-timing-function: ease-in;
 
 }
@@ -57,8 +57,7 @@ $menu-icon__hover-color--x: hotpink;
     }
   }
 
-  // .open &--trans-to-x {
-  &--trans-to-x:hover {
+  .menu-visible &--trans-to-x {
     &::before {
       /*position*/
       top: 40%;

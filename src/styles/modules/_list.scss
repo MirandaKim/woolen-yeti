@@ -52,6 +52,16 @@
     }
   }
 
+  &--horizontal--less-space {
+    &>li {
+      /*spacing*/
+      padding-left: 10px;
+      padding-right: 10px;
+      /*display*/
+      display: inline-block;
+    }
+  }
+
   &--no-bullets {
     &>li {
       list-style: none;
@@ -166,10 +176,10 @@
 
       &>li {
         /*spacing*/
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-left: 40px;
-        margin-right: 40px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
         /*display*/
         display: inline-block;
       }

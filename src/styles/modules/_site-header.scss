@@ -30,8 +30,12 @@
   # Logo Link
 
   # Menu Wrapper
+    > At Small
+    > Sticky
+    > Has No JS
 
   # Menu Icon Wrapper
+    > Has No Js
 
 */
 
@@ -39,7 +43,7 @@
 /*   # Site Header                   */
 /************************************/
 
-$sh_sticky-transition-time: 2000ms;
+$sh_sticky-transition-time: 1000ms;
 
 /**************************************/
 /*   # Site Header                   */
@@ -118,7 +122,7 @@ $sh_sticky-transition-time: 2000ms;
     display: inline-block;
     /*position*/
     position: relative;
-    // left: 50%;
+    left: 50%;
     top: 0;
     /*structure*/
     width: 200px;
@@ -128,7 +132,7 @@ $sh_sticky-transition-time: 2000ms;
     margin-left: 20px;
     margin-right: 20px;
     /*transform*/
-    // transform: translateX(-50%);
+    transform: translateX(-50%);
     /*transition*/
     transition-property: all;
     transition-duration: $sh_sticky-transition-time;
@@ -140,6 +144,10 @@ $sh_sticky-transition-time: 2000ms;
     ******************/
 
     @include atSmall {
+      /*position*/
+      left: 0;
+      /*transform*/
+      transform: translateX(0);
       /*structure*/
       width: 200px;
       /*spacing*/
@@ -155,8 +163,6 @@ $sh_sticky-transition-time: 2000ms;
         /*spacing*/
         margin-top: 10px;
         margin-bottom: 10px;
-        // top: 70px;
-        // left: 10%;
       }
 
     }
@@ -185,10 +191,36 @@ $sh_sticky-transition-time: 2000ms;
   /************************************/
 
   &__menu-wrapper {
-
+    /*position*/
+    z-index: 20;
+    position: fixed;
+    right: 0;
+    top: 0;
+    /*structure*/
+    height: 100vh;
+    width: 15rem;
+    max-width: 100vw;
+    /*spacing*/
+    padding-top: 50px;
+    /*colors*/
+    background-color: rgba($color_offWhite, .95);
     /*transition*/
     transition-property: all;
     transition-duration: $sh_sticky-transition-time;
+
+
+    @include forTiny {
+      /*transform*/
+      transform: translateX(100%);
+
+      &--visible {
+        /*transform*/
+        transform: translateX(0);
+        /*shadows*/
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+      }
+    }
+
 
     /*****************
     *   > At Small   *
@@ -199,9 +231,18 @@ $sh_sticky-transition-time: 2000ms;
       /*position*/
       position: relative;
       float: right;
+      /*structure*/
+      height: auto;
+      width: auto;
+      max-width: unset;
       /*spacing*/
-      margin-top: 50px;
+      // padding-top: 0
+      // margin-top: 50px;
       margin-bottom: 20px;
+      /*colors*/
+      background-color: transparent;
+      /*shadows*/
+      box-shadow: unset;
 
       /***************
       *   > Sticky   *
@@ -211,6 +252,25 @@ $sh_sticky-transition-time: 2000ms;
         margin-bottom: 5px;
       }
     }
+
+    /******************
+    *   > Has No JS   *
+    ******************/
+
+    .has-no-js & {
+      /*position*/
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 0;
+      /*structure*/
+      height: auto;
+      /*transform*/
+      transform: translateX(0);
+      /*shadows*/
+      box-shadow: unset;
+    }
+
   }
 
   /**************************************/
@@ -219,12 +279,21 @@ $sh_sticky-transition-time: 2000ms;
 
   &__menu-icon-wrapper {
     /*position*/
+    z-index: 30;
     position: absolute;
     top: 10px;
     right: 15px;
     /*structure*/
     height: auto;
     width: auto;
+
+    /******************
+    *   > Has No JS   *
+    ******************/
+
+    .has-no-js & {
+      display: none;
+    }
   }
 
 

@@ -50,7 +50,7 @@ document.body.classList.add('has-js');
 /*   # Common Vars                   */
 /************************************/
 
-let mainNav_block = 'main-nav';
+let mainNav_block = 'site-header__menu-wrapper';
 let mainNav_selector = `.${mainNav_block}`;
 
 /**************************************/
@@ -71,9 +71,9 @@ checkHasTouch.detect(); // the watch event is unbound once a touch event is fire
   The display is based on class names--thus is dependent on CSS
   for any change in position, visibility, or animations.
 */
-let body_visibleMenuClassStr = '--menu-visible';
+let body_visibleMenuClassStr = 'menu-visible';
 let mainNav_visibleClassStr = `${mainNav_block}--visible`;
-let mainNav_toggleSelectors = [`.site-header__menu-toggle`];
+let mainNav_toggleSelectors = [`.main-nav-toggle`];
 let mainNav_closeSelectors = [`${mainNav_selector}__links`, 'article', '.logo'];
 let mainNav_openSelectors = [];
 

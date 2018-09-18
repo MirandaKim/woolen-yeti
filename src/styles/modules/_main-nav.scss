@@ -1,3 +1,30 @@
+/****************************************************/
+/*                                                 */
+/*   Main Navigation (main-nav.scss)              */
+/*                                               */
+/************************************************/
+/*
+
+  - Styles for the site's main navigation menu.
+  - This file includes media queries to cusomize the menu for tiny and larger screens.
+  - Some elements within the main navigation may have additional styles set
+    by class names in other files (such as links)
+  - The main navigation is positioned using the menu wrapper--the style for this
+    element can be found in the site-header style file (./site-header.scss)
+
+  *************
+  * Contents: *
+  *************
+
+  # Main Nav
+  # Links
+  # Social Links
+
+*/
+
+/**************************************/
+/*   # Main Nav                      */
+/************************************/
 
 .main-nav {
   /*position*/
@@ -7,34 +34,103 @@
   height: auto;
   /*spacing*/
 
+  /**************************************/
+  /*   # Links                         */
+  /************************************/
 
 
   &__links {
     /*display*/
     display: table;
     /*structure*/
-    width: auto;
+    height: auto;
+    width: 100%;
     /*spacing*/
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 0;
     margin-bottom: 0;
+    padding-left: 0;
 
+    a {
+      /*display*/
+      display: block;
+      /*structure*/
+      height: auto;
+      width: 100%;
+      /*spacing*/
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      /*colors*/
+      color: $color_neutralMed;
+      /*typography*/
+      text-align: center;
+      font-size: 1.4rem;
+      /*transition*/
+      transition-property: color;
+      transition-duration: 100ms;
+    }
+
+    & a.active {
+      /*colors*/
+      background-color: pink;
+    }
+
+    @include forLandscape {
+      a {
+        font-size: 1.1rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+    }
+
+    /*****************
+    *   > At Small   *
+    *****************/
+
+    @include atSmall {
+      a {
+        /*display*/
+        // display: inline-block;
+        /*structure*/
+        // width: 100%;
+        // height: auto;
+        /*spacing*/
+        // padding: 0;
+        /*typography*/
+        font-size: 1rem;
+        text-align: left;
+      }
+    }
+
+    /**************
+    *   > Hover   *
+    **************/
+
+    /*style for all links when any link is moused over*/
     .has-no-touch &:hover {
       a {
         color: $color_neutralDark;
       }
     }
-
-    a {
-      /*colors*/
-      color: $color_neutralMed;
-      transition-property: color;
-      transition-duration: 100ms;
-      .has-no-touch &:hover {
-        color: $color_accentMain;
-      }
+    /*style for specific link moused over*/
+    .has-no-touch & a:hover {
+      color: $color_accentMain;
     }
 
+
+  }
+
+  /**************************************/
+  /*   # Social Links                  */
+  /************************************/
+
+  &__social-links {
+    margin-top: 30px;
+    text-align: center;
   }
 }

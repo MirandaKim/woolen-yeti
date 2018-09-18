@@ -13,11 +13,25 @@
   }
 
   &__image {
-    max-height: 30px;
-    .has-no-touch &:hover {
-      max-height: 40px;
+
+    &--small {
+      max-height: 26px;
+    }
+
+    .has-no-touch &--scale-on-hover {
+      /*transition*/
+      transition-property: transform;
+      transition-duration: 200ms;
+      &:hover {
+        /*transform*/
+        transform: scale(1.1);
+      }
     }
   }
+
+
+
+
 
 
   &__title {
