@@ -15,7 +15,7 @@ import waypoints from '~/node_modules/waypoints/lib/noframework.waypoints';
     This element will trigger the class name change.
   - Add the class 'make-sticky' to any elements in your html.
     These elements will receive the sticky class when the user scrolls to the 'trigger-sticky' element.
-  - The default sticky class is: "--sticky"
+  - The default sticky class is: "sticky"
   - Want to use existing class names instead of adding 'make-sticky' and 'trigger-sticky'?
     Use your custom values when constucting & calling execute (see custom example below).
   - PUBLIC ENTRY POINT: StickyOnScroll.execute(...)
@@ -70,7 +70,7 @@ class StickyOnScroll {
   targetSelector(string) - selector or element to modify on scroll to/from top.
   stickyClass(string) - class name to togggle based on document position.
   */
-  execute(targetSelector='.make-sticky', stickyClass='--sticky'){
+  execute(targetSelector='.make-sticky', stickyClass='sticky'){
     try{
       this._createStickyWaypoint(targetSelector, stickyClass);
     }catch(err){

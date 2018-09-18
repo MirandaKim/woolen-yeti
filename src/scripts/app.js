@@ -88,7 +88,7 @@ navDisplay.setEvents({ // See NavDisplay.class.js for config options.
 /*   # Sticky Header                 */
 /************************************/
 /*
-Give header class a sticky class (.--sticky) when document is scrolled away from the top of the screen.
+Give header class a sticky class (.sticky) when document is scrolled away from the top of the screen.
 For this to funtion, make sure the header (or any element to be sticky) is given the class 'make-sticky',
 and a single trigger element (near the top of the screen) is given the class (trigger-sticky)
 for triggering the class change event.
