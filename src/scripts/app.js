@@ -3,6 +3,7 @@ import $ from 'jquery';
 import CheckHasTouch from './modules/CheckHasTouch.class';
 import NavDisplay from './modules/NavDisplay.class';
 import StickyOnScroll from './modules/StickyOnScroll.class';
+import Copyright from './modules/Copyright.class';
 
 /****************************************************/
 /*                                                 */
@@ -26,7 +27,8 @@ import StickyOnScroll from './modules/StickyOnScroll.class';
   # Common Vars
   # Detect Touch
   # Navigation Display
-  # Sticky On Scroll (disabled)
+  # Sticky On Scroll
+  # Copyright
 
 */
 
@@ -95,3 +97,10 @@ for triggering the class change event.
 */
 let stickyOnScroll = new StickyOnScroll();
 stickyOnScroll.execute();
+
+/**************************************/
+/*   # Copyright                     */
+/************************************/
+/*set the copyright for the current year*/
+let copyright = new Copyright();
+copyright.setYear();
