@@ -153,6 +153,13 @@
     text-decoration: none;
     /*colors*/
     color: $color_accentMain;
+
+    &:hover {
+      /*colors*/
+      color: $color_accentSec;
+      /*typography*/
+      text-decoration: underline;
+    }
   }
 
 
