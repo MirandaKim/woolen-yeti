@@ -12,11 +12,17 @@
   *************
 
   # Site Footer
+    > At Small
   # Content
+  # Columns
+    > At Small
   # Copyright
   # Social Icons
+    > On Hover
+    > At Small
   # Email
   # Link
+    > On Hover
 
 */
 
@@ -41,6 +47,10 @@
   font-weight: 100;
   letter-spacing: .6;
   font-size: .9rem;
+
+  /****************
+  *  > At Small   *
+  ****************/
 
   @include atSmall {
     /*spacing*/
@@ -72,10 +82,11 @@
   /*   # Column                        */
   /************************************/
 
-  &__column {
+  &__column {}
 
-  }
-
+  /****************
+  *  > At Small   *
+  ****************/
 
   @include atSmall {
     &__column--right-align-at-small {
@@ -115,10 +126,18 @@
     transition-property: opacity;
     transition-duration: 200ms;
 
+    /****************
+    *  > On Hover   *
+    ****************/
+
     /*hover*/
-    &:hover {
+    .has-no-touch &:hover {
       opacity: 1;
     }
+
+    /****************
+    *  > At Small   *
+    ****************/
 
     @include atSmall {
       /*position*/
@@ -154,7 +173,11 @@
     /*colors*/
     color: $color_accentMain;
 
-    &:hover {
+    /****************
+    *  > On Hover   *
+    ****************/
+
+    .has-no-touch &:hover {
       /*colors*/
       color: $color_accentSec;
       /*typography*/
