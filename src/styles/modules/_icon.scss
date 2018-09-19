@@ -1,5 +1,6 @@
 .icon {
-
+  /*position*/
+  position: relative;
   /*structure*/
   height: auto;
   width: auto;
@@ -9,13 +10,18 @@
   background-position: center center;
 
   &--circle-style {
-
+    /*spacing*/
+    padding: 15px;
+    /*borders*/
+    border-radius: 50%;
+    /*colors*/
+    background-color: $color_neutralMed;
   }
 
   &__image {
 
     &--small {
-      max-height: 26px;
+      max-height: 29px;
     }
 
     .has-no-touch &--scale-on-hover {

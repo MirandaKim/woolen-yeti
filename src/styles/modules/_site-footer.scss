@@ -13,6 +13,10 @@
 
   # Site Footer
   # Content
+  # Copyright
+  # Social Icons
+  # Email
+  # Link
 
 */
 
@@ -26,12 +30,25 @@
   /*structure*/
   min-height: 100px;
   /*spacing*/
-  padding-top: 20px;
+  padding-top: 50px;
   padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   /*colors*/
-  background-color: $color_neutralMed;
+  color: $color_neutralLight;
+  background-color: $color_neutralDark;
+  /*typography*/
+  font-weight: 100;
+  letter-spacing: .6;
+  font-size: .9rem;
+
+  @include atSmall {
+    /*spacing*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 
 
 /**************************************/
@@ -49,6 +66,93 @@
     margin-right: auto;
     /*typography*/
     // text-align: center;
+  }
+
+  /**************************************/
+  /*   # Column                        */
+  /************************************/
+
+  &__column {
+
+  }
+
+
+  @include atSmall {
+    &__column--right-align-at-small {
+      /*typography*/
+      text-align: right;
+    }
+
+    &__column--left-align-at-small {
+      text-align: left;
+    }
+  }
+
+
+  /**************************************/
+  /*   # Copyright                     */
+  /************************************/
+
+  &__copyright {
+    /*color*/
+    opacity: .5;
+  }
+
+  /**************************************/
+  /*   # Social Icons                  */
+  /************************************/
+
+  &__social-icons {
+    /*position*/
+    position: relative;
+    /*spacing*/
+    margin-bottom: 1rem;
+    /*typography*/
+    text-align: center;
+    /*colors*/
+    opacity: .6;
+    /*transitions*/
+    transition-property: opacity;
+    transition-duration: 200ms;
+
+    /*hover*/
+    &:hover {
+      opacity: 1;
+    }
+
+    @include atSmall {
+      /*position*/
+      top: 50%;
+      /*typography*/
+      text-align: left;
+      /*transform*/
+      transform: translateY(-50%);
+    }
+  }
+
+  /**************************************/
+  /*   # Email                         */
+  /************************************/
+
+  &__email {
+    /*transitions*/
+    transition-property: color;
+    transition-duration: 200ms;
+
+    &.highlight {
+      color: $color_accentMain;
+    }
+  }
+
+  /**************************************/
+  /*   # Link                          */
+  /************************************/
+
+  &__link {
+    /*typography*/
+    text-decoration: none;
+    /*colors*/
+    color: $color_accentMain;
   }
 
 

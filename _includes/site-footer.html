@@ -1,14 +1,15 @@
 <footer class="site-footer">
-  <div class="site-footer__content columns">
-    <div class="columns__pillar columns__pillar--6o12">
-      <p>Welcome to the footer</p>
+  <div class="site-footer__content columns columns--not-for-tiny columns--center-text">
+    <div class="columns__pillar columns__pillar--6o12 site-footer__column--left-align-at-small">
+      <div class="site-footer__social-icons">{% include social.html classStr="list--no-left-space-on-first"%}</div>
+    </div>
+    <div class="columns__pillar columns__pillar--6o12  columns__pillar--no-side-margin site-footer__column site-footer__column--right-align-at-small">
       <p>This site is hosted by <a class="link link--no-underline site-footer__link" href="https://pages.github.com/" title="Go to GitHub Pages">
-        <img class="icon icon--inline" src="{{site.baseurl}}/assets/images/icons/GitHub-Mark-Light-32px.png" alt="">
+        <span class="icon icon--inline"><img class="icon__image icon__image--small" src="{{site.baseurl}}/assets/images/icons/GitHub-Mark-Light-32px.png" alt=""></span>
         GitHub Pages</a>
       </p>
-    </div>
-    <div class="columns__pillar columns__pillar--6o12 site-footer__social-icons columns__pillar--no-side-margin right-align">
-      {% include social.html%}
+      <p class="email site-footer__email">woolsendpatterns@gmail.com</p>
+      <p class='copyright site-footer__copyright'>&copy; <span class="copyright__year">2018</span> Miranda Hoover</p>
     </div>
   </div>
 </footer>

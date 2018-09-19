@@ -62,6 +62,20 @@
     }
   }
 
+  &--no-right-space-on-last {
+    &>li:last-child {
+      padding-right: 0;
+      margin-right: 0;
+    }
+  }
+
+  &--no-left-space-on-first {
+    &>li:first-child {
+      padding-left: 0;
+      margin-right: 0;
+    }
+  }
+
   &--no-bullets {
     &>li {
       list-style: none;

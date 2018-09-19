@@ -13,3 +13,14 @@
 .right-align {
   text-align: right;
 }
+
+.right-align--at-small {
+  @include atSmall {
+    text-align: right;
+  }
+}
+
+.no-right-spacing {
+  padding-right: 0;
+  margin-right: 0;
+}
