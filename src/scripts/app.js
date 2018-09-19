@@ -111,6 +111,6 @@ copyright.setYear();
 /*   # Email Hover Event             */
 /************************************/
 
-let emailIconSelector = '.social-icons .icon--email';
-let emailTextSelector = '.site-footer__email';
-Utils.addClassToOtherOnHover(emailIconSelector, emailTextSelector, 'highlight', true);
+// let emailIconSelector = '.social-icons .icon--email';
+// let emailTextSelector = '.site-footer__email';
+// Utils.addClassToOtherOnHover(emailIconSelector, emailTextSelector, 'highlight', true);
