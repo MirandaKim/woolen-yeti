@@ -4,6 +4,7 @@ import CheckHasTouch from './modules/CheckHasTouch.class';
 import NavDisplay from './modules/NavDisplay.class';
 import StickyOnScroll from './modules/StickyOnScroll.class';
 import Copyright from './modules/Copyright.class';
+import Utils from './modules/Utils.class';
 
 /****************************************************/
 /*                                                 */
@@ -29,6 +30,7 @@ import Copyright from './modules/Copyright.class';
   # Navigation Display
   # Sticky On Scroll
   # Copyright
+  # Email Hover Event
 
 */
 
@@ -104,3 +106,11 @@ stickyOnScroll.execute();
 /*set the copyright for the current year*/
 let copyright = new Copyright();
 copyright.setYear();
+
+/**************************************/
+/*   # Email Hover Event             */
+/************************************/
+
+let emailIconSelector = '.social-icons .icon--email';
+let emailTextSelector = '.site-footer__email';
+Utils.addClassToOtherOnHover(emailIconSelector, emailTextSelector, 'highlight', true);
