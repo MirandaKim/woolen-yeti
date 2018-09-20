@@ -8,7 +8,19 @@ layout: wrapper
   <div class="post__content">
     {{ content }}
   </div>
-  <div class="post__footer">
-    <p class="post__date">{{page.date | date: "%-d %B %Y" }}</p>
+  <div class="post__footer columns">
+    <div class="columns__pillar columns__pillar--8o12">
+      <ul class="list list--horizontal list--no-left-space-on-first list--horizontal--less-space">
+        {% if page.tags %}
+          <li class="list__lable">tags:</li>
+          {% for tag in page.tags %}
+          <li>{{ tag }}</li>
+          {% endfor %}
+        {% endif %}
+      </ul>
+    </div>
+    <div class="columns__pillar colums__pillar--4o12">
+      <p class="post__date">{{page.date | date: "%-d %B %Y" }}</p>
+    </div>
   </div>
 </article>
