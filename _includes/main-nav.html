@@ -1,16 +1,16 @@
 <nav class="main-nav">
   <ul class="main-nav__links list--links list--horizontal-at-small list--links--dots-on-active list--links--dots-on-hover list--links--no-underline">
     <li>
-      <a href="/about">about</a>
+      {% include main-nav-link.html pgName='about' classStr='' pgLabel='about' %}
     </li>
     <li>
-      <a href="/posts">posts</a>
+      {% include main-nav-link.html pgName='posts' classStr='' pgLabel='posts' %}
     </li>
     <li>
-      <a href="/patterns">patterns</a>
+      <a href="/patterns">{% include main-nav-link.html pgName='patterns' classStr='' pgLabel='patterns' %}</a>
     </li>
     <li>
-      <a href="/contact">contact</a>
+      {% include main-nav-link.html pgName='contact' classStr='' pgLabel='contact' %}
     </li>
   </ul>
   <div class="main-nav__social-links hide-at-small">{% include social.html classStr="list--horizontal list--horizontal--less-space" %}</div>
