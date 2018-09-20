@@ -57,7 +57,7 @@ $sh_sticky-transition-time: 1000ms;
   /*structure*/
   width: 100%;
   /*colors*/
-  background-color: transparent;
+  background-color: rgba($color_offWhite, .8);
   /*transition*/
   transition-property: all;
   transition-duration: $sh_sticky-transition-time;
@@ -204,7 +204,7 @@ $sh_sticky-transition-time: 1000ms;
     /*spacing*/
     padding-top: 40px;
     /*colors*/
-    background-color: rgba($color_neutralDark, .95);
+    background-color: rgba($color_neutralDark, .98);
     /*transition*/
     transition-property: all;
     transition-duration: $sh_sticky-transition-time;

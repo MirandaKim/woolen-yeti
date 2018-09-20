@@ -120,8 +120,6 @@
     margin-bottom: 1rem;
     /*typography*/
     text-align: center;
-    /*colors*/
-    opacity: .6;
     /*transitions*/
     transition-property: opacity;
     transition-duration: 200ms;
@@ -132,7 +130,7 @@
 
     /*hover*/
     .has-no-touch &:hover {
-      opacity: 1;
+    
     }
 
     /****************

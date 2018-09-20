@@ -45,7 +45,7 @@
   /*   # Clickable                     */
   /************************************/
 
-  &--clickable {
+  .has-no-touch &--clickable {
     /*transform*/
     transform: scale(1);
     /*transition*/
@@ -99,7 +99,7 @@
       /*spacing*/
       padding: $post-cover-link-padding;
     }
-    &--cover:hover {
+    .has-no-touch &--cover:hover {
       /*shadows*/
       box-shadow: 3px 3px 15px rgba(0, 0, 0, .1);
     }
