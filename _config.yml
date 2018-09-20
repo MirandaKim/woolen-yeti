@@ -37,22 +37,31 @@ defaults:
       author: "Miranda Hoover"
   -
     scope:
-      path: "_posts"
+      path: "content/_posts"
     values:
-      layout: "post"
+      layout: post
       tags: post
 
   -
     scope:
-      path: "_posts/patterns"
+      path: "content/_posts/posts"
+    values:
+      tags: post
+      categories: posts
+
+  -
+    scope:
+      path: "content/_posts/patterns"
     values:
       tags: pattern
+      categories: patterns
 
   -
     scope:
       path: "_posts/videos"
     values:
-      tags: videos
+      tags: video
+      categories: videos
 
 permalink: pretty
 
@@ -60,6 +69,13 @@ collections:
   posts:
     output: true
     permalink: /:collection/:title/
+
+##########################
+# Jekyll Compose Config #
+########################
+# Go to ~/Gemfile for details
+jekyll_compose:
+
 
 
 # Exclude from processing.

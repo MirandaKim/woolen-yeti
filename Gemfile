@@ -28,3 +28,29 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
+
+###################
+# Jekyll Compose #
+#################
+# Generate files with commands
+# draft       Creates a new draft post with the given NAME
+# post        Creates a new post with the given NAME
+# publish     Moves a draft into the _posts directory and sets the date
+# unpublish   Moves a post back into the _drafts directory
+# page        Creates a new page with the given NAME
+##############
+# Customize #
+############
+# See jekyll_compose section of ~/_config.yml
+##################
+# Use Examples: #
+################
+# Create draft:
+#   $ bundle exec jekyll draft "My new draft"
+# Publish draft:
+#   $ bundle exec jekyll publish _drafts/my-new-draft.md
+#   or specify a specific date on which to publish it
+#   $ bundle exec jekyll publish _drafts/my-new-draft.md --date 2014-01-24
+# Unpublish post:
+#   $ bundle exec jekyll unpublish _posts/2014-01-24-my-new-draft.md
+gem 'jekyll-compose', group: [:jekyll_plugins]

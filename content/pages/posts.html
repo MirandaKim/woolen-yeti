@@ -5,7 +5,7 @@ permalink: /posts/
 ---
 
 <ul class="list list--posts list--no-bullets">
-  {% for post in site.posts %}
+  {% for post in site.categories["posts"] %}
     <li>
     {% include post-preview.html %}
     </li>
