@@ -56,10 +56,8 @@ $sh_sticky-transition-time: 1000ms;
   top: 0;
   /*structure*/
   width: 100%;
-  /*overflow*/
-  overflow: hidden;
   /*colors*/
-  background-color: rgba($color_offWhite, .98);
+  background-color: transparent;
   /*transition*/
   transition-property: all;
   transition-duration: $sh_sticky-transition-time;
@@ -71,6 +69,8 @@ $sh_sticky-transition-time: 1000ms;
   &.sticky {
     /*fancy*/
     box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    /*colors*/
+    background-color: rgba($color_offWhite, .98);
   }
 
 
@@ -204,7 +204,7 @@ $sh_sticky-transition-time: 1000ms;
     /*spacing*/
     padding-top: 40px;
     /*colors*/
-    background-color: rgba($color_offWhite, .95);
+    background-color: rgba($color_neutralDark, .95);
     /*transition*/
     transition-property: all;
     transition-duration: $sh_sticky-transition-time;
@@ -238,7 +238,7 @@ $sh_sticky-transition-time: 1000ms;
       max-width: unset;
       /*spacing*/
       padding-top: 0;
-      margin-top: 30px;
+      margin-top: 40px;
       margin-bottom: 20px;
       /*colors*/
       background-color: transparent;

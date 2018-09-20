@@ -18,6 +18,10 @@
 
   # Main Nav
   # Links
+    > Active
+    > For Landscape
+    > At Small
+    > On Hover
   # Social Links
 
 */
@@ -55,6 +59,8 @@
     a {
       /*display*/
       display: block;
+      /*position*/
+      position: relative;
       /*structure*/
       height: auto;
       width: 100%;
@@ -71,12 +77,51 @@
       /*transition*/
       transition-property: color;
       transition-duration: 100ms;
+
+      &::after {
+        content: "";
+        /*display*/
+        display: none;
+        /*position*/
+        z-index: -1;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        /*structure*/
+        height: 5px;
+        width: 100%;
+        /*colors*/
+        background-color: $color_accentMain;
+      }
     }
 
-    & a.active {
+    /**************
+    *   > Active   *
+    **************/
+
+    & .active {
+      /*typography*/
+      font-weight: 700;
+      letter-spacing: .7;
       /*colors*/
-      background-color: pink;
+      color: $color_offWhite;
+      background-color: $color_accentMain;
+
+      @include atSmall {
+        /*color*/
+        color: $color_accentMain;
+        background-color: transparent;
+
+        &:after {
+          display: block;
+        }
+      }
+
     }
+
+    /**********************
+    *   > For Landscape   *
+    **********************/
 
     @include forLandscape {
       a {
@@ -107,19 +152,31 @@
       }
     }
 
-    /**************
-    *   > Hover   *
-    **************/
+    /*****************
+    *   > On Hover   *
+    *****************/
 
     /*style for all links when any link is moused over*/
     .has-no-touch &:hover {
-      a {
-        color: $color_neutralDark;
+      a:not(.active) {
+        // color: $color_neutralDark;
       }
     }
     /*style for specific link moused over*/
-    .has-no-touch & a:hover {
-      color: $color_accentMain;
+    .has-no-touch & a:not(.active):hover {
+      color: $color_offWhite;
+
+      @include atSmall {
+        /*colors*/
+        color: $color_neutralDark;
+      }
+
+      &:after {
+        @include atSmall {
+          display: block;
+          background-color: $color_neutralDark;
+        }
+      }
     }
 
 

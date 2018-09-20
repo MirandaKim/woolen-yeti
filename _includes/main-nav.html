@@ -1,5 +1,5 @@
 <nav class="main-nav">
-  <ul class="main-nav__links list--links list--horizontal-at-small list--links--dots-on-active list--links--dots-on-hover list--links--no-underline">
+  <ul class="main-nav__links list--links list--horizontal-at-small list--links--no-underline">
     <li>
       {% include main-nav-link.html pgName='about' classStr='' pgLabel='about' %}
     </li>
@@ -7,7 +7,7 @@
       {% include main-nav-link.html pgName='posts' classStr='' pgLabel='posts' %}
     </li>
     <li>
-      <a href="/patterns">{% include main-nav-link.html pgName='patterns' classStr='' pgLabel='patterns' %}</a>
+      {% include main-nav-link.html pgName='patterns' classStr='' pgLabel='patterns' %}
     </li>
     <li>
       {% include main-nav-link.html pgName='contact' classStr='' pgLabel='contact' %}
