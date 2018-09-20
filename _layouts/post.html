@@ -8,9 +8,9 @@ layout: wrapper
   <div class="post__content">
     {{ content }}
   </div>
-  <div class="post__footer columns">
+  <div class="post__footer post__footer--more-space-top columns columns--not-for-tiny">
     <div class="columns__pillar columns__pillar--8o12">
-      <ul class="list list--horizontal list--no-left-space-on-first list--horizontal--less-space">
+      <ul class="list list--horizontal list--no-left-space-on-first list--horizontal--less-space post__tags">
         {% if page.tags %}
           <li class="list__lable">tags:</li>
           {% for tag in page.tags %}
@@ -19,8 +19,8 @@ layout: wrapper
         {% endif %}
       </ul>
     </div>
-    <div class="columns__pillar colums__pillar--4o12">
-      <p class="post__date">{{page.date | date: "%-d %B %Y" }}</p>
+    <div class="columns__pillar columns__pillar--4o12 columns__pillar--no-side-margin">
+      <div class="post__date">{{page.date | date: "%-d %B %Y" }}</div>
     </div>
   </div>
 </article>

@@ -177,9 +177,37 @@
     height: auto;
     /*spacing*/
     margin-top: 10px;
-    padding: 5px;
     /*colors*/
     color: $color_neutralMed;
+
+    &--more-space-top {
+      /*spacing*/
+      margin-top: 50px;
+    }
+  }
+
+  /**************************************/
+  /*   # Tags                          */
+  /************************************/
+
+  &__tags {
+    /*spacing*/
+    padding-bottom: 10px;
+    @include atSmall {
+      padding-bottom: 0;
+    }
+  }
+
+  /**************************************/
+  /*   # Date                          */
+  /************************************/
+
+  &__date {
+
+    @include atSmall {
+      /*typography*/
+      text-align: right;
+    }
   }
 
 }

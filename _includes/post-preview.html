@@ -14,9 +14,9 @@
     </div>
     {% endif %}
   </div>
-  <div class="post__footer columns">
+  <div class="post__footer columns columns--not-for-tiny">
     <div class="columns__pillar columns__pillar--8o12">
-      <ul class="list list--horizontal list--no-left-space-on-first list--horizontal--less-space">
+      <ul class="list list--horizontal list--no-left-space-on-first list--horizontal--less-space post__tags">
         {% if post.tags %}
           <li class="list__lable">tags:</li>
           {% for tag in post.tags %}
@@ -25,7 +25,9 @@
         {% endif %}
       </ul>
     </div>
-    <div class="columns__pillar columns__pillar--4o12 right-align">{{ post.date | date: "%-d %B %Y" }}</div>
+    <div class="columns__pillar columns__pillar--4o12">
+      <div class="post__date">{{ post.date | date: "%-d %B %Y" }}</div>
+    </div>
   </div>
   <a href="{{ post.url }}" title="{{ post.title }}: read full post" class="post__link post__link--cover"></a>
 </article>
