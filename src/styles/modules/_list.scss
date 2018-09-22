@@ -18,6 +18,7 @@
     > Dots on hover
   # Icons
   # Posts
+  # Floating
   # At Small
     > Horizontal at small
 
@@ -194,6 +195,19 @@
   &--posts {
     &>li {
       margin-bottom: 50px;
+    }
+  }
+
+  /**************************************/
+  /*   # Floating                      */
+  /************************************/
+
+  &--floating {
+    &>li {
+      /*relative*/
+      position: relative;
+      float: right;
+
     }
   }
 

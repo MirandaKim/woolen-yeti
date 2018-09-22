@@ -1,16 +1,20 @@
-<article class="post post--clickable">
-  <h4 class="post__title">{{ post.title }}</h4>
+<section class="post post--clickable">
+  <h2 class="post__title">{{ post.title }}</h2>
   <div class="post__content columns">
     {% if post.thumbnail %}
-    <div class="columns__pillar columns__pillar--4o12">
-      <img src="{{ post.featureImg }}" alt="{{ post.thumbnailAlt }}" class="image image--fit-to-width image--shadow-frame">
+    <div class="columns__pillar">
+      <img src="{{ post.thumbnail }}" alt="{{ post.thumbnailAlt }}" class="post__thumbnail image image--shadow-frame">
     </div>
-    <div class="columns__pillar columns__pillar--8o12">
-      <p>{{ post.excerpt | truncate: 300, "..." }}</p>
+    <div class="columns__pillar">
+      <div class="columns__content columns__content--center-vert columns__content--child-no-vert-spacing">
+        {{ post.excerpt | truncate: 200, "..."}}
+      </div>
     </div>
     {% else %}
     <div class="columns__pillar">
-      <p>{{ post.excerpt | truncate: 300, "..." }}</p>
+      <div class="columns__content">
+        {{ post.excerpt | truncate: 200, "..."}}
+      </div>
     </div>
     {% endif %}
   </div>
@@ -29,5 +33,6 @@
       <div class="post__date">{{ post.date | date: "%-d %B %Y" }}</div>
     </div>
   </div>
+  <div class="line line--center-below line--narrow line--top-space"></div>
   <a href="{{ post.url }}" title="{{ post.title }}: read full post" class="post__link post__link--cover"></a>
-</article>
+</section>

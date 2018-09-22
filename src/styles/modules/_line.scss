@@ -28,10 +28,8 @@
   /*position*/
   z-index: -1;
   position: relative;
-  left: 0;
-  top: 0;
   /*structure*/
-  height: 3px;
+  height: 1px;
   width: 100%;
   /*colors*/
   background-color: $color_neutralLight;
@@ -42,6 +40,15 @@
 
   &--absolute {
     position: absolute;
+  }
+
+  &--center-below {
+    /*position*/
+    position: absolute;
+    bottom: -26px;
+    left: 50%;
+    /*transform*/
+    transform: translateX(-50%);
   }
 
   /******************
@@ -56,6 +63,10 @@
   &--thick-vertical {
     height: 100%;
     width: 90px;
+  }
+
+  &--narrow {
+    width: 100px;
   }
 
   /***************

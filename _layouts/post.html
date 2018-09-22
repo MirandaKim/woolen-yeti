@@ -1,9 +1,9 @@
 ---
 layout: wrapper
 ---
-<article>
+<article class="post">
   {% if page.featureImg %}
-  <img src="{{ page.featureImg }}" alt="{{ page.featureImgAlt }}" class="image image--fit-to-width image--shadow-frame">
+  <img src="{{ page.featureImg }}" alt="{{ page.featureImgAlt }}" class="post__image image image--center-horiz image--restrict-to-parent image--center-horiz image--shadow-frame">
   {% endif %}
   <div class="post__content">
     {{ content }}

@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "This is a test!"
-date:   2018-08-20 21:09:34 -0700
+title:  "This is a test too!"
+date:   2018-08-01 21:09:34 -0700
 categories:
 tags: testing example
-thumbnail: "/assets/images/thumbnails/fox-lovey-00-300px.jpg"
+thumbnail: ""
 featureImg: https://images.unsplash.com/photo-1533382433768-3d403240fa40?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5bd2fd8f85911127ed8ef51e803d2c9a&auto=format&fit=crop&w=1400&q=80
 thumbnailAlt: "example"
 featureImgAlt: "example"
