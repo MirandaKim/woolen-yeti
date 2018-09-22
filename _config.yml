@@ -40,6 +40,7 @@ defaults:
       path: "content/_posts"
     values:
       layout: post
+      comments: true
       tags: post
       permalink: posts/:title/
 
