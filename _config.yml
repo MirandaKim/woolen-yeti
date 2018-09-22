@@ -41,6 +41,7 @@ defaults:
     values:
       layout: post
       tags: post
+      permalink: posts/:title/
 
   -
     scope:
@@ -48,6 +49,7 @@ defaults:
     values:
       tags: post
       categories: posts
+      permalink: posts/:title/
 
   -
     scope:
@@ -55,6 +57,7 @@ defaults:
     values:
       tags: pattern
       categories: patterns
+      permalink: patterns/:title/
 
   -
     scope:
@@ -62,13 +65,8 @@ defaults:
     values:
       tags: video
       categories: videos
+      permalink: videos/:title/
 
-permalink: pretty
-
-collections:
-  posts:
-    output: true
-    permalink: /:collection/:title/
 
 ##########################
 # Jekyll Compose Config #
