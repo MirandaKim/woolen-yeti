@@ -35,6 +35,8 @@ defaults:
     values:
       layout: "default"
       author: "Miranda Hoover"
+      popupSignup: true
+      blockSignup: true
   -
     scope:
       path: "content/_posts"

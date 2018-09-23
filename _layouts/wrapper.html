@@ -7,7 +7,13 @@
   <body class="has-no-js">
     {% include site-header.html %}
     {% include site-body.html %}
+    {% if page.blockSignup %}
+    {% include email-signup.html %}
+    {% endif %}
     {% include site-footer.html %}
+    {% if page.popupSignup %}
+    {% include email-signup-popup.html %}
+    {% endif %}
     <script src="{{site.baseurl}}/assets/app.js"></script>
   </body>
 </html>
