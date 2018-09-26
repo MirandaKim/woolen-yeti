@@ -36,6 +36,19 @@ class Utils {
     }
   }
 
+  static toggleClassForOtherOnClick(toggleSelector, modifySelector, classStr, onInitially = false) {
+    let trigger = $(toggleSelector);
+    let effected = $(modifySelector);
+    let onClass = 'on';
+    if(onInitially){
+      trigger.addClass(onClass);
+    }
+    trigger.on('click', () => {
+      effected.toggleClass(classStr);
+      trigger.toggleClass(onClass);
+    });
+  }
+
 }
 
 export default Utils;
