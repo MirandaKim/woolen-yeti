@@ -30,7 +30,7 @@ import Utils from './modules/Utils.class';
   # Navigation Display
   # Sticky On Scroll
   # Copyright
-  # Email Hover Event
+  # Email Sign-Up Toggle Display
 
 */
 
@@ -108,9 +108,10 @@ let copyright = new Copyright();
 copyright.setYear();
 
 /**************************************/
-/*   # Email Hover Event             */
+/*   # Email Sign-Up Toggle Display  */
 /************************************/
 
-// let emailIconSelector = '.social-icons .icon--email';
-// let emailTextSelector = '.site-footer__email';
-// Utils.addClassToOtherOnHover(emailIconSelector, emailTextSelector, 'highlight', true);
+let emailSignUpSelector = '.email-signup--hidden-initially';
+let emailSignUpToggleSelector = '.email-signup__toggle';
+let emailSignUpDisplayClass = 'email-signup--visible';
+Utils.toggleClassForOtherOnClick(emailSignUpToggleSelector, emailSignUpSelector, emailSignUpDisplayClass);

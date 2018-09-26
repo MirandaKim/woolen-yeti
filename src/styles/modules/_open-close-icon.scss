@@ -1,0 +1,145 @@
+
+/****************************************************/
+/*                                                 */
+/*   Open/Close Icon CSS (_open-close-icon.scss)  */
+/*                                               */
+/************************************************/
+/*
+
+  - This is an icon made of elements (no svg, etc.),
+    which can be toggled be toggled between a down arrow and x.
+  - The style includes color change on hover and an transition between the arrow and x.
+  - Give an element the class "open-close-icon" to apply the icon.
+  - The icon will change to an x when the icon (or &__wrapper) is given the class "on" (via script).
+  - Optional: give a wrapping element the class open-close-icon__wrapper,
+    this will allow the styles to change when the wrapper is hovered or given the on class.
+
+  *************
+  * Contents: *
+  *************
+
+  # Variables
+  # Wrapper
+  # Open-Close Icon
+    > Pseudos
+    > On Hover (Arrow)
+    > Change To X
+    > On Hover (X)
+
+*/
+
+/**************************************/
+/*   # Variables                     */
+/************************************/
+
+$openclose_arrowDefaultColor: $color_neutralMed;
+$openclose_arrowHoverColor: $color_attentionMed;
+$openclose_xDefaultColor: $color_neutralMed;
+$openclose_xHoverColor: $color_attentionHot;
+
+/**************************************/
+/*   # Wrapper                       */
+/************************************/
+
+.open-close-icon__wrapper {}
+
+/**************************************/
+/*   # Open-Close Icon               */
+/************************************/
+
+.open-close-icon {
+    /*structure*/
+    height: 30px;
+    width: 40px;
+
+    /****************
+    *   > Pseudos   *
+    ****************/
+
+    &::before,
+    &::after {
+      content: "";
+      /*display*/
+      display: block;
+      /*position*/
+      position: absolute;
+      top: 0;
+      /*structure*/
+      height: 28px;
+      width: 8px;
+      /*borders*/
+      border-radius: 3px;
+      /*colors*/
+      background-color: $openclose_arrowDefaultColor;
+      /*transition*/
+      transition-property: all;
+      transition-duration: 500ms;
+    }
+
+    &::before {
+      /*transform*/
+      transform: rotate(45deg) translate(10px, -10px);
+    }
+
+    &::after {
+      /*transform*/
+      transform: rotate(-45deg) ;
+    }
+
+    /*************************
+    *   > On Hover (Arrow)   *
+    *************************/
+
+    .has-no-touch .open-close-icon__wrapper:hover &::before,
+    .has-no-touch .open-close-icon__wrapper:hover &::after,
+    .has-no-touch &:hover::before,
+    .has-no-touch &:hover::after {
+      /*colors*/
+      background-color: $openclose_arrowHoverColor;
+    }
+
+    /********************
+    *   > Change To X   *
+    ********************/
+
+    .open-close-icon__wrapper.on &,
+    &.on {
+
+      &::before,
+      &::after {
+        /*colors*/
+        background-color: $openclose_xDefaultColor;
+      }
+
+      /*If device has touch, give the X the hover color by default*/
+      .has-touch &::before,
+      .has-touch &::after {
+        /*colors*/
+        background-color: $openclose_xHoverColor;
+      }
+
+      &::before {
+        /*transform*/
+        transform: scale(1.2) rotate(225deg) translate(-5px, 5px) ;
+      }
+
+      &::after {
+        /*transform*/
+        transform: scale(1.2) rotate(-225deg) translate(-5px, -5px) ;
+      }
+    }
+
+    /*********************
+    *   > On Hover (X)   *
+    *********************/
+
+    .has-no-touch .open-close-icon__wrapper.on:hover &,
+    .has-no-touch &.on:hover & {
+      &::before,
+      &::after {
+        /*colors*/
+        background-color: $openclose_xHoverColor;
+      }
+    }
+
+}

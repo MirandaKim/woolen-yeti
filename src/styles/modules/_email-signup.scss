@@ -1,0 +1,232 @@
+
+/****************************************************/
+/*                                                 */
+/*   Email Signup CSS (_email-signup.scss)        */
+/*                                               */
+/************************************************/
+/*
+
+  - Style the email/newsletter signup
+  - The email signup may be hidden initially with the class email-signup--hidden-initially.
+    Using a JS script, it may be fully visible by adding the class email-signup--visible.
+    This class may be toggled by giving an element the class email-signup__toggle.
+    See ~/src/scripts/app.js for more details.
+
+  *************
+  * Contents: *
+  *************
+
+  # Variables
+  # Email Signup
+    > At Small
+  # Title
+  # Display Toggle
+    > At Small
+    > Title
+    > Icon
+  # Content
+    > Hidden Initially
+    > Visible
+  # Submit
+
+*/
+
+/**************************************/
+/*   # Variables                     */
+/************************************/
+
+$email-signup_maxHeight: 40rem; //this value should be larger than the expected height to allow css height transition.
+
+/**************************************/
+/*   # Email Signup                  */
+/************************************/
+
+.email-signup {
+  /*position*/
+  position: relative;
+  /*spacing*/
+  padding-left: 30px;
+  padding-right: 30px;
+  /*colors*/
+  background-color: $color_neutralLight;
+
+  /*****************
+  *   > At Small   *
+  *****************/
+
+  @include atSmall {
+    /*spacing*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  /**************************************/
+  /*   # Title                         */
+  /************************************/
+
+  &__title {}
+
+  /**************************************/
+  /*   # Display Toggle                */
+  /************************************/
+
+  &__toggle {
+    /*cursor*/
+    cursor: pointer;
+    /*display*/
+    display: flex;
+    /*position*/
+    position: relative;
+    /*structure*/
+    width: auto;
+
+    /*****************
+    *   > At Small   *
+    *****************/
+
+    @include atSmall {
+      display: inline-block;
+    }
+  }
+
+  /**************
+  *   > Title   *
+  **************/
+
+  &__toggle-title {
+    /*display*/
+    display: inline-block;
+    /*spacing*/
+    margin-left: 50px;
+    /*transform*/
+    transition-property: color;
+    transition-duration: 200ms;
+
+    @include atSmall {
+      margin-left: 0;
+    }
+
+    /*title style when the wrapping toggle element is moused-over*/
+    .has-no-touch .email-signup__toggle:hover & {
+      color: $color_accentSec;
+    }
+    /*title style when the wrapping toggle element is moused-over and the email-signup has the visisble class*/
+    .has-no-touch .email-signup--visible .email-signup__toggle:hover & {
+      color: $color_accentMain;
+    }
+  }
+
+  /*************
+  *   > Icon   *
+  *************/
+  /* Note: icon may have additional class names with styles in other files. */
+
+  &__toggle-icon {
+    /*cursor*/
+    cursor: pointer;
+    /*display*/
+    display: inline-block;
+    /*position*/
+    position: absolute;
+    top: 50%;
+    /*spacing*/
+    margin-right: 15px;
+    /*transform*/
+    transform: scale(.8) translateY(-50%);
+    /*transition*/
+    transition-duration: 200ms;
+    transition-property: transform;
+
+    @include atSmall {
+      /*position*/
+      position: relative;
+      top: 6px;
+      /*spacing*/
+      margin-top: 0;
+      margin-right: 5px;
+      /*transform*/
+      transform: scale(.8);
+    }
+
+    .has-no-touch .email-signup__toggle:hover & {
+      /*transform*/
+      transform: scale(.9);
+    }
+  }
+
+  /**************************************/
+  /*   # Content                       */
+  /************************************/
+
+  &__content {
+    /*position*/
+    position: relative;
+    /*structure*/
+    height: auto;
+
+    /*************************
+    *   > Hidden Initially   *
+    *************************/
+
+    .email-signup--hidden-initially &{
+      /*structure*/
+      height: auto;
+      max-height: 0;
+      /*colors*/
+      opacity: .2;
+      /*overflow*/
+      overflow: hidden;
+      /*transitions*/
+      transition-property: all;
+      transition-duration: 1000ms;
+      transition-timing-function: linear;
+    }
+
+    /****************
+    *   > Visible   *
+    ****************/
+
+    .email-signup--hidden-initially.email-signup--visible &{
+      /*structure*/
+      max-height: $email-signup_maxHeight;
+      /*colors*/
+      opacity: 1;
+    }
+
+  }
+
+  /**************************************/
+  /*   # Submit                        */
+  /************************************/
+
+  // Note: make sure to keep the id in this style to override default
+  #mc_embed_signup &__submit[type="submit"] {
+    /*spacing*/
+    margin-top: 1rem;
+    /*transitions*/
+    transition-property: all;
+    transition-duration: 200ms;
+    /*override webkit*/
+    -webkit-appearance: none;
+
+    /*If device has touch (no hover), give the submit button the hover color initially*/
+    .has-touch &{
+      /*typography*/
+      font-weight: 700;
+      letter-spacing: .2;
+      /*colors*/
+      background-color: $color_attentionMed;
+    }
+
+    &:hover {
+      /*transform*/
+      transform: scale(1.05);
+      /*colors*/
+      background-color: $color_attentionMed;
+    }
+  }
+
+
+}
