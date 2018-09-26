@@ -1,0 +1,87 @@
+/****************************************************/
+/*                                                 */
+/*   Skip To Content (_skip-to-content.scss)      */
+/*                                               */
+/************************************************/
+/*
+
+  - Hidden element linked to the main content of the site
+  - This is used to skip the main navigation and go right to the actual content.
+  - The element with this class should contain the text "Skip to main content"
+
+  *************
+  * Contents: *
+  *************
+
+  # Skip To Content
+    > At Small
+    > On Focus
+    > On Hover
+
+*/
+
+/**************************************/
+/*   # Skip To Content               */
+/************************************/
+
+.skip-to-content {
+  /*display*/
+  display: block;
+  /*position*/
+  z-index: 5000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*spacing*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+  /*borders*/
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  /*typography*/
+  font-size: 1.2rem;
+  letter-spacing: .3;
+  /*colors*/
+  background: $color_neutralLight;
+  opacity: .5;
+  /*shadows*/
+  // box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  /*transform*/
+  transform: translateX(-101%);
+  /*transition*/
+  transition-property: all;
+  transition-duration: 1000ms;
+
+  /*****************
+  *   > At Small   *
+  *****************/
+
+  @include atSmall {
+    /*position*/
+    top: 120px;
+    left: 0;
+  }
+
+  /*****************
+  *   > On Focus   *
+  *****************/
+
+  &:focus {
+    /*colors*/
+    opacity: 1;
+    /*transform*/
+    transform: translateX(0);
+  }
+
+  /*****************
+  *   > On Hover   *
+  *****************/
+
+  &:hover {
+    /*colors*/
+    color: $color_red_med_01;
+  }
+
+}
