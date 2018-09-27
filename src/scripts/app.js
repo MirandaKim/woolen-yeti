@@ -5,6 +5,7 @@ import NavDisplay from './modules/NavDisplay.class';
 import StickyOnScroll from './modules/StickyOnScroll.class';
 import Copyright from './modules/Copyright.class';
 import Utils from './modules/Utils.class';
+import UserMessage from './modules/UserMessage.class';
 
 /****************************************************/
 /*                                                 */
@@ -31,6 +32,7 @@ import Utils from './modules/Utils.class';
   # Sticky On Scroll
   # Copyright
   # Email Sign-Up Toggle Display
+  # User Messages
 
 */
 
@@ -56,6 +58,7 @@ document.body.classList.add('has-js');
 
 let mainNav_block = 'site-header__menu-wrapper';
 let mainNav_selector = `.${mainNav_block}`;
+let urlParams = Utils.getUrlParameters();
 
 /**************************************/
 /*   # Detect Touch                  */
@@ -115,3 +118,14 @@ let emailSignUpSelector = '.email-signup--hidden-initially';
 let emailSignUpToggleSelector = '.email-signup__toggle';
 let emailSignUpDisplayClass = 'email-signup--visible';
 Utils.toggleClassForOtherOnClick(emailSignUpToggleSelector, emailSignUpSelector, emailSignUpDisplayClass);
+
+/**************************************/
+/*   # User Messages                 */
+/************************************/
+/*Post a user message near the top of the screen. These messages are based on url parameters.*/
+let userMessage = new UserMessage();
+let messageSent = 'msgSent=true'; // value for triggering the message after a contact form has been submitted.
+
+if($.inArray(messageSent, urlParams) > -1){
+  userMessage.postMessage('Message Sent', 'Your message has been sent. ....', 'user-message--neutral');
+}
