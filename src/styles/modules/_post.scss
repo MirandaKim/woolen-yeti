@@ -37,13 +37,10 @@
   /*position*/
   position: relative;
   /*spacing*/
-  // margin-top: 40px;
   margin-bottom: 40px;
-  // padding: 10px;
   /*colors*/
   background-color: transparent;
   /*shadows*/
-  // box-shadow: 3px 3px 15px rgba(0, 0, 0, .1);
 
   /**************************************/
   /*   # Clickable                     */
@@ -71,10 +68,10 @@
     margin-top: 0;
     margin-bottom: 5px;
     /*typography*/
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 100;
     /*colors*/
-    color: $color_accentMain;
+    color: $color_neutralMed;
   }
 
   /**************************************/
