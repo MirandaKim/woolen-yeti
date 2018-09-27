@@ -127,5 +127,5 @@ let userMessage = new UserMessage();
 let messageSent = 'msgSent=true'; // value for triggering the message after a contact form has been submitted.
 
 if($.inArray(messageSent, urlParams) > -1){
-  userMessage.postMessage('Message Sent', 'Your message has been sent. ....', 'user-message--neutral');
+  userMessage.postMessage('Thanks for being awesome!', 'Your message has been sent, and we\'ll contact you via email as soon as we can. Thanks again!', 'user-message--neutral');
 }
