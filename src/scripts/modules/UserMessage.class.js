@@ -29,16 +29,16 @@ class UserMessage {
   _constructHtml(titleStr, msgStr, classStr, messageId){
     return `
     <div class="${this._messageBoxClass} ${classStr}" id="${messageId}">
-      <div class="${this._messageBoxClass}__${this._messageBoxCloseSuffix}">X</div>
-      <h2 class="${this._messageBoxClass}__${this._messageBoxTitleSuffix}">${titleStr}</h2>
-      <p class="${this._messageBoxClass}__${this._messageBoxMsgSuffix}">${msgStr}</p>
+      <div class="${this._messageBoxClass}${this._messageBoxCloseSuffix} icon--x icon--scale-on-hover"></div>
+      <h2 class="${this._messageBoxClass}${this._messageBoxTitleSuffix}">${titleStr}</h2>
+      <p class="${this._messageBoxClass}${this._messageBoxMsgSuffix}">${msgStr}</p>
     </div>
     `;
   }
 
   _setCloseEvent(messageId){
     let message = $(`#${messageId}`);
-    message.find(`.${this._messageBoxClass}__${this._messageBoxCloseSuffix}`).on('click', () => {
+    message.find(`.${this._messageBoxClass}${this._messageBoxCloseSuffix}`).on('click', () => {
       message.remove();
     })
   }
