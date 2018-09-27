@@ -35,6 +35,8 @@
 
   &__button {
     cursor: pointer;
+    /*override webkit*/
+    -webkit-appearance: none;
   }
 
   &__submit {

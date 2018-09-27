@@ -1,7 +1,119 @@
+/****************************************************/
+/*                                                 */
+/*   User Message (_user-message.scss)            */
+/*                                               */
+/************************************************/
+/*
+
+  - Style a user message.
+  - User messages should be generated via a script
+  (see ~/src/app.js and ~/src/modules/UserMessages.class.js for more details)
+
+  *************
+  * Contents: *
+  *************
+
+  # Wrapper
+  # User Message
+  # Close
+    > On Hover
+    > Has Touch
+  # Title
+  # Message
+
+*/
+
+/**************************************/
+/*   # Wrapper                       */
+/************************************/
+
 .user-message__wrapper {
-  
+  /*spacing*/
+  margin-bottom: 40px;
 }
 
+/**************************************/
+/*   # User Message                  */
+/************************************/
+
 .user-message {
+  /*position*/
+  position: relative;
+  /*spacing*/
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+  /*borders*/
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $color_attentionMed;
+  /*shadows*/
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+
+  /**************************************/
+  /*   # Close                         */
+  /************************************/
+
+  /*The close element is expected to have the class icon--x,
+    which is why there are style overrides for pseudo elements.*/
+
+  &__close {
+    cursor: pointer;
+    /*position*/
+    position: absolute;
+    right: 2px;
+    top: 5px;
+    /*transform*/
+    transform: scale(.8);
+    /*transition*/
+    transition-property: all;
+    transition-duration: 200ms;
+
+    /****************
+    *  > On Hover   *
+    ****************/
+
+    .has-no-touch &:hover {
+      /*transform*/
+      transform: scale(1);
+    }
+
+    .has-no-touch &:hover::before,
+    .has-no-touch &:hover::after {
+      /*colors*/
+      background-color: $color_attentionHot;
+    }
+
+    /*****************
+    *  > Has Touch   *
+    *****************/
+
+    .has-touch &::before,
+    .has-touch &::after{
+      /*colors*/
+      background-color: $color_attentionHot;
+    }
+  }
+
+  /**************************************/
+  /*   # Title                         */
+  /************************************/
+
+  &__title {
+    /*colors*/
+    color: $color_attentionMed;
+  }
+
+  /**************************************/
+  /*   # Message                       */
+  /************************************/
+
+  &__message {
+    /*colors*/
+    color: $color_neutralDark;
+  }
 
 }

@@ -29,8 +29,8 @@ class UserMessage {
   _constructHtml(titleStr, msgStr, classStr, messageId){
     return `
     <div class="${this._messageBoxClass} ${classStr}" id="${messageId}">
-      <div class="${this._messageBoxClass}${this._messageBoxCloseSuffix} icon--x icon--scale-on-hover"></div>
-      <h2 class="${this._messageBoxClass}${this._messageBoxTitleSuffix}">${titleStr}</h2>
+      <div class="${this._messageBoxClass}${this._messageBoxCloseSuffix} icon--x"></div>
+      <h2 class="${this._messageBoxClass}${this._messageBoxTitleSuffix} headline headline--no-top-space">${titleStr}</h2>
       <p class="${this._messageBoxClass}${this._messageBoxMsgSuffix}">${msgStr}</p>
     </div>
     `;

@@ -9,6 +9,7 @@
   background-size: cover;
   background-position: center center;
 
+
   &--circle-style {
     /*spacing*/
     padding: 15px;
@@ -35,13 +36,53 @@
     }
   }
 
-
-
-
-
-
   &__title {
     display: none;
+
+  }
+
+  &--x {
+    /*position*/
+    position: relative;
+    /*structure*/
+    height: 30px;
+    width: 40px;
+    /*spacing*/
+    padding-left: 10px;
+
+    /****************
+    *   > Pseudos   *
+    ****************/
+
+    &::before,
+    &::after {
+      content: "";
+      /*display*/
+      display: block;
+      /*position*/
+      position: absolute;
+      top: 0;
+      /*structure*/
+      height: 28px;
+      width: 8px;
+      /*borders*/
+      border-radius: 3px;
+      /*colors*/
+      background-color: $color_neutralMed;
+      /*transition*/
+      transition-property: all;
+      transition-duration: 500ms;
+    }
+    &::before {
+      /*transform*/
+      transform: rotate(225deg) translate(-5px, 5px) ;
+    }
+
+    &::after {
+      /*transform*/
+      transform: rotate(-225deg) translate(-5px, -5px) ;
+    }
+
 
   }
 
