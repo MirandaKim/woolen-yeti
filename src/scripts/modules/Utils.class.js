@@ -14,6 +14,7 @@ import $ from 'jquery';
   *************
 
   # Class Modifiers
+  # URL
 
 */
 
@@ -47,6 +48,16 @@ class Utils {
       effected.toggleClass(classStr);
       trigger.toggleClass(onClass);
     });
+  }
+
+  /**************************************/
+  /*   # Class Modifiers               */
+  /************************************/
+
+  static getUrlParameters(){
+    let url = decodeURIComponent(window.location.search.substring(1));
+    let  urlParams = url.split('&');
+    return urlParams;
   }
 
 }
