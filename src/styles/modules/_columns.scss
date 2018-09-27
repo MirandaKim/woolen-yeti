@@ -34,6 +34,8 @@
   # Pillar
       > Sizing
       > Spacing
+      > Colors
+      > For Tiny
   # Content
   # No Flexbox
 
@@ -198,12 +200,55 @@
       padding-right: 10px;
     }
 
+    &--right-padding {
+      /*spacing*/
+      padding-right: 10px;
+    }
+
     &--full-padding {
       /*spacing*/
       padding-left: 10px;
       padding-right: 10px;
       padding-top: 10px;
       padding-bottom: 10px;
+    }
+
+    &--full-padding--more {
+      /*spacing*/
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    /**************
+    *  > Colors   *
+    **************/
+
+    &--background-light {
+      background-color: $color_neutralLight;
+    }
+
+    /***************
+    *  > Shadows   *
+    ***************/
+
+    &--drop-shadow {
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+    }
+
+    /****************
+    *  > On Hover   *
+    ****************/
+
+    &--scale-on-hover {
+      /*transition*/
+      transition-property: transform;
+      transition-duration: 500ms;
+
+      .has-no-touch &:hover{
+        transform: scale(1.05);
+      }
     }
 
     /****************

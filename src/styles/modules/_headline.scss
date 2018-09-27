@@ -11,6 +11,11 @@
     font-size: 3rem;
   }
 
+  &--no-top-space {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
   @include atSmall {
     &--large--at-small {
       font-size: 3rem;

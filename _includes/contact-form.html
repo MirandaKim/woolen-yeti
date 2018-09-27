@@ -1,0 +1,24 @@
+<div class="contact-form__wrapper">
+  <form class="contact-form form" name="form-contact" id="form-contact" action="https://formspree.io/woolsendpatterns@gmail.com" method="POST">
+    <ul class="list list--no-bullets list--remove-webkit-side-space">
+      <li>
+        <label for="contact-form-name" class="form__label">Name</label>
+        <div class="form__description">Just your first name is fine.</div>
+        <input type="text" name="contact-form-name" id="contact-form-name" class="form__input form__input--inner-shadow form__input--text">
+      </li>
+      <li>
+        <label for="contact-form-name" class="form__label">Email</label>
+        <div class="form__description">Let us know how to respond to your message. Don't worry, your email will not be added to any mailing list.</div>
+        <input type="email" name="_replyto" id="contact-form-email" required class="form__input form__input--text form__input--inner-shadow">
+      </li>
+      <li>
+        <label for="contact-form-name" class="form__label">Message</label>
+        <div class="form__description"></div>
+        <textarea name="contact-form-message" id="contact-form-message" required class="form__input form__input--inner-shadow form__input--textarea"></textarea>
+      </li>
+      <!-- <input type="hidden" name="_next" value="http://woolsend.com/contact?sent=true" /> -->
+      <input type="hidden" name="_next" value="localhost:3000/contact?sent=true" />
+    </ul>
+    <input type="submit" value="Send Message" class="form__button form__submit">
+  </form>
+</div>
