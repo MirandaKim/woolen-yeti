@@ -16,6 +16,10 @@
     padding-top: 0;
   }
 
+  &--less-bottom-space {
+    margin-bottom: 5px;
+  }
+
   @include atSmall {
     &--large--at-small {
       font-size: 3rem;
