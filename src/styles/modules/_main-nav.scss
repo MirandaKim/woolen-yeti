@@ -55,6 +55,8 @@
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+    /*typography*/
+    letter-spacing: .8;
 
     a {
       /*display*/
@@ -88,7 +90,7 @@
         bottom: -10px;
         left: 0;
         /*structure*/
-        height: 5px;
+        height: 2px;
         width: 100%;
         /*colors*/
         background-color: $color_accentMain;
@@ -139,14 +141,6 @@
 
     @include atSmall {
       a {
-        /*display*/
-        // display: inline-block;
-        /*structure*/
-        // width: 100%;
-        // height: auto;
-        /*spacing*/
-        // padding: 0;
-        /*typography*/
         font-size: 1rem;
         text-align: left;
       }

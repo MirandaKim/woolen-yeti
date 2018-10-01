@@ -203,29 +203,8 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
 
   // Note: make sure to keep the id in this style to override default
   #mc_embed_signup &__submit[type="submit"] {
-    /*spacing*/
-    margin-top: 1rem;
-    /*transitions*/
-    transition-property: all;
-    transition-duration: 200ms;
-    /*override webkit*/
-    -webkit-appearance: none;
-
-    /*If device has touch (no hover), give the submit button the hover color initially*/
-    .has-touch &{
-      /*typography*/
-      font-weight: 700;
-      letter-spacing: .2;
-      /*colors*/
-      background-color: $color_attentionMed;
-    }
-
-    &:hover {
-      /*transform*/
-      transform: scale(1.05);
-      /*colors*/
-      background-color: $color_attentionMed;
-    }
+    @include button();
+    margin: 0;
   }
 
 

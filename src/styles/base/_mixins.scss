@@ -45,6 +45,8 @@
     > Center Vertically
     > Dots
 
+  # Links
+
 */
 
 /**************************************/
@@ -198,4 +200,89 @@ NOTE: the element and container must both have a position for this to work!
   border-radius: 50%;
   /*colors*/
   background-color: $color;
+}
+
+/**************************************/
+/*   # Links                         */
+/************************************/
+
+/***************
+*   > Inline   *
+***************/
+
+@mixin inlineLink(){
+  /*display*/
+  display: inline-block;
+  /*position*/
+  position: relative;
+  /*typography*/
+  text-decoration: none;
+  /*colors*/
+  color: $color_textLink_inline;
+  /*transitions*/
+  transition-property: all;
+  transition-duration: 100ms;
+
+  &::after {
+    content: "";
+    /*display*/
+    display: block;
+    /*position*/
+    position: absolute;
+    bottom: 1px;
+    /*structure*/
+    width: 100%;
+    height: 2px;
+    /*colors*/
+    background-color: $color_textLink_inline;
+    opacity: 0;
+    /*transitions*/
+    transition-property: all;
+    transition-duration: 100ms;
+  }
+
+  &:hover {
+    /*colors*/
+    color: $color_textLink_inline_hover;
+  }
+  &:hover::after {
+    /*colors*/
+    background-color: $color_textLink_inline_hover;
+    opacity: 1;
+  }
+}
+
+/***************
+*   > Button   *
+***************/
+
+@mixin button(){
+  cursor: pointer;
+  /*override webkit*/
+  -webkit-appearance: none;
+  /*spacing*/
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  /*borders*/
+  border-style: none;
+  border-radius: 3px;
+  /*typography*/
+  font-size: 1rem;
+  letter-spacing: .7;
+  /*colors*/
+  color: $color_offWhite;
+  background-color: $color_button;
+  /*transitions*/
+  transition-property: all;
+  transition-duration: 200ms;
+
+  .has-no-touch &:hover {
+    /*colors*/
+    background-color: $color_button_hover;
+    /*transform*/
+    transform: scale(1.05);
+  }
+
 }

@@ -130,7 +130,7 @@
 
     /*hover*/
     .has-no-touch &:hover {
-    
+
     }
 
     /****************
@@ -170,6 +170,10 @@
     text-decoration: none;
     /*colors*/
     color: $color_accentSec;
+
+    &::after {
+      display: none;
+    }
 
     /****************
     *  > On Hover   *

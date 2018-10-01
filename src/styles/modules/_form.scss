@@ -34,37 +34,9 @@
   }
 
   &__button {
-    cursor: pointer;
-    /*override webkit*/
-    -webkit-appearance: none;
+    @include button();
   }
 
-  &__submit {
-    /*spacing*/
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    /*borders*/
-    border-style: none;
-    border-radius: 3px;
-    /*typography*/
-    font-size: 1rem;
-    // font-weight: 900;
-    letter-spacing: .3;
-    /*colors*/
-    color: $color_offWhite;
-    background-color: $color_accentSec;
-    /*transitions*/
-    transition-property: all;
-    transition-duration: 200ms;
-
-
-    &:hover {
-      /*transform*/
-      transform: scale(1.05);
-    }
-
-  }
+  &__submit {}
 
 }
