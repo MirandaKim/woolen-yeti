@@ -47,6 +47,8 @@
 
   # Links
 
+  # Style
+
 */
 
 /**************************************/
@@ -260,6 +262,8 @@ NOTE: the element and container must both have a position for this to work!
   cursor: pointer;
   /*override webkit*/
   -webkit-appearance: none;
+  /*display*/
+  display: inline-block;
   /*spacing*/
   padding-left: 10px;
   padding-right: 10px;
@@ -271,6 +275,7 @@ NOTE: the element and container must both have a position for this to work!
   /*typography*/
   font-size: 1rem;
   letter-spacing: .7;
+  text-decoration: none;
   /*colors*/
   color: $color_offWhite;
   background-color: $color_button;
@@ -285,4 +290,12 @@ NOTE: the element and container must both have a position for this to work!
     transform: scale(1.05);
   }
 
+}
+
+/**************************************/
+/*   # Style                         */
+/************************************/
+
+@mixin dropShadow (){
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
 }

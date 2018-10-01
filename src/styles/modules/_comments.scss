@@ -1,0 +1,12 @@
+.comments {
+  /*display*/
+  display: block;
+  /*position*/
+  position: relative;
+  /*spacing*/
+  padding: 15px;
+  /*colors*/
+  color: $color_neutralDark;
+  /*shadows*/
+  @include dropShadow();
+}
