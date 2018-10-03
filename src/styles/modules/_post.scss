@@ -38,6 +38,7 @@
   position: relative;
   /*spacing*/
   margin-bottom: 40px;
+  margin-top: 40px;
   /*colors*/
   background-color: transparent;
   /*shadows*/
@@ -72,6 +73,17 @@
     font-weight: 100;
     /*colors*/
     color: $color_neutralMed;
+
+    .post--clickable & {
+      /*transitions*/
+      transition-property: color;
+      transition-duration: 500ms;
+    }
+
+    .post--clickable:hover & {
+      /*colors*/
+      color: $color_accentSec;
+    }
   }
 
   /**************************************/

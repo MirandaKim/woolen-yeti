@@ -1,7 +1,14 @@
 <div class="site-body restrict-width" id="main">
   <div class="user-message__wrapper"></div>
   <main>
-    <h1 class="headline headline--medium headline--large--at-small headline--center-align--for-tiny">{{page.title}}</h1>
+    <header>
+      <h1 class="headline headline--medium headline--large--at-small headline--center-align no-bottom-space">
+        {{page.title}}
+      </h1>
+      {% if page.subTitle %}
+      <p class="headline--medium headline--center-align color-med no-top-space">{{page.subTitle}}</p>
+      {% endif %}
+    </header>
     {{content}}
   </main>
 </div>

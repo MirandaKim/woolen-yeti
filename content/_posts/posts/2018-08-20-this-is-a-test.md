@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "This is a test!"
+title:  "What the Fuzz?"
+subTitle: "Tips for Crocheting with Fuzzy Yarn."
 date:   2018-08-20 21:09:34 -0700
 categories:
 tags: testing example

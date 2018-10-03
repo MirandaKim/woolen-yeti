@@ -5,19 +5,19 @@ layout: wrapper
   {% if page.featureImg %}
   <img src="{{ page.featureImg }}" alt="{{ page.featureImgAlt }}" class="post__image image image--center-horiz image--restrict-to-parent image--center-horiz image--shadow-frame">
   {% endif %}
-  <div class="post__content">
+  <div class="post__content wrapper wrapper--more-p-space-bottom">
     {{ content }}
   </div>
   <div class="post__footer post__footer--more-space-top columns columns--not-for-tiny">
     <div class="columns__pillar columns__pillar--8o12">
-      <ul class="list list--horizontal list--remove-webkit-side-space list--no-left-space-on-first list--horizontal--less-space post__tags">
+      <!-- <ul class="list list--horizontal list--remove-webkit-side-space list--no-left-space-on-first list--horizontal--less-space post__tags">
         {% if page.tags %}
           <li class="list__lable">tags:</li>
           {% for tag in page.tags %}
           <li>{{ tag }}</li>
           {% endfor %}
         {% endif %}
-      </ul>
+      </ul> -->
     </div>
     <div class="columns__pillar columns__pillar--4o12 columns__pillar--no-side-margin">
       <div class="post__date">{{page.date | date: "%-d %B %Y" }}</div>

@@ -23,6 +23,18 @@
 .color-dark {
   color: $color_neutralDark;
 }
+.color-med {
+  color: $color_neutralMed;
+}
+
+.no-top-space {
+  padding-top: 0;
+  margin-top: 0;
+}
+.no-bottom-space {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 
 .no-right-spacing {
   padding-right: 0;

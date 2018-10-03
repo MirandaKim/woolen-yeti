@@ -27,6 +27,8 @@
   # Content
     > Hidden Initially
     > Visible
+  # Field
+  # Input
   # Submit
 
 */
@@ -47,6 +49,8 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
   /*spacing*/
   padding-left: 30px;
   padding-right: 30px;
+  /*typography*/
+  line-height: 1.2;
   /*colors*/
   background-color: $color_neutralLight;
 
@@ -198,10 +202,31 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
   }
 
   /**************************************/
+  /*   # Field                         */
+  /************************************/
+
+  // Note: make sure to keep the id in this style to override default
+  &__field,
+  #mc_embed_signup &__field.mc-field-group {
+    padding-bottom: 1rem;
+  }
+
+  /**************************************/
+  /*   # Input                         */
+  /************************************/
+
+  // Note: make sure to keep the id in this style to override default
+  &__input,
+  #mc_embed_signup &__field.mc-field-group &__input[type="text"] {
+    
+  }
+
+  /**************************************/
   /*   # Submit                        */
   /************************************/
 
   // Note: make sure to keep the id in this style to override default
+  &__submit,
   #mc_embed_signup &__submit[type="submit"] {
     @include button();
     margin: 0;

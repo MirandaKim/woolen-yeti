@@ -40,13 +40,16 @@
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
-  /*colors*/
-  color: $color_neutralLight;
   background-color: $color_neutralDark;
   /*typography*/
   font-weight: 100;
   letter-spacing: .6;
   font-size: .9rem;
+
+  p {
+    /*colors*/
+    color: $color_neutralLight;
+  }
 
   /****************
   *  > At Small   *

@@ -4,11 +4,11 @@
   font-weight: 100;
 
   &--medium {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   &--large {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   &--no-top-space {
@@ -22,7 +22,7 @@
 
   @include atSmall {
     &--large--at-small {
-      font-size: 3rem;
+      font-size: 4rem;
     }
   }
 

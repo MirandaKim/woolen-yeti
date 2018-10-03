@@ -46,9 +46,14 @@ body {
 /*   # Text Elements                 */
 /************************************/
 
+p {
+  /*color*/
+  color: $color_neutralDark;
+}
+
 p, dd, li {
   /*typography*/
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 /**************************************/
