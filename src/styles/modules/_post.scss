@@ -81,8 +81,7 @@
       transition-duration: 500ms;
     }
 
-    .has-no-touch .post--clickable:hover &,
-    .has-touch .post--clickable & {
+    .has-no-touch .post--clickable:hover &{
       /*colors*/
       color: $color_accentSec;
     }
