@@ -1,9 +1,15 @@
 .headline {
   /*display*/
   display: block;
+  /*typography*/
+  font-weight: 100;
   /*color*/
   color: $color_neutralDark;
   font-weight: 100;
+
+  &--small {
+    font-size: 2rem;
+  }
 
   &--medium {
     font-size: 2.5rem;
@@ -20,6 +26,10 @@
 
   &--less-bottom-space {
     margin-bottom: 5px;
+  }
+
+  &--color-med {
+    color: $color_neutralMed;
   }
 
   @include atSmall {

@@ -70,7 +70,7 @@
     margin-top: 0;
     margin-bottom: 0;
     /*typography*/
-    font-size: 2.2rem;
+    font-size: 1.7rem;
     font-weight: 100;
     /*colors*/
     color: $color_neutralMed;
@@ -85,6 +85,11 @@
       /*colors*/
       color: $color_accentSec;
     }
+
+    @include atSmall {
+      /*typography*/
+      font-size: 2.2rem;
+    }
   }
   /**************************************/
   /*   # Sub Title                     */
@@ -97,13 +102,16 @@
     margin-bottom: 0;
     margin-top: 0;
     /*typography*/
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 100;
     /*colors*/
     color: $color_neutralDark;
 
     @include atSmall {
+      /*spacing*/
       margin-top: -.75rem;
+      /*typography*/
+      font-size: 1.5rem;
     }
   }
 
