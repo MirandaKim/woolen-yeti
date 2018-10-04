@@ -1,7 +1,7 @@
 ---
 layout: wrapper
 ---
-<article class="post">
+<div class="post">
   {% if page.featureImg %}
   <img src="{{ page.featureImg }}" alt="{{ page.featureImgAlt }}" class="post__image image image--center-horiz image--restrict-to-parent image--center-horiz image--shadow-frame">
   {% endif %}
@@ -23,7 +23,7 @@ layout: wrapper
       <div class="post__date">{{page.date | date: "%-d %B %Y" }}</div>
     </div>
   </div>
-</article>
+</div>
 <aside>
   {% if page.comments %}
   {% include comments.html %}
