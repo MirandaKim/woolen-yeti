@@ -38,11 +38,19 @@
   /*position*/
   position: relative;
   /*spacing*/
-  margin-bottom: 40px;
   margin-top: 40px;
+  margin-bottom: 50px;
   /*colors*/
   background-color: transparent;
-  /*shadows*/
+
+  @include atSmall {
+    /*spacing*/
+    margin-bottom: 80px;
+  }
+
+  &--no-bottom-margin {
+    margin-bottom: 0;
+  }
 
   /**************************************/
   /*   # Clickable                     */
@@ -259,7 +267,7 @@
 
     &--more-space-top {
       /*spacing*/
-      margin-top: 50px;
+      margin-top: 30px;
     }
   }
 
