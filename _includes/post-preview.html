@@ -1,38 +1,18 @@
-<section class="post post--clickable">
-  <h2 class="post__title">{{ post.title }}</h2>
+<div class="post post--clickable">
   <div class="post__content columns">
+    <div class="columns__pillar columns__pillar--fill">
+      <div class="columns__content columns__content--center-vert">
+        <h2 class="post__title headline">{{ post.title }}</h2>
+        <p class="post__title--sub headline">{{ post.subTitle }}</p>
+        <div class="post__date">{{ post.date | date: "%-d %B %Y" }}</div>
+      </div>
+    </div>
     {% if post.thumbnail %}
-    <div class="columns__pillar">
+    <div class="columns__pillar columns__pillar--no-side-margin columns__content--child-no-vert-spacing hide-for-tiny">
       <img src="{{ post.thumbnail }}" alt="{{ post.thumbnailAlt }}" class="post__thumbnail image image--shadow-frame">
-    </div>
-    <div class="columns__pillar">
-      <div class="columns__content columns__content--center-vert columns__content--child-no-vert-spacing">
-        {{ post.excerpt | truncate: 200, "..."}}
-      </div>
-    </div>
-    {% else %}
-    <div class="columns__pillar">
-      <div class="columns__content">
-        {{ post.excerpt | truncate: 200, "..."}}
-      </div>
     </div>
     {% endif %}
   </div>
-  <div class="post__footer columns columns--not-for-tiny">
-    <div class="columns__pillar columns__pillar--8o12">
-      <!-- <ul class="list list--horizontal list--no-left-space-on-first list--horizontal--less-space list--remove-webkit-side-space post__tags">
-        {% if post.tags %}
-          <li class="list__lable">tags:</li>
-          {% for tag in post.tags %}
-          <li>{{ tag }}</li>
-          {% endfor %}
-        {% endif %}
-      </ul> -->
-    </div>
-    <div class="columns__pillar columns__pillar--4o12">
-      <div class="post__date">{{ post.date | date: "%-d %B %Y" }}</div>
-    </div>
-  </div>
   <div class="line line--center-below line--top-space"></div>
   <a href="{{ post.url }}" title="{{ post.title }}: read full post" class="post__link post__link--cover"></a>
-</section>
+</div>

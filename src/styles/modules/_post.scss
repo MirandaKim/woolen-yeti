@@ -15,6 +15,7 @@
 
   # Post
   # Title
+  # Sub Title
   # Link
     > Cover
     > Arrow On Hover
@@ -54,7 +55,7 @@
     transition-property: transform;
     transition-duration: 200ms;
 
-    &:hover {
+    .has-no-touch &:hover {
       /*transform*/
       transform: scale(1.01);
     }
@@ -67,7 +68,7 @@
   &__title {
     /*spacing*/
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     /*typography*/
     font-size: 2.2rem;
     font-weight: 100;
@@ -80,9 +81,30 @@
       transition-duration: 500ms;
     }
 
-    .post--clickable:hover & {
+    .has-no-touch .post--clickable:hover &,
+    .has-touch .post--clickable & {
       /*colors*/
       color: $color_accentSec;
+    }
+  }
+  /**************************************/
+  /*   # Sub Title                     */
+  /************************************/
+
+  &__title--sub {
+    /*display*/
+    display: block;
+    /*spacing*/
+    margin-bottom: 0;
+    margin-top: 0;
+    /*typography*/
+    font-size: 1.5rem;
+    font-weight: 100;
+    /*colors*/
+    color: $color_neutralDark;
+
+    @include atSmall {
+      margin-top: -.75rem;
     }
   }
 
@@ -187,13 +209,11 @@
     display: inline-block;
     /*position*/
     position: relative;
+    top: 50%;
     /*structure*/
     height: 100px;
     width: 100px;
-    /*spacing*/
-    // margin-top: 15px;
-
-    top: 50%;
+    /*transform*/
     transform: translateY(-50%);
 
     @include atSmall {
@@ -201,8 +221,7 @@
       height: 150px;
       width: 150px;
       /*spacing*/
-      margin-right: 15px;
-      // margin-bottom: 15px;
+
       top: 50%;
       transform: translateY(-50%);
     }
@@ -254,10 +273,16 @@
   /************************************/
 
   &__date {
+    /*typography*/
+    letter-spacing: 1.5;
+    font-size: .9rem;
+    /*color*/
+    color: $color_neutralMed;
+
 
     @include atSmall {
       /*typography*/
-      text-align: right;
+      // text-align: right;
     }
   }
 

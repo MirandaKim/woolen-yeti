@@ -1,4 +1,6 @@
 .headline {
+  /*display*/
+  display: block;
   /*color*/
   color: $color_neutralDark;
   font-weight: 100;
@@ -31,6 +33,10 @@
   }
 
   @include forTiny {
+    // &--reduce-line-height--for-tiny {
+      line-height: 1.2;
+    // }
+
     &--center-align--for-tiny {
         text-align: center;
     }
