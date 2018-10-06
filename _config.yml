@@ -35,7 +35,7 @@ defaults:
     values:
       layout: "default"
       author: "Miranda Hoover"
-      popupSignup: true
+      popupSignup: false
       blockSignup: true
   -
     scope:

@@ -23,8 +23,6 @@
 /************************************/
 
 .line {
-  /*display*/
-  display: block;
   /*position*/
   z-index: -1;
   position: relative;
@@ -40,6 +38,11 @@
 
   &--absolute {
     position: absolute;
+  }
+
+  &--bottom {
+    position: absolute;
+    bottom: 0;
   }
 
   &--center-below {

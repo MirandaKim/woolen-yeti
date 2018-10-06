@@ -1,7 +1,7 @@
 <nav class="main-nav">
-  <ul class="main-nav__links list--links list--horizontal-at-small list--links--no-underline">
+  <ul class="main-nav__links list--links list--horizontal-at-small--space-adjusting list--links--no-underline">
     <li>
-      {% include main-nav-link.html pgName='about' classStr='' pgLabel='about' %}
+      {% include main-nav-link.html pgName='' classStr='' pgLabel='home' %}
     </li>
     <li>
       {% include main-nav-link.html pgName='posts' classStr='' pgLabel='posts' %}
@@ -10,8 +10,14 @@
       {% include main-nav-link.html pgName='patterns' classStr='' pgLabel='patterns' %}
     </li>
     <li>
+      {% include main-nav-link.html pgName='techniques' classStr='' pgLabel='techniques' %}
+    </li>
+    <li>
+      {% include main-nav-link.html pgName='about' classStr='' pgLabel='about' %}
+    </li>
+    <li>
       {% include main-nav-link.html pgName='contact' classStr='' pgLabel='contact' %}
     </li>
   </ul>
-  <div class="main-nav__social-links hide-at-small">{% include social.html classStr="list--horizontal list--horizontal--less-space" %}</div>
+  <!-- <div class="main-nav__social-links hide-at-small">{% include social.html classStr="list--horizontal list--horizontal--less-space" %}</div> -->
 </nav>

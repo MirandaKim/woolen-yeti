@@ -17,6 +17,7 @@
   *************
 
   # Main Nav
+    > At Small
   # Links
     > Active
     > For Landscape
@@ -36,7 +37,15 @@
   /*structure*/
   width: 100%;
   height: auto;
-  /*spacing*/
+
+  /*****************
+  *   > At Small   *
+  *****************/
+
+  @include atSmall {
+    /*typography*/
+    text-align: center;
+  }
 
   /**************************************/
   /*   # Links                         */
@@ -87,19 +96,23 @@
         /*position*/
         z-index: -1;
         position: absolute;
-        bottom: -10px;
-        left: 0;
+        bottom: -5px;
+        left: 50%;
         /*structure*/
-        height: 2px;
-        width: 100%;
+        height: 8px;
+        width: 8px;
+
+        transform: translateX(-50%);
+        /*borders*/
+        border-radius: 50%;
         /*colors*/
         background-color: $color_accentMain;
       }
     }
 
-    /**************
+    /***************
     *   > Active   *
-    **************/
+    ***************/
 
     & .active {
       /*typography*/
@@ -126,6 +139,7 @@
     **********************/
 
     @include forLandscape {
+
       a {
         font-size: 1.1rem;
         padding-left: 10px;
@@ -183,5 +197,9 @@
   &__social-links {
     margin-top: 30px;
     text-align: center;
+
+    @include forLandscape {
+      margin-top: 10px;
+    }
   }
 }

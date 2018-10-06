@@ -43,7 +43,7 @@
 /*   # Site Header                   */
 /************************************/
 
-$sh_sticky-transition-time: 1000ms;
+$sh_sticky-transition-time: 500ms;
 
 /**************************************/
 /*   # Site Header                   */
@@ -52,10 +52,12 @@ $sh_sticky-transition-time: 1000ms;
 .site-header {
   /*position*/
   z-index: 500;
-  position: fixed;
+  position: relative;
   top: 0;
   /*structure*/
   width: 100%;
+  /*spacing*/
+  margin-top: 50px;
   /*colors*/
   background-color: rgba($color_offWhite, .8);
   /*transition*/
@@ -67,8 +69,6 @@ $sh_sticky-transition-time: 1000ms;
   ****************/
 
   &.sticky {
-    /*fancy*/
-    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
     /*colors*/
     background-color: rgba($color_offWhite, .98);
   }
@@ -78,8 +78,9 @@ $sh_sticky-transition-time: 1000ms;
   *   > At Small   *
   *****************/
   @include atSmall{
-    /*position*/
-    // position: relative;
+    /*spacing*/
+    margin-top: 5rem;
+    margin-bottom: 7rem;
   }
 
 
@@ -126,45 +127,20 @@ $sh_sticky-transition-time: 1000ms;
     /*structure*/
     width: 150px;
     /*spacing*/
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 0;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
-    /*transform*/
-    // transform: translateX(-50%);
-    /*transition*/
-    transition-property: all;
-    transition-duration: $sh_sticky-transition-time;
-
-
 
     /******************
     *   > At Small   *
     ******************/
 
     @include atSmall {
-      /*display*/
-      display: inline-block;
       /*position*/
       left: 0;
-      /*transform*/
-      transform: translateX(0);
       /*structure*/
       width: 200px;
-      /*spacing*/
-      margin-left: 50px;
-
-      /***************
-      *   > Sticky   *
-      ****************/
-
-      .site-header.sticky & {
-        /*structure*/
-        width: 110px;
-        /*spacing*/
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
 
     }
 
@@ -228,18 +204,21 @@ $sh_sticky-transition-time: 1000ms;
     *****************/
     @include atSmall{
       /*display*/
-      display: inline-block;
+      display: block;
       /*position*/
-      position: relative;
-      float: right;
+      position: absolute;
+      top: auto;
       /*structure*/
       height: auto;
-      width: auto;
+      width: 100vw;
       max-width: unset;
       /*spacing*/
-      padding-top: 0;
-      margin-top: 40px;
-      margin-bottom: 20px;
+      padding-top: 10px;
+      padding-bottom: 2px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
       /*colors*/
       background-color: transparent;
       /*shadows*/
@@ -249,9 +228,16 @@ $sh_sticky-transition-time: 1000ms;
       *   > Sticky   *
       ****************/
       .site-header.sticky & {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding-top: 0;
+        /*position*/
+        position: fixed;
+        top: 0;
+        /*spacing*/
+        padding-top: 2px;
+        padding-bottom: 2px;
+        /*colors*/
+        background-color: rgba($color_offWhite, .97);
+        /*shadow*/
+        box-shadow: 0 0 6px rgba(0, 0, 0, .1);
       }
     }
 
@@ -282,12 +268,37 @@ $sh_sticky-transition-time: 1000ms;
   &__menu-icon-wrapper {
     /*position*/
     z-index: 30;
-    position: absolute;
-    top: 10px;
+    position: fixed;
+    top: 8px;
     right: 15px;
     /*structure*/
     height: auto;
     width: auto;
+
+    &::after {
+      content: "";
+      /*position*/
+      z-index: -1;
+      position: fixed;
+      top: 5px;
+      // left: 0;
+      right: 8px;
+      /*structure*/
+      height: 30px;
+      width: 40px;
+
+      border-radius: 5px;
+      /*colors*/
+      background-color: rgba($color_offWhite, .7);
+      // background-color: rgba($color_neutralDark, .9);
+      /*transitions*/
+      // transition-duration: 500ms;
+      // transition-property: all;
+    }
+
+    .menu-visible &::after {
+      background-color: transparent;
+    }
 
     /******************
     *   > Has No JS   *

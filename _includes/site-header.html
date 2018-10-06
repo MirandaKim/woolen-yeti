@@ -1,6 +1,5 @@
 <header class="site-header make-sticky">
-  <div class="site-header__sticky-trigger trigger-sticky"></div>
-  <!-- <div class="image image--watercolor site-header__splash"></div> -->
+
   <div class="site-header__logo-wrapper">
     {% include logo.html %}
     <a href="/" class="site-header__logo-link"></a>
@@ -8,7 +7,8 @@
   <a class="skip-to-content" href="#main">Skip to main content</a>
   <div class="site-header__menu-icon-wrapper hide-at-small">{% include menu-icon.html %}</div>
   <div class="site-header__menu-wrapper">
+    <div class="site-header__sticky-trigger trigger-sticky"></div>
+    <div class="line line--bottom"></div>
     {% include main-nav.html %}
   </div>
-  <div class="site-header__search-wrapper">{% include search.html %}</div>
 </header>
