@@ -65,11 +65,11 @@ defaults:
 
   -
     scope:
-      path: "_posts/videos"
+      path: "content/_posts/techniques"
     values:
-      tags: video
-      categories: videos
-      permalink: videos/:title/
+      tags: techniques
+      categories: techniques
+      permalink: techniques/:title/
 
 
 ##########################
