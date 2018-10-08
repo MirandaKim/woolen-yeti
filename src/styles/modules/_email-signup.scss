@@ -24,7 +24,11 @@
     > At Small
     > Title
     > Icon
+    > Icon - Has No JS
+    > Icon - At Small
+    > Icon - On Hover
   # Content
+    > Has No JS
     > Hidden Initially
     > Visible
   # Field
@@ -143,6 +147,18 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
     transition-duration: 200ms;
     transition-property: transform;
 
+    /*************************
+    *   > Icon - Has No JS   *
+    *************************/
+
+    .has-no-js &{
+      display: none;
+    }
+
+    /************************
+    *   > Icon - At Small   *
+    ************************/
+
     @include atSmall {
       /*position*/
       position: relative;
@@ -153,6 +169,10 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
       /*transform*/
       transform: scale(.8);
     }
+
+    /************************
+    *   > Icon - On Hover   *
+    ************************/
 
     .has-no-touch .email-signup__toggle:hover & {
       /*transform*/
@@ -169,6 +189,26 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
     position: relative;
     /*structure*/
     height: auto;
+
+    /******************
+    *   > Has No JS   *
+    ******************/
+
+    .has-no-js &,
+    .has-no-js .email-signup--hidden-initially &{
+      max-height: unset;
+      opacity: 1;
+    }
+
+    .has-no-js & *{
+      display: none;
+    }
+
+    .has-no-js &:before {
+      content: "You must enable Javascript on your device or browser to subscribe to the newsletter.";
+      display: block;
+      margin-bottom: 15px;
+    }
 
     /*************************
     *   > Hidden Initially   *
@@ -218,7 +258,7 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
   // Note: make sure to keep the id in this style to override default
   &__input,
   #mc_embed_signup &__field.mc-field-group &__input[type="text"] {
-    
+
   }
 
   /**************************************/
