@@ -81,7 +81,7 @@ checkHasTouch.detect(); // the watch event is unbound once a touch event is fire
 let body_visibleMenuClassStr = 'menu-visible';
 let mainNav_visibleClassStr = `${mainNav_block}--visible`;
 let mainNav_toggleSelectors = [`.main-nav-toggle`];
-let mainNav_closeSelectors = [`${mainNav_selector}__links`, 'article', '.logo'];
+let mainNav_closeSelectors = [`${mainNav_selector}__links`, '.site-body', '.site-footer'];
 let mainNav_openSelectors = [];
 
 let navDisplay = new NavDisplay(mainNav_selector, mainNav_visibleClassStr, body_visibleMenuClassStr);
