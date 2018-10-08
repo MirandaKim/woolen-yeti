@@ -63,7 +63,17 @@
 
   &--shadow-frame {
     /*borders*/
-    border-width: 5px;
+    border-width: 8px;
+    border-style: solid;
+    /*colors*/
+    border-color: $color_offWhite;
+    /*shadows*/
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+  }
+
+  &--shadow-frame--thin {
+    /*borders*/
+    border-width: 3px;
     border-style: solid;
     /*colors*/
     border-color: $color_offWhite;

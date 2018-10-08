@@ -32,6 +32,10 @@
     @include button();
   }
 
+  &--button--slim {
+    @include button(2px, 8px);
+  }
+
   /**************
   *  > Inline   *
   **************/
