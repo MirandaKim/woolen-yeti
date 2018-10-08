@@ -91,8 +91,14 @@ $sh_sticky-transition-time: 500ms;
 
   &__sticky-trigger {
     /*position*/
-    position: absolute;
-    top: 15px;
+    position: relative;
+    // top: -2px;
+    top: 0;
+
+
+    // width: 100vw;
+    // height: 1px;
+    // background-color: red;
   }
 
   /**************************************/
@@ -141,10 +147,9 @@ $sh_sticky-transition-time: 500ms;
       left: 0;
       /*structure*/
       width: 200px;
-
+      /*spacing*/
+      margin-bottom: 90px;
     }
-
-
   }
 
 
@@ -185,6 +190,9 @@ $sh_sticky-transition-time: 500ms;
     transition-property: all;
     transition-duration: $sh_sticky-transition-time;
 
+    /*****************
+    *   > For Tiny   *
+    *****************/
 
     @include forTiny {
       /*transform*/
@@ -197,7 +205,6 @@ $sh_sticky-transition-time: 500ms;
         box-shadow: 0 0 10px rgba(0, 0, 0, .2);
       }
     }
-
 
     /*****************
     *   > At Small   *
@@ -213,7 +220,7 @@ $sh_sticky-transition-time: 500ms;
       width: 100vw;
       max-width: unset;
       /*spacing*/
-      // padding-top: 10px;
+      padding-top: 0;
       padding-bottom: 2px;
       margin-top: 0;
       margin-bottom: 0;
