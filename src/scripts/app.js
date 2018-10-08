@@ -49,8 +49,8 @@ import UserMessage from './modules/UserMessage.class';
   a device may not be able to reach that element if js is
   not enabled.)
 */
-document.body.classList.remove('has-no-js');
-document.body.classList.add('has-js');
+// document.body.classList.remove('has-no-js');
+// document.body.classList.add('has-js');
 
 /**************************************/
 /*   # Common Vars                   */

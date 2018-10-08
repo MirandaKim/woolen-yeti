@@ -213,7 +213,7 @@ $sh_sticky-transition-time: 500ms;
       width: 100vw;
       max-width: unset;
       /*spacing*/
-      padding-top: 10px;
+      // padding-top: 10px;
       padding-bottom: 2px;
       margin-top: 0;
       margin-bottom: 0;
@@ -245,18 +245,84 @@ $sh_sticky-transition-time: 500ms;
     *   > Has No JS   *
     ******************/
 
-    .has-no-js & {
-      /*position*/
-      position: relative;
-      margin-left: auto;
-      margin-right: auto;
-      padding-top: 0;
-      /*structure*/
-      height: auto;
-      /*transform*/
-      transform: translateX(0);
-      /*shadows*/
-      box-shadow: unset;
+    /*
+    animation: delay the display of the menu.
+    This if specificly for tiny screens with no js.
+    This keeps the menu form displaying or messing with the spacing
+    of elements until the code switches to has-js.
+    If it doesn't go to has-js and stays as has-no-js,
+    this animation will display the menu with minimal disruption.
+    */
+    @keyframes delayRelitiveMenuDisplay {
+      from {
+        /*position*/
+        position: relative;
+        /*height*/
+        max-height: 0;
+        /*colors*/
+        opacity: 0;
+        /*transform*/
+        transform: translateX(0);
+      }
+      to {
+        /*position*/
+        position: relative;
+        /*structure*/
+        max-height: 100vh;
+        /*colors*/
+        opacity: 1;
+        /*transform*/
+        transform: translateX(0);
+      }
+    }
+
+    @include forTiny {
+
+      .has-no-js & {
+        /*display*/
+        display: block;
+        /*position*/
+        position: absolute;
+        /*structure*/
+        height: auto;
+        width: 100vw;
+        /*spacing*/
+        padding: 0;
+        margin-top: -30px;
+        margin-bottom: -78px;
+        // margin-top: -1.8rem;
+        // margin-bottom: -5rem;
+        /*overflow*/
+        overflow: hidden;
+        /*transform*/
+        transform: translateX(100%);
+        /*colors*/
+        background-color: transparent;
+        /*animation*/
+        animation-name: delayRelitiveMenuDisplay;
+        animation-duration: 1s;
+        animation-delay: 500ms;
+        animation-fill-mode: forwards;
+
+      }
+
+      .has-no-js & li {
+        /*display*/
+        display: inline-block;
+      }
+
+      .has-no-js & a {
+        /*display*/
+        display: inline-block;
+        /*structure*/
+        width: auto;
+        /*spacing*/
+        padding-top: 2px;
+        padding-bottom: 2px;
+        /*typography*/
+        font-size: .9rem;
+
+      }
     }
 
   }
@@ -274,6 +340,12 @@ $sh_sticky-transition-time: 500ms;
     /*structure*/
     height: auto;
     width: auto;
+    /*colors*/
+    opacity: 1;
+    transform: tanslateX(0);
+    /*transitions*/
+    transition-property: all;
+    transition-duration: 1000ms;
 
     &::after {
       content: "";
@@ -305,7 +377,8 @@ $sh_sticky-transition-time: 500ms;
     ******************/
 
     .has-no-js & {
-      display: none;
+      transform: translateX(60px);
+      opacity: 0;
     }
   }
 
