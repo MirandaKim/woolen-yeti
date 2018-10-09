@@ -13,12 +13,60 @@
   * Contents: *
   *************
 
+  # Mixins
+  # Wrapper
   # Image
   # Size
   # Style
   # Background
 
 */
+
+/**************************************/
+/*   # Mixins                        */
+/************************************/
+
+@mixin shadowFrame($borderWidth:8px){
+  /*borders*/
+  border-width: $borderWidth;
+  border-style: solid;
+  /*colors*/
+  border-color: $color_offWhite;
+  /*shadows*/
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+}
+
+/**************************************/
+/*   # Wrapper                       */
+/************************************/
+
+.image__wrapper {
+
+  overflow: hidden;
+
+  &--hero {
+    /*display*/
+    display: block;
+    /*position*/
+    position: relative;
+    /*structure*/
+    max-height: 400px;
+    width: 94vw;
+    // min-width: 600px;
+    max-width: 1200px;
+    /*spacing*/
+    margin-top: -20px;
+    // margin-left: -25px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $color_neutralMed;
+  }
+
+  &--shadow-frame {
+    @include shadowFrame();
+  }
+
+}
 
 /**************************************/
 /*   # Image                         */
@@ -62,23 +110,15 @@
   /************************************/
 
   &--shadow-frame {
-    /*borders*/
-    border-width: 8px;
-    border-style: solid;
-    /*colors*/
-    border-color: $color_offWhite;
-    /*shadows*/
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+    @include shadowFrame();
   }
 
   &--shadow-frame--thin {
-    /*borders*/
-    border-width: 3px;
-    border-style: solid;
-    /*colors*/
-    border-color: $color_offWhite;
-    /*shadows*/
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+    @include shadowFrame(3px);
+  }
+
+  &--circle {
+    border-radius: 50%;
   }
 
   /**************************************/

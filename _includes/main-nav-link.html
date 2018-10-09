@@ -1,3 +1,4 @@
 {% assign current = page.url | downcast | split: '/' %}
-<a href="/{{ include.pgName }}"
-  class="{{ include.classStr }}{% if current[1] == include.pgName %} active{% endif %}">{{ include.pgLabel }}</a>
+{% assign home = current[1] == && include.pageHref == %}
+<a href="/{{ include.pgHref }}"
+  class="{{ include.classStr }}{% if current[1] == include.pgHref || home %} active{% endif %}">{{ include.pgLabel }}</a>

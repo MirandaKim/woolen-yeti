@@ -14,6 +14,7 @@
   # Link
     > Button
     > Inline
+    > Fill
 
 */
 
@@ -42,6 +43,37 @@
 
   &--inline {
     @include inlineLink();
+  }
+
+  /************
+  *  > Fill   *
+  ************/
+
+  &--fill-text-below {
+    /*display*/
+    display: block;
+    /*position*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*structure*/
+    height: 100%;
+    width: 100%;
+    /*spacing*/
+    padding-top: 105%;
+    /*typography*/
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1.5;
+    font-weight: 700;
+    /*colors*/
+    color: $color_button;
+
+    .has-no-touch &:hover {
+      color: $color_button_hover;
+    }
+
   }
 
 }

@@ -33,10 +33,12 @@ defaults:
     scope:
       path: ""
     values:
-      layout: "default"
+      layout: "wrapper"
       author: "Miranda Hoover"
       popupSignup: false
       blockSignup: true
+      includeTitle: true
+      restrictWidth: true
   -
     scope:
       path: "content/_posts"

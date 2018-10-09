@@ -1,8 +1,32 @@
 .wrapper {
 
-
+  position: relative;
 
   &--more-p-space-bottom p {
     margin-bottom: 50px;
   }
+
+  &--center-horiz {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--bottom-margin {
+      margin-bottom: 60px;
+  }
+
+  &--bottom-margin--more {
+      margin-bottom: 100px;
+  }
+
+  &--shift-up {
+    margin-top: -50px;
+  }
+
+  &--center-vert {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
 }

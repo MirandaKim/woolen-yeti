@@ -45,3 +45,21 @@
   padding-top: 0;
   margin-top: -1rem;
 }
+
+.restrict-width {
+  /*structure*/
+  max-width: $structure_restricted_width;
+}
+
+
+.scale-on-hover {
+  transition-property: transform;
+  transition-duration: 300ms;
+  .has-no-touch &:hover{
+    transform: scale(1.02);
+  }
+}
+
+.circle {
+  border-radius: 50%;
+}

@@ -1,8 +1,6 @@
 .site-body {
   /*position*/
   position: relative;
-  /*structure*/
-  max-width: $structure_restricted_width;
   /*spacing*/
   margin-top: 60px;
   margin-left: auto;
@@ -20,56 +18,33 @@
     margin-bottom: 100px;
   }
 
-
-
   /**************************************/
-  /*   # Logo Wrapper                  */
+  /*   # Header                        */
   /************************************/
 
-  &__logo-wrapper {
+  &__header {
     /*position*/
-    // position: relative;
-    position: relative;
-    left: 50%;
-    top: 0;
+    z-index: 10;
     /*structure*/
-    width: 200px;
-    /*spacing*/
-    margin-top: 30px;
-    margin-bottom: 50px;
-    /*transform*/
-    transform: translateX(-50%);
-    /*transition*/
-    transition-property: all;
-    transition-duration: $sh_sticky-transition-time;
+    width: 100%;
 
-    /******************
-    *   > At Small   *
-    ******************/
-
-    @include atSmall {
-      /*structure*/
-      width: 250px;
-
-      /***************
-      *   > Sticky   *
-      ****************/
-
-      .--sticky & {
-        /*structure*/
-        width: 150px;
-        /*spacing*/
-        margin-top: 10px;
-        margin-bottom: 10px;
-        // top: 70px;
-        // left: 10%;
-      }
-
+    &--bkgd-screen {
+      background-color: rgba($color_offWhite, .15);
     }
+
+    &--bkgd-screen--dark {
+      background-color: rgba($color_offBlack, .15);
+    }
+  }
+
+  /**************************************/
+  /*   # Title                         */
+  /************************************/
+
+  &__title {
 
 
   }
-
 
   /**************************************/
   /*   # Logo Link                     */

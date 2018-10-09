@@ -18,6 +18,8 @@ design/
 working/
 .test/
 .trashed/
+src/images/ignore
+assets/images/ignore
 
 # OS or Editor folders
 .DS_Store

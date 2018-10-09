@@ -33,7 +33,7 @@ require('./scripts.task');
 /************************************/
 
 let htmlWatchFiles = [
-  './index.md',
+  './index.html',
   './_includes/**/*.html',
   './_layouts/**/*.html',
   './content/**/*.html'

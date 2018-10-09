@@ -51,4 +51,12 @@
         text-align: center;
     }
   }
+
+  &--light {
+    color: $color_offWhite;
+  }
+
+  &--shadow {
+    text-shadow: 0 0 15px rgba(0, 0, 0, .8);
+  }
 }

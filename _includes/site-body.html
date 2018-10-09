@@ -1,7 +1,8 @@
-<div class="site-body restrict-width" id="main">
+<div class="site-body{% if include.restrictWidth %} restrict-width{% endif %}" id="main">
     <div class="line hide-at-small"></div>
   <div class="user-message__wrapper"></div>
   <main>
+    {% if include.includeTitles %}
     <header>
       <h1 class="headline headline--medium headline--large--at-small headline--center-align">
         {{page.title}}
@@ -10,6 +11,7 @@
       <p class="headline headline--small headline--center-align headline--color-med negative-top-space">{{page.subTitle}}</p>
       {% endif %}
     </header>
+    {% endif %}
     {{content}}
   </main>
 </div>
