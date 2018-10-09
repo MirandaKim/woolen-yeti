@@ -63,7 +63,7 @@
     transition-property: transform;
     transition-duration: 200ms;
 
-    .has-no-touch &:hover {
+    &:hover {
       /*transform*/
       transform: scale(1.01);
     }
