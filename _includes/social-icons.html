@@ -1,0 +1,42 @@
+{% assign emailIcon = "/assets/images/icons/icon_email-black-50px.png" %}
+{% assign etsyIcon = "/assets/images/icons/icon_etsy-black-50px.png" %}
+{% assign instagramIcon = "/assets/images/icons/icon_instagram-black-50px.png" %}
+{% assign ravelryIcon = "/assets/images/icons/icon_ravelry-black-50px.png" %}
+{% assign rssIcon = "/assets/images/icons/icon_rss-black-50px.png" %}
+
+{% if include.direction == 'horizontal' %}
+  {% assign youtubeIcon = "/assets/images/icons/icon_youtube-black-70px.png" %}
+{% else %}
+  {% assign youtubeIcon = "/assets/images/icons/icon_youtube-black-50px.png" %}
+{% endif %}
+
+{% if include.color == 'white' %}
+  {% assign emailIcon = "/assets/images/icons/icon_email-white-50px.png" %}
+  {% assign etsyIcon = "/assets/images/icons/icon_etsy-white-50px.png" %}
+  {% assign instagramIcon = "/assets/images/icons/icon_instagram-white-50px.png" %}
+  {% assign ravelryIcon = "/assets/images/icons/icon_ravelry-white-50px.png" %}
+  {% assign rssIcon = "/assets/images/icons/icon_rss-white-50px.png" %}
+  {% if include.direction == 'horizontal' %}
+    {% assign youtubeIcon = "/assets/images/icons/icon_youtube-white-70px.png" %}
+  {% else %}
+    {% assign youtubeIcon = "/assets/images/icons/icon_youtube-white-50px.png" %}
+  {% endif %}
+{% endif %}
+
+<ul class="social-icons{% if include.direction == 'horizontal' %} social-icons--horizontal{% endif %} list list--icons list--no-bullets list--full-links list--remove-webkit-side-space {{include.classStr}}">
+  <li class="social-icons__icon-wrapper">
+    {% include social-icon.html linkHref="https://www.instagram.com/wools_end/" linkTitle="Instagram: see Wool's End images" linkLabel="Instagram" linkImage=instagramIcon %}
+  </li>
+  <li class="social-icons__icon-wrapper">
+      {% include social-icon.html linkHref="https://www.etsy.com/" linkTitle="Etsy: checkout my etsy shop--when I actually have one..." linkLabel="Etsy" linkImage=etsyIcon %}
+  </li>
+  <li class="social-icons__icon-wrapper">
+    {% include social-icon.html linkHref="https://www.youtube.com/" linkTitle="YouTube: go to the XXX YouTube channel" linkLabel="YouTube" linkImage=youtubeIcon %}
+  </li>
+  <li class="social-icons__icon-wrapper">
+    {% include social-icon.html linkHref="https://www.ravelry.com/people/Mirananemone" linkTitle="Ravelry: go to my Ravelry account page" linkLabel="Ravelry" linkImage=ravelryIcon %}
+  </li>
+  <li class="social-icons__icon-wrapper">
+    {% include social-icon.html linkHref="/feed.xml" linkTitle="Subscribe via RSS" linkLabel="RSS" linkImage=rssIcon %}
+  </li>
+</ul>
