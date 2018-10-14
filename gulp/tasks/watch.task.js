@@ -34,6 +34,7 @@ require('./scripts.task');
 
 let htmlWatchFiles = [
   './index.html',
+  './404.html',
   './_includes/**/*.html',
   './_layouts/**/*.html',
   './content/**/*.html'

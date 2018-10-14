@@ -13,6 +13,9 @@
 .right-align {
   text-align: right;
 }
+.center-align {
+  text-align: center;
+}
 
 .right-align--at-small {
   @include atSmall {
