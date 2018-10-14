@@ -1,4 +1,22 @@
+<!--
+Create main navigation link
+Logic checks if link should have active class (if page url matches the current url).
+There is additional logic for the home page/link to check that both are empty.
+-->
+<!-- get current url -->
 {% assign current = page.url | downcast | split: '/' %}
-{% assign home = current[1] == && include.pageHref == %}
+<!-- set active to false initial -->
+{% assign active = false %}
+<!-- if current url matches the page url, make active (this will not work for empty urls)-->
+{% if current[1] == include.pgHref %}
+  {% assign active = true %}
+{% endif %}
+<!-- check for home page/link (empty) -->
+{% if include.pgHref == ''%}
+  {% if current[1] == %}
+    {% assign active = true %}
+  {% endif %}
+{% endif %}
+
 <a href="/{{ include.pgHref }}"
-  class="{{ include.classStr }}{% if current[1] == include.pgHref || home %} active{% endif %}">{{ include.pgLabel }}</a>
+  class="{{ include.classStr }}{% if active == true %} active{% endif %}">{{ include.pgLabel }}</a>
