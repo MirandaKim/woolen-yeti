@@ -38,4 +38,10 @@
     transform: translateY(-50%);
   }
 
+
+    &--narrow-for-tiny {
+      @include forTiny {
+        max-width: 250px;
+      }
+    }
 }
