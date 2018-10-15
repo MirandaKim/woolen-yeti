@@ -6,52 +6,58 @@ includeTitle: false
 restrictWidth: false
 ---
 
-<div class="wrapper wrapper--shift-up wrapper--bottom-margin">
-  <div class="image__wrapper image__wrapper--hero image--shadow-frame">
-    {% include image.html src="https://images.unsplash.com/photo-1448321052373-c722eeb4c64e?ixlib=rb-0.3.5&s=63f77e1088a55895658d2d67f5592659&auto=format&fit=crop&w=1400&q=80" lazy=false classStr="image--fit-to-width" %}
-    <!-- <img class="image image--fit-to-width" src="https://images.unsplash.com/photo-1448321052373-c722eeb4c64e?ixlib=rb-0.3.5&s=63f77e1088a55895658d2d67f5592659&auto=format&fit=crop&w=1400&q=80" alt=""> -->
-    <!-- <img class="image image--fit-to-width" src="/assets/images/ignore/IMG_E0377-hero.jpeg"> -->
-  </div>
-  <header class="site-body__header wrapper wrapper--center-vert">
-    <h1 class="headline headline--light headline--shadow headline--medium headline--large--at-small headline--center-align headline--less-bottom-space site-body__title">{{page.title}}</h1>
-    <p class="headline headline--light headline--center-align headline--shadow headline--no-top-space headline--small">{{ page.subTitle }}</p>
-  </header>
-</div>
-<div class="wrapper wrapper--center-horiz wrapper--bottom-margin restrict-width">
-  <div class="wrapper wrapper--bottom-margin">
-    <h2 class="headline headline--center-align">Hello!</h2>
+<article>
+  <section class="wrapper wrapper--shift-up wrapper--bottom-margin">
+    <div class="image__wrapper image__wrapper--hero image--shadow-frame">
+      {% include image.html src="https://images.unsplash.com/photo-1448321052373-c722eeb4c64e?ixlib=rb-0.3.5&s=63f77e1088a55895658d2d67f5592659&auto=format&fit=crop&w=1400&q=80" lazy=false classStr="image--fit-to-width" %}
+      <!-- <img class="image image--fit-to-width" src="https://images.unsplash.com/photo-1448321052373-c722eeb4c64e?ixlib=rb-0.3.5&s=63f77e1088a55895658d2d67f5592659&auto=format&fit=crop&w=1400&q=80" alt=""> -->
+      <!-- <img class="image image--fit-to-width" src="/assets/images/ignore/IMG_E0377-hero.jpeg"> -->
+    </div>
+    <header class="site-body__header wrapper wrapper--center-vert">
+      <h1 class="headline headline--light headline--shadow headline--medium headline--large--at-small headline--center-align headline--less-bottom-space site-body__title">{{page.title}}</h1>
+      <p class="headline headline--light headline--center-align headline--shadow headline--no-top-space headline--small">{{ page.subTitle }}</p>
+    </header>
+  </section>
+  <section class="wrapper wrapper--center-horiz wrapper--bottom-margin restrict-width">
+    <div class="wrapper wrapper--bottom-margin">
+      <h2 class="headline headline--center-align">Hello!</h2>
+      <p>
+        Praesent a sapien iaculis, consectetur nunc eu, varius erat. Aliquam vestibulum mi odio, eget pharetra felis pretium a. Nunc consectetur tellus nec erat feugiat, sit amet finibus sem tempus. Nunc sagittis ultricies metus ac gravida. Duis ultricies odio
+        vitae urna mattis pulvinar.
+      </p>
+    </div>
+  </section>
+  <section class="wrapper wrapper--center-horiz wrapper--bottom-margin restrict-width">
+      <div class="columns columns--not-for-tiny wrapper wrapper--bottom-margin--more wrapper--center-horiz wrapper--narrow-for-tiny">
+        <div class="columns__pillar columns__pillar--4o12 columns__pillar--full-padding--lots">
+          <div class="wrapper scale-on-hover site-body__feature-link-wrapper">
+            <!-- <img class="image "  alt=""> -->
+            {% include image.html src="assets/images/thumbnails/fox-lovey-00-300px.jpg" width="300px" classStr="image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" %}
+            <a class="link link--fill-text-below site-body__feature-link" href="/patterns">Patterns</a>
+          </div>
+        </div>
+        <div class="columns__pillar columns__pillar--4o12 columns__pillar--full-padding--lots">
+          <div class="wrapper scale-on-hover site-body__feature-link-wrapper">
+            <!-- <img class="image image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" src="assets/images/thumbnails/fox-lovey-00-300px.jpg" alt=""> -->
+            {% include image.html src="assets/images/thumbnails/fox-lovey-00-300px.jpg" width="300px" classStr="image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" %}
+            <a class="link link--fill-text-below site-body__feature-link" href="/posts">Posts</a>
+        </div>
+        </div>
+        <div class="columns__pillar columns__pillar--4o12 columns__pillar--full-padding--lots columns__pillar--no-side-margin">
+          <div class="wrapper scale-on-hover site-body__feature-link-wrapper">
+            <!-- <img class="image image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" src="assets/images/thumbnails/fox-lovey-00-300px.jpg" alt=""> -->
+            {% include image.html src="assets/images/thumbnails/fox-lovey-00-300px.jpg" width="300px" classStr="image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" %}
+            <a class="link link--fill-text-below site-body__feature-link" href="/techniques">Techniques</a>
+          </div>
+        </div>
+      </div>
+  </section>
+  <div class="line"></div>
+  <section class="wrapper wrapper--center-horiz wrapper--bottom-margin restrict-width">
+    <h2 class="headline headline--center-align">Something</h2>
     <p>
       Praesent a sapien iaculis, consectetur nunc eu, varius erat. Aliquam vestibulum mi odio, eget pharetra felis pretium a. Nunc consectetur tellus nec erat feugiat, sit amet finibus sem tempus. Nunc sagittis ultricies metus ac gravida. Duis ultricies odio
-      vitae urna mattis pulvinar.
+      vitae urna mattis pulvinar. Curabitur consequat velit sit amet velit porttitor aliquam. Quisque eget iaculis lacus.
     </p>
-  </div>
-  <div class="columns columns--not-for-tiny wrapper wrapper--bottom-margin--more wrapper--center-horiz wrapper--narrow-for-tiny">
-    <div class="columns__pillar columns__pillar--4o12 columns__pillar--full-padding--lots">
-      <div class="wrapper scale-on-hover site-body__feature-link-wrapper">
-        <!-- <img class="image "  alt=""> -->
-        {% include image.html src="assets/images/thumbnails/fox-lovey-00-300px.jpg" width="300px" classStr="image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" %}
-        <a class="link link--fill-text-below site-body__feature-link" href="/patterns">Patterns</a>
-      </div>
-    </div>
-    <div class="columns__pillar columns__pillar--4o12 columns__pillar--full-padding--lots">
-      <div class="wrapper scale-on-hover site-body__feature-link-wrapper">
-        <!-- <img class="image image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" src="assets/images/thumbnails/fox-lovey-00-300px.jpg" alt=""> -->
-        {% include image.html src="assets/images/thumbnails/fox-lovey-00-300px.jpg" width="300px" classStr="image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" %}
-        <a class="link link--fill-text-below site-body__feature-link" href="/posts">Posts</a>
-    </div>
-    </div>
-    <div class="columns__pillar columns__pillar--4o12 columns__pillar--full-padding--lots columns__pillar--no-side-margin">
-      <div class="wrapper scale-on-hover site-body__feature-link-wrapper">
-        <!-- <img class="image image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" src="assets/images/thumbnails/fox-lovey-00-300px.jpg" alt=""> -->
-        {% include image.html src="assets/images/thumbnails/fox-lovey-00-300px.jpg" width="300px" classStr="image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" %}
-        <a class="link link--fill-text-below site-body__feature-link" href="/techniques">Techniques</a>
-    </div>
-    </div>
-  </div>
-  <div class="line"></div>
-  <h2 class="headline headline--center-align">Something</h2>
-  <p>
-    Praesent a sapien iaculis, consectetur nunc eu, varius erat. Aliquam vestibulum mi odio, eget pharetra felis pretium a. Nunc consectetur tellus nec erat feugiat, sit amet finibus sem tempus. Nunc sagittis ultricies metus ac gravida. Duis ultricies odio
-    vitae urna mattis pulvinar. Curabitur consequat velit sit amet velit porttitor aliquam. Quisque eget iaculis lacus.
-  </p>
-</div>
+  </section>
+</article>
