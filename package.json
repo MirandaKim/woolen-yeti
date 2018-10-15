@@ -18,6 +18,7 @@
   "homepage": "https://github.com/MirandaKim/wools-end#readme",
   "dependencies": {
     "jquery": "^3.3.1",
+    "lazysizes": "^4.1.4",
     "normalize.css": "^8.0.0",
     "waypoints": "^4.0.1"
   },

@@ -3,7 +3,7 @@ layout: wrapper
 ---
 <div class="post">
   {% if page.featureImg %}
-  <img src="{{ page.featureImg }}" alt="{{ page.featureImgAlt }}" class="post__image image image--center-horiz image--restrict-to-parent image--center-horiz image--shadow-frame">
+  {% include image.html src=page.featureImg lazy=false alt=page.featureImgAlt classStr='post__image image--center-horiz image--restrict-to-parent image--center-horiz image--shadow-frame' %}
   {% endif %}
   <div class="post__content wrapper wrapper--more-p-space-bottom">
     {{ content }}
