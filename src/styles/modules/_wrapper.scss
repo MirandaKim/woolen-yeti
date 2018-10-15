@@ -12,11 +12,20 @@
   }
 
   &--bottom-margin {
-      margin-bottom: 60px;
+
+    margin-bottom: 30px;
+
+      @include atSmall {
+        margin-bottom: 60px;
+      }
   }
 
   &--bottom-margin--more {
+    margin-bottom: 60px;
+
+    @include atSmall {
       margin-bottom: 100px;
+    }
   }
 
   &--shift-up {

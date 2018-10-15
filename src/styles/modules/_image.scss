@@ -51,15 +51,17 @@
     position: relative;
     /*structure*/
     max-height: 400px;
-    width: 94vw;
-    // min-width: 600px;
     max-width: 1200px;
     /*spacing*/
     margin-top: -20px;
-    // margin-left: -25px;
     margin-left: auto;
     margin-right: auto;
     background-color: $color_neutralMed;
+
+    @include atSmall {
+
+    }
+
   }
 
   &--shadow-frame {

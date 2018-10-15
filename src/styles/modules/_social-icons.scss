@@ -4,17 +4,19 @@
   &--horizontal {
     .social-icons__icon-wrapper {
       /*spacing*/
-      // padding-left: 10px;
-      padding-right: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
       /*display*/
       display: inline-block;
     }
 
-    .social-icons__youtube {
-      // padding-left: 10px;
-      // padding-right: 10px;
-    }
+  }
 
+  @include atSmall {
+    &--horizontal .social-icons__icon-wrapper {
+      padding-right: 0;
+      padding-left: 30px;
+    }
   }
 
 
