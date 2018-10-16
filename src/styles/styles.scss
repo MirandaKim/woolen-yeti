@@ -20,6 +20,7 @@
   # Modules
     > General Elements
     > Target Elements
+    > JS Modules
 */
 
 
@@ -77,5 +78,9 @@
 @import 'modules/_comments';
 @import 'modules/_comment-form';
 
+/******************
+*  > JS Modules   *
+******************/
 
 @import 'modules/_sticky';
+@import 'modules/_reveal-on-scroll';

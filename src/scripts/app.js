@@ -6,6 +6,7 @@ import StickyOnScroll from './modules/StickyOnScroll.class';
 import Copyright from './modules/Copyright.class';
 import Utils from './modules/Utils.class';
 import UserMessage from './modules/UserMessage.class';
+import RevealOnScroll from './modules/RevealOnScroll.class';
 
 /****************************************************/
 /*                                                 */
@@ -29,7 +30,8 @@ import UserMessage from './modules/UserMessage.class';
   # Common Vars
   # Detect Touch
   # Navigation Display
-  # Sticky On Scroll
+  # Sticky Header
+  # Reveal On Scroll
   # Copyright
   # Email Sign-Up Toggle Display
   # User Messages
@@ -102,6 +104,15 @@ for triggering the class change event.
 */
 let stickyOnScroll = new StickyOnScroll();
 stickyOnScroll.execute();
+
+/**************************************/
+/*   # Reveal On Scroll              */
+/************************************/
+/*
+
+*/
+let revealOnScroll = new RevealOnScroll();
+revealOnScroll.execute();
 
 /**************************************/
 /*   # Copyright                     */
