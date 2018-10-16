@@ -13,14 +13,31 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Wool's End
-email: woolsendpatterns@gmail.com
+title: XXXXX
+email: XXXXX@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is a site with hopes to some day become a real blog. It may look like a lot of dummy text now, but come back later for some crochet posts.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+social:
+  instagram:
+    title: Instagram
+    url: instagram.com/wools_end
+    full: https://instagram.com/wools_end
+  etsy:
+    title: Etsy
+    url: etsy.com/shop
+    full: https://etsy.com/shop
+  ravelry:
+    title: Ravelry
+    url: ravelry.com/people/Mirananemone
+    full: https://ravelry.com/people/Mirananemone
+  youtube:
+    title: Youtube
+    url: youtube.com/channel
+    full: https://youtube.com/channel
 
 # Build settings
 markdown: kramdown

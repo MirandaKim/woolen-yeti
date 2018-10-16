@@ -10,14 +10,15 @@ permalink: /contact/
       <ul class="list list--no-bullets list--items-bottom-space list--remove-webkit-side-space list--items-bottom-space--more">
         <li>
           <h2 class="headline headline--no-top-space headline--less-bottom-space">Email</h2>
-          <p>woolsendpatterns@gmail.com</p>
+          <p>{{ site.email }}</p>
         </li>
         <li>
           <h2 class="headline headline--less-bottom-space">Find Me Online</h2>
           <ul class="list list--remove-webkit-side-space list--no-bullets">
-            <li><a href="https://www.instagram.com/wools_end/" class="link link--inline">instagram.com/wools_end</a></li>
-            <li><a href="https://www.etsy.com" class="link link--inline">etsy.com</a></li>
-            <li><a href="https://www.ravelry.com/people/Mirananemone" class="link link--inline">ravelry.com/people/Mirananemone</a></li>
+            <li><a href="{{ site.social.instagram.full }}" class="link link--inline">{{ site.social.instagram.title }}</a></li>
+            <li><a href="{{ site.social.etsy.full }}" class="link link--inline">{{ site.social.etsy.title }}</a></li>
+            <li><a href="{{ site.social.ravelry.full }}" class="link link--inline">{{ site.social.ravelry.title }}</a></li>
+            <li><a href="{{ site.social.youtube.full }}" class="link link--inline">{{ site.social.youtube.title }}</a></li>
           </ul>
         </li>
         <li>

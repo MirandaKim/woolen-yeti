@@ -3,7 +3,6 @@ import $ from 'jquery';
 import CheckHasTouch from './modules/CheckHasTouch.class';
 import NavDisplay from './modules/NavDisplay.class';
 import StickyOnScroll from './modules/StickyOnScroll.class';
-import Copyright from './modules/Copyright.class';
 import Utils from './modules/Utils.class';
 import UserMessage from './modules/UserMessage.class';
 import RevealOnScroll from './modules/RevealOnScroll.class';
@@ -117,13 +116,6 @@ See reveal-on-scroll.scss for css transitions (~/src/styles/modules/_reveal-on-s
 */
 let revealOnScroll = new RevealOnScroll();
 revealOnScroll.execute();
-
-/**************************************/
-/*   # Copyright                     */
-/************************************/
-/*set the copyright for the current year*/
-let copyright = new Copyright();
-copyright.setYear();
 
 /**************************************/
 /*   # Email Sign-Up Toggle Display  */
