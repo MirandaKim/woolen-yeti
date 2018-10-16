@@ -122,7 +122,7 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
     }
     /*title style when the wrapping toggle element is moused-over and the email-signup has the visisble class*/
     .has-no-touch .email-signup--visible .email-signup__toggle:hover & {
-      color: $color_accentMain;
+      color: $color_attentionHot;
     }
   }
 

@@ -43,7 +43,7 @@
   background-color: $color_neutralDark;
   /*typography*/
   font-weight: 100;
-  letter-spacing: .6;
+  letter-spacing: .8;
   font-size: .9rem;
 
   p {
@@ -157,13 +157,7 @@
   /************************************/
 
   &__email {
-    /*transitions*/
-    transition-property: color;
-    transition-duration: 200ms;
 
-    &.highlight {
-      color: $color_accentMain;
-    }
   }
 
   /**************************************/
@@ -173,11 +167,13 @@
   &__link {
     /*typography*/
     text-decoration: none;
+    /*borders*/
+    border-style: none;
     /*colors*/
-    color: $color_accentSec;
+    color: $color_accentTri;
 
     &::after {
-      display: none;
+      opacity: 0;
     }
 
     /****************
@@ -187,8 +183,10 @@
     .has-no-touch &:hover {
       /*colors*/
       color: $color_accentMain;
-      /*typography*/
-      text-decoration: underline;
+    }
+    .has-no-touch &:hover:after {
+      opacity: 1;
+      border-color: $color_accentMain;
     }
   }
 
