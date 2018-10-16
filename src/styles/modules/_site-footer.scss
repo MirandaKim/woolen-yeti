@@ -182,11 +182,11 @@
 
     .has-no-touch &:hover {
       /*colors*/
-      color: $color_accentMain;
+      color: $color_offWhite;
     }
     .has-no-touch &:hover:after {
       opacity: 1;
-      border-color: $color_accentMain;
+      border-color: $color_offWhite;
     }
   }
 
