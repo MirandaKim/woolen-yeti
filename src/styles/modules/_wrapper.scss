@@ -39,9 +39,17 @@
   }
 
 
-    &--narrow-for-tiny {
-      @include forTiny {
+  &--narrow-for-tiny {
+    @include forTiny {
+      max-width: 250px;
+    }
+  }
+
+  &--narrow-for-tiny-portrait {
+    @include forTiny {
+      @include forPortrait {
         max-width: 250px;
       }
     }
+  }
 }

@@ -82,6 +82,15 @@
         /*spacing*/
         margin-top: 15px;
     }
+
+    @include forPortrait {
+      &--not-for-tiny-portrait {
+        display: block;
+          .columns__pillar {
+            width: 100%;
+          }
+        }
+      }
   }
 
   /**************************************/
