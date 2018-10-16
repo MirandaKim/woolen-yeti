@@ -7,6 +7,7 @@ import Copyright from './modules/Copyright.class';
 import Utils from './modules/Utils.class';
 import UserMessage from './modules/UserMessage.class';
 import RevealOnScroll from './modules/RevealOnScroll.class';
+import FixLazyWaypoints from './modules/FixLazyWaypoints.class';
 
 /****************************************************/
 /*                                                 */
@@ -35,6 +36,7 @@ import RevealOnScroll from './modules/RevealOnScroll.class';
   # Copyright
   # Email Sign-Up Toggle Display
   # User Messages
+  # Fix Lazy Waypoints
 
 */
 
@@ -109,7 +111,9 @@ stickyOnScroll.execute();
 /*   # Reveal On Scroll              */
 /************************************/
 /*
-
+Add the class 'reveal-on-scroll' to an element to reveal when the element is scrolled to.
+The JS only triggers a class name change and doesn't handle the actual animation (this requires css transitions).
+See reveal-on-scroll.scss for css transitions (~/src/styles/modules/_reveal-on-scroll.scss)
 */
 let revealOnScroll = new RevealOnScroll();
 revealOnScroll.execute();
@@ -140,3 +144,12 @@ let messageSent = 'msgSent=true'; // value for triggering the message after a co
 if($.inArray(messageSent, urlParams) > -1){
   userMessage.postMessage('Thanks for being awesome!', 'Your message has been sent, and we\'ll contact you via email as soon as we can. Thanks again!', 'user-message--neutral');
 }
+
+/**************************************/
+/*   # Fix Lazy Waypoints            */
+/************************************/
+/*
+Refresh waypoints when a lazy image is loaded in to allow accurate waypoint positions.
+*/
+let fixLazyWay = new FixLazyWaypoints();
+fixLazyWay.execute();
