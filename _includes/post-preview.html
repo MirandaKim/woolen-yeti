@@ -1,5 +1,5 @@
 <div class="post post--clickable post--no-bottom-margin">
-  <div class="post__content columns">
+  <div class="post__content columns reveal-on-scroll">
     <div class="columns__pillar columns__pillar--fill">
       <div class="columns__content columns__content--center-vert">
         <h2 class="post__title headline">{{ post.title }}</h2>
@@ -12,7 +12,7 @@
       {% include image.html src=post.thumbnail alt=post.thumbnailAlt classStr="post__thumbnail image--shadow-frame--thin" width=300 height=300 %}
     </div>
     {% endif %}
+    <div class="line line--center-below line--top-space"></div>
   </div>
-  <div class="line line--center-below line--top-space"></div>
   <a href="{{ post.url }}" title="{{ post.title }}: read full post" class="post__link post__link--cover"></a>
 </div>
