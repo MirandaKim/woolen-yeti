@@ -23,21 +23,30 @@ twitter_username: jekyllrb
 github_username:  jekyll
 social:
   instagram:
-    title: Instagram
+    label: Instagram
+    title: "Instagram: Go to XXXXX's Instagram Page"
     url: instagram.com/wools_end
     full: https://instagram.com/wools_end
   etsy:
-    title: Etsy
+    label: Etsy
+    title: "Etsy: Go to XXXXX's Etsy Store"
     url: etsy.com/shop
     full: https://etsy.com/shop
   ravelry:
-    title: Ravelry
+    label: Ravelry
+    title: "Ravelry: Go to my Ravelry page"
     url: ravelry.com/people/Mirananemone
     full: https://ravelry.com/people/Mirananemone
   youtube:
-    title: Youtube
+    label: YouTube
+    title: "YouTube: Go to my Youtube Channel"
     url: youtube.com/channel
     full: https://youtube.com/channel
+  rss:
+    label: RSS
+    title: "Subscribe via RSS"
+    url: /feed.xml
+    full: /feed.xml
 
 # Build settings
 markdown: kramdown

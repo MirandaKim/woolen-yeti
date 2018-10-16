@@ -25,18 +25,18 @@
 
 <ul class="social-icons{% if include.direction == 'horizontal' %} social-icons--horizontal{% endif %} list list--icons list--no-bullets list--full-links list--remove-webkit-side-space {{include.classStr}}">
   <li class="social-icons__icon-wrapper">
-    {% include social-icon.html linkHref="https://www.instagram.com/wools_end/" linkTitle="Instagram: see Wool's End images" linkLabel="Instagram" linkImage=instagramIcon %}
+    {% include social-icon.html linkHref=site.social.instagram.full linkTitle=site.social.instagram.title linkLabel=site.social.instagram.label linkImage=instagramIcon %}
   </li>
   <li class="social-icons__icon-wrapper">
-      {% include social-icon.html linkHref="https://www.etsy.com/" linkTitle="Etsy: checkout my etsy shop--when I actually have one..." linkLabel="Etsy" linkImage=etsyIcon %}
+      {% include social-icon.html linkHref=site.social.etsy.full linkTitle=site.social.etsy.title linkLabel=site.social.etsy.label linkImage=etsyIcon %}
   </li>
   <li class="social-icons__icon-wrapper">
-    {% include social-icon.html linkHref="https://www.youtube.com/" linkTitle="YouTube: go to the XXX YouTube channel" linkLabel="YouTube" linkImage=youtubeIcon %}
+    {% include social-icon.html linkHref=site.social.youtube.full linkTitle=site.social.youtube.title linkLabel=site.social.youtube.label linkImage=youtubeIcon %}
   </li>
   <li class="social-icons__icon-wrapper">
-    {% include social-icon.html linkHref="https://www.ravelry.com/people/Mirananemone" linkTitle="Ravelry: go to my Ravelry account page" linkLabel="Ravelry" linkImage=ravelryIcon %}
+    {% include social-icon.html linkHref=site.social.ravelry.full linkTitle=site.social.ravelry.title linkLabel=site.social.ravelry.label linkImage=ravelryIcon %}
   </li>
   <li class="social-icons__icon-wrapper">
-    {% include social-icon.html linkHref="/feed.xml" linkTitle="Subscribe via RSS" linkLabel="RSS" linkImage=rssIcon %}
+    {% include social-icon.html linkHref=site.social.rss.url linkTitle=site.social.rss.title linkLabel=site.social.rss.label linkImage=rssIcon %}
   </li>
 </ul>
