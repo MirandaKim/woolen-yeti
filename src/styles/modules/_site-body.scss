@@ -62,26 +62,6 @@
   }
 
 
-  /**************************************/
-  /*   # Feature Link                  */
-  /************************************/
-
-  &__feature-link-wrapper {
-    /*structure*/
-    max-width: 180px;
-    /*spacing*/
-    margin-left: auto;
-    margin-right: auto;
-
-    @include atSmall {
-      max-width: 200px;
-    }
-  }
-
-  &__feature-link {
-    /*colors*/
-    color: $color_neutralMed;
-  }
 
 
 }

@@ -1,0 +1,58 @@
+
+
+.feature-link__wrapper {
+  /*structure*/
+  max-width: 180px;
+  max-height: 180px;
+  /*spacing*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+
+  @include atSmall {
+    max-width: 200px;
+  }
+
+  @include forTiny {
+    @include forPortrait {
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+
+/**************************************/
+/*   # Feature Link                  */
+/************************************/
+
+.feature-link {
+
+  &__image {
+    /*position*/
+    position: relative;
+    /*structure*/
+    width: 150px;
+    height: 150px;
+    /*spacing*/
+    margin-left: auto;
+    margin-right: auto;
+
+    @include atSmall {
+      width: 180px;
+      height: 180px;
+    }
+
+  }
+
+  &__link {
+    /*spacing*/
+    padding-top: 160px;
+    /*colors*/
+    color: $color_neutralMed;
+
+    @include atSmall {
+      padding-top: 190px;
+    }
+  }
+
+
+}

@@ -17,33 +17,28 @@ restrictWidth: false
       </p>
     </div>
   </section>
-  <section class="wrapper wrapper--center-horiz wrapper--bottom-margin restrict-width  reveal-on-scroll">
+  <section class="wrapper wrapper--center-horiz wrapper--bottom-margin restrict-width">
       <div class="columns columns--not-for-tiny-portrait wrapper wrapper--bottom-margin--more wrapper--center-horiz wrapper--narrow-for-tiny-portrait">
-        <div class="columns__pillar columns__pillar--4o12 columns__pillar--full-padding--lots">
-          <div class="wrapper scale-on-hover site-body__feature-link-wrapper">
-            <!-- <img class="image "  alt=""> -->
-            {% include image.html src="assets/images/thumbnails/thumbnail--grey-fox-on-notebook-200px.png" lazy=false width="300px" classStr="image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" %}
-            <a class="link link--fill-text-below site-body__feature-link" href="/patterns">Patterns</a>
-          </div>
+        <div class="columns__pillar columns__pillar--4o12 reveal-on-scroll">
+          <!-- {% include feature-link.html label="Patterns" href="/patterns" src="assets/images/thumbnails/thumbnail--grey-fox-on-notebook-200px.png" srcLow="thumbnail--grey-fox-on-notebook-50px.png" %} -->
+          {% include feature-link.html label="Patterns" href="/patterns"
+          src="assets/images/thumbnails/thumbnail--grey-fox-on-notebook-200px.png"
+          srcLow="assets/images/thumbnails/thumbnail--grey-fox-on-notebook-10px.png" %}
         </div>
-        <div class="columns__pillar columns__pillar--4o12 columns__pillar--full-padding--lots">
-          <div class="wrapper scale-on-hover site-body__feature-link-wrapper">
-            <!-- <img class="image image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" src="assets/images/thumbnails/fox-lovey-00-300px.jpg" alt=""> -->
-            {% include image.html src="assets/images/thumbnails/thumbnail--grayson-eyedrop-yarn-200px.png" lazy=false width="300px" classStr="image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" %}
-            <a class="link link--fill-text-below site-body__feature-link" href="/posts">Posts</a>
+        <div class="columns__pillar columns__pillar--4o12 reveal-on-scroll">
+          {% include feature-link.html label="Posts" href="/posts"
+          src="assets/images/thumbnails/thumbnail--grayson-eyedrop-yarn-200px.png"
+          srcLow="assets/images/thumbnails/thumbnail--grayson-eyedrop-yarn-10px.png" %}
         </div>
-        </div>
-        <div class="columns__pillar columns__pillar--4o12 columns__pillar--full-padding--lots columns__pillar--no-side-margin">
-          <div class="wrapper scale-on-hover site-body__feature-link-wrapper">
-            <!-- <img class="image image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" src="assets/images/thumbnails/fox-lovey-00-300px.jpg" alt=""> -->
-            {% include image.html src="assets/images/thumbnails/thumbnail--invisible-join-step-200px.png" lazy=false width="300px" classStr="image--shadow-frame image--circle image--fit-to-width site-body__feature-link-image" %}
-            <a class="link link--fill-text-below site-body__feature-link" href="/techniques">Techniques</a>
-          </div>
+        <div class="columns__pillar columns__pillar--4o12 columns__pillar--no-side-margin reveal-on-scroll">
+          {% include feature-link.html label="Techniques" href="/techniques"
+          src="assets/images/thumbnails/thumbnail--invisible-join-step-200px.png"
+          srcLow="assets/images/thumbnails/thumbnail--invisible-join-step-10px.png" %}
         </div>
       </div>
   </section>
-  <div class="line"></div>
-  <section class="wrapper wrapper--center-horiz wrapper--bottom-margin restrict-width  reveal-on-scroll">
+<div class="line"></div>
+  <section class="wrapper wrapper--center-horiz wrapper--vertical-margin restrict-width  reveal-on-scroll">
     <h2 class="headline headline--center-align">Something</h2>
     <p>
       Praesent a sapien iaculis, consectetur nunc eu, varius erat. Aliquam vestibulum mi odio, eget pharetra felis pretium a. Nunc consectetur tellus nec erat feugiat, sit amet finibus sem tempus. Nunc sagittis ultricies metus ac gravida. Duis ultricies odio

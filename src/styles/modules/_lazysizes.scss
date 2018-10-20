@@ -1,0 +1,13 @@
+.blur-up {
+    filter: blur(8px);
+    transition-property: all;
+    transition-duration: 200ms;
+
+    &.lazyloaded {
+      filter: blur(0);
+    }
+
+    .has-no-js .blur-up {
+      // filter: blur(0);
+    }
+}

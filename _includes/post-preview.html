@@ -9,7 +9,7 @@
     </div>
     {% if post.thumbnail %}
     <div class="columns__pillar columns__pillar--no-side-margin columns__content--child-no-vert-spacing hide-for-tiny">
-      {% include image.html src=post.thumbnail alt=post.thumbnailAlt classStr="post__thumbnail image--shadow-frame--thin" width=300 height=300 %}
+      {% include thumbnail.html src=post.thumbnail srcLow=post.thumbnailLow %}
     </div>
     {% endif %}
     <div class="line line--center-below line--top-space"></div>

@@ -68,6 +68,10 @@
     @include shadowFrame();
   }
 
+  &--shadow-frame--thin {
+    @include shadowFrame(3px);
+  }
+
 }
 
 /**************************************/
@@ -104,6 +108,11 @@
   &--restrict-to-parent {
     max-height: 100%;
     max-width: 100%;
+  }
+
+  &--fit-to-parent {
+    height: 100%;
+    width: 100%;
   }
 
 
