@@ -92,13 +92,7 @@ $sh_sticky-transition-time: 500ms;
   &__sticky-trigger {
     /*position*/
     position: relative;
-    // top: -2px;
     top: 0;
-
-
-    // width: 100vw;
-    // height: 1px;
-    // background-color: red;
   }
 
   /**************************************/
@@ -354,30 +348,27 @@ $sh_sticky-transition-time: 500ms;
     transition-property: all;
     transition-duration: 1000ms;
 
-    &::after {
-      content: "";
-      /*position*/
-      z-index: -1;
-      position: fixed;
-      top: 5px;
-      // left: 0;
-      right: 8px;
-      /*structure*/
-      height: 30px;
-      width: 40px;
-
-      border-radius: 5px;
-      /*colors*/
-      background-color: rgba($color_offWhite, .7);
-      // background-color: rgba($color_neutralDark, .9);
-      /*transitions*/
-      // transition-duration: 500ms;
-      // transition-property: all;
-    }
-
-    .menu-visible &::after {
-      background-color: transparent;
-    }
+    // &::after {
+    //   content: "";
+    //   /*position*/
+    //   z-index: -1;
+    //   position: fixed;
+    //   top: 5px;
+    //   // left: 0;
+    //   right: 8px;
+    //   /*structure*/
+    //   height: 30px;
+    //   width: 40px;
+    //   /*borders*/
+    //   border-radius: 5px;
+    //   /*colors*/
+    //   background-color: rgba($color_offWhite, .7);
+    //
+    // }
+    //
+    // .menu-visible &::after {
+    //   background-color: transparent;
+    // }
 
     /******************
     *   > Has No JS   *
