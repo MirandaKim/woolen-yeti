@@ -57,7 +57,7 @@ $structure_restricted_width: 750px; /*the max width for content*/
 
 /*GREYS*/
 $color_grey_light_01: rgb(234, 234, 234);
-$color_grey_med_01: rgb(180, 181, 180);
+$color_grey_med_01: rgb(160, 161, 160);
 $color_grey_dark_01: rgb(82, 82, 87);
 $color_grey_dark_02: rgb(50, 50, 50);
 
@@ -65,19 +65,19 @@ $color_grey_dark_02: rgb(50, 50, 50);
 $color_red_med_01: rgb(238, 77, 155);
 
 /*BLUES*/
-$color_blue_light_01: rgb(28, 254, 255);
-$color_blue_med_01: rgb(1, 195, 196);
-$color_blue_med_02: rgb(1, 170, 171);
-$color_blue_dark_01: rgb(0, 68, 69);
+$color_blue_light_01: rgb(186, 230, 251);
+$color_blue_light_02: rgb(109, 202, 243);
+$color_blue_med_01: rgb(90, 154, 184);
+$color_blue_med_02: rgb(0, 129, 156);
+$color_blue_dark_01: rgb(5, 106, 127);
+
 
 /*orange*/
 $color_orange_light_01: rgb(255, 146, 6);
 $color_orange_med_01: rgb(232, 99, 62);
 
 /*GREENS*/
-// $color_green_med_01: rgb(141, 196, 21);
 $color_green_med_01: rgb(10, 219, 162);
-// $color_green_med_01: rgb(9, 209,  98);
 
 /**************************
 *  > Color Designations   *
@@ -93,17 +93,14 @@ $color_neutralMed: $color_grey_med_01;
 $color_neutralLight: $color_grey_light_01;
 
 /*ACCENT*/
-// $color_accentMain: $color_red_med_01;
-$color_accentMain: $color_blue_med_01;
-$color_accentSec: $color_blue_med_02;
-// $color_accentSec: $color_orange_light_01;
+$color_accentMain: $color_blue_med_02;
+$color_accentSec: $color_blue_dark_01;
 $color_accentTri: $color_blue_light_01;
 
-// $color_accentTir: $color_blue_light_01;
 
 /*Attention*/
 $color_attentionMild: $color_grey_med_01;
-$color_attentionMed: $color_green_med_01;
+$color_attentionMed: $color_blue_light_02;
 $color_attentionHot: $color_red_med_01;
 
 
@@ -125,5 +122,5 @@ $color_textBody: $color_grey_dark_02;
 /*LINKS*/
 $color_textLink_inline: $color_accentMain;
 $color_textLink_inline_hover: $color_accentSec;
-$color_button: $color_accentSec;
+$color_button: $color_accentMain;
 $color_button_hover: $color_accentSec;

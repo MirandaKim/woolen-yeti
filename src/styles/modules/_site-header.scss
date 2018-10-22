@@ -26,6 +26,7 @@
 
   # Logo Wrapper
     > At Small
+    > For Tiny Landscape
 
   # Logo Link
 
@@ -57,7 +58,7 @@ $sh_sticky-transition-time: 500ms;
   /*structure*/
   width: 100%;
   /*spacing*/
-  margin-top: 50px;
+  margin-top: 30px;
   /*colors*/
   background-color: rgba($color_offWhite, .8);
   /*transition*/
@@ -79,7 +80,7 @@ $sh_sticky-transition-time: 500ms;
   *****************/
   @include atSmall{
     /*spacing*/
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-bottom: 7rem;
   }
 
@@ -125,10 +126,10 @@ $sh_sticky-transition-time: 500ms;
     // left: 50%;
     top: 0;
     /*structure*/
-    width: 150px;
+    width: 80vw;
     /*spacing*/
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
 
@@ -140,9 +141,24 @@ $sh_sticky-transition-time: 500ms;
       /*position*/
       left: 0;
       /*structure*/
-      width: 200px;
+      width: 350px;
       /*spacing*/
-      margin-bottom: 90px;
+      margin-bottom: 40px;
+    }
+
+    /***************************
+    *   > For Tiny Landscape   *
+    ***************************/
+
+    @include forTiny {
+      @include forLandscape {
+        /*position*/
+        left: 0;
+        /*structure*/
+        width: 250px;
+        /*spacing*/
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -348,27 +364,6 @@ $sh_sticky-transition-time: 500ms;
     transition-property: all;
     transition-duration: 1000ms;
 
-    // &::after {
-    //   content: "";
-    //   /*position*/
-    //   z-index: -1;
-    //   position: fixed;
-    //   top: 5px;
-    //   // left: 0;
-    //   right: 8px;
-    //   /*structure*/
-    //   height: 30px;
-    //   width: 40px;
-    //   /*borders*/
-    //   border-radius: 5px;
-    //   /*colors*/
-    //   background-color: rgba($color_offWhite, .7);
-    //
-    // }
-    //
-    // .menu-visible &::after {
-    //   background-color: transparent;
-    // }
 
     /******************
     *   > Has No JS   *
