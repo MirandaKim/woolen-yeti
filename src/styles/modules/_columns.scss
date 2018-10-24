@@ -99,7 +99,7 @@
 
   &__pillar {
     /*display*/
-    display: inline-block;
+    display: block;
     /*position*/
     position: relative;
     /*spacing*/
@@ -213,6 +213,11 @@
       padding-right: 10px;
     }
 
+    &--vertical-padding {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
     &--right-padding {
       /*spacing*/
       padding-right: 10px;
@@ -324,7 +329,7 @@
 
   .columns__pillar {
     /*display*/
-    display: inline-block;
+    display: block;
     /*position*/
     position: relative;
     float: left;

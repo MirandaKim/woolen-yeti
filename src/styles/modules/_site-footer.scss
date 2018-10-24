@@ -44,8 +44,9 @@
   /*typography*/
   font-weight: 100;
   line-height: 1.5;
-  letter-spacing: .8;
+  letter-spacing: 1;
   font-size: .9rem;
+  font-weight: 500;
 
   p {
     /*colors*/
@@ -145,11 +146,11 @@
 
     @include atSmall {
       /*position*/
-      top: 50%;
+      // top: 50%;
       /*typography*/
       text-align: left;
       /*transform*/
-      transform: translateY(-50%);
+      // transform: translateY(-50%);
     }
   }
 
