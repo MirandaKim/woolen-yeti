@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 
 /****************************************************/
@@ -36,7 +35,6 @@ let fileDest = './assets';
 gulp.task('styles', () => {
   return gulp.src(fileSrc)
   .pipe(sass())
-  .pipe(autoprefixer('last 6 version'))
   .pipe(cssnano()) // minimize resulting css
   .on('error', function(errorInfo){ // handle error
     console.log(errorInfo.toString());
