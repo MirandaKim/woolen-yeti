@@ -1,5 +1,10 @@
 <div class="contact-form__wrapper">
-  <form class="contact-form form" name="form-contact" id="form-contact" action="https://formspree.io/woolsendpatterns@gmail.com" method="POST">
+  <noscript>
+    <div class="wrapper visible-for-no-js contact-form__no-js-overlay">
+      <p>Please enable JavaScript on your device or browser to use the contact form. Or contact me via email: <a href="mailto:{{site.email}}">{{ site.email }}</a></p>
+    </div>
+  </noscript>
+  <form class="contact-form form hide-for-no-js" name="form-contact" id="form-contact" action="https://formspree.io/woolsendpatterns@gmail.com" method="POST">
     <ul class="list list--no-bullets list--remove-webkit-side-space">
       <li>
         <label for="contact-form-name" class="form__label">Name</label>

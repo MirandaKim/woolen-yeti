@@ -4,7 +4,20 @@
 
 .contact-form {
 
+&__no-js-overlay {
+    /*position*/
+    position: absolute;
+    left: 0;
+    /*structure*/
+    height: 100%;
+    width: 100%;
+    /*spacing*/
+    padding: 20px;
 
-
+    p {
+      /*color*/
+      color: $color_attentionMed;
+    }
+}
 
 }
