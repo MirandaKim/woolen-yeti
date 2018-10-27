@@ -1,0 +1,10 @@
+<picture class="image picture {{ include.classStr }}">
+  {% for imgSrc in include.srcset %}
+  <source media="{{ imgSrc.media }}" srcset="{{ imgSrc.file }}">
+  {% endfor %}
+  <img
+  src="{{ include.src }}"
+  {% if include.height %}height="{{ include.height }}"{% endif %}
+  {% if include.width %}width="{{ include.width }}"{% endif %}
+  alt="{{ include.alt }}">
+</picture>

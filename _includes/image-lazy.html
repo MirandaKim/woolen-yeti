@@ -1,0 +1,8 @@
+<img
+{% if include.srcLow %}src="{{ include.srcLow }}"{% endif %}
+data-sizes: "auto"
+data-src="{{ include.src }}"
+{% if include.srcset %}data-srcset="{{ include.srcset }}"{% endif %}
+{% if include.height %}height="{{ include.height }}"{% endif %}
+{% if include.width %}width="{{ include.width }}"{% endif %}
+class="image lazyload blur-up {{ include.classStr }}" alt="{{ include.alt }}">

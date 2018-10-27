@@ -1,29 +1,16 @@
 {% if include.lazy == false %}
   {% if include.srcset %}
-    <picture class="image picture {{ include.classStr }}">
-      {% for imgSrc in include.srcset %}
-      <source media="{{ imgSrc.media }}" srcset="{{ imgSrc.file }}">
-      {% endfor %}
-      <img
-      src="{{ include.src }}"
-      {% if include.height %}height="{{ include.height }}"{% endif %}
-      {% if include.width %}width="{{ include.width }}"{% endif %}
-      alt="{{ include.alt }}">
-    </picture>
+    {% include image-srcset.html srcset=include.srcset src=include.src height=include.height width=include.width alt=include.alt classStr=include.classStr %}
   {% else %}
-    <img
-    src="{{ include.src }}"
-    {% if include.height %}height="{{ include.height }}"{% endif %}
-    {% if include.width %}width="{{ include.width }}"{% endif %}
-    class="image {{ include.classStr }}" alt="{{ include.alt }}">
+    {% include image-standard.html src=include.src height=include.height width=include.width alt=include.alt classStr=include.classStr %}
   {% endif %}
 {% else %}
-  <img
-  {% if include.srcLow %}src="{{ include.srcLow }}"{% endif %}
-  data-sizes: "auto"
-  data-src="{{ include.src }}"
-  {% if include.srcset %}data-srcset="{{ include.srcset }}"{% endif %}
-  {% if include.height %}height="{{ include.height }}"{% endif %}
-  {% if include.width %}width="{{ include.width }}"{% endif %}
-  class="image lazyload blur-up {{ include.classStr }}" alt="{{ include.alt }}">
+  <noscript>
+    {% if include.srcset %}
+      {% include image-srcset.html srcset=include.srcset src=include.src height=include.height width=include.width alt=include.alt classStr=include.classStr %}
+    {% else %}
+      {% include image-standard.html src=include.src height=include.height width=include.width alt=include.alt classStr=include.classStr %}
+    {% endif %}
+  </noscript>
+  {% include image-lazy.html src=include.src srcLow=include.srcLow srcset=include.srcset height=include.height width=include.width alt=include.alt classStr=include.classStr %}
 {% endif %}

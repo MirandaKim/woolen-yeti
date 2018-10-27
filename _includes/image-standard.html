@@ -1,0 +1,4 @@
+<img src="{{ include.src }}"
+{% if include.height %}height="{{ include.height }}"{% endif %}
+{% if include.width %}width="{{ include.width }}"{% endif %}
+class="image {{ include.classStr }}" alt="{{ include.alt }}">
