@@ -62,7 +62,7 @@ defaults:
     values:
       layout: "wrapper"
       author: "Miranda Hoover"
-      popupSignup: false
+      popupSignup: true
       blockSignup: true
       includeTitle: true
       restrictWidth: true
