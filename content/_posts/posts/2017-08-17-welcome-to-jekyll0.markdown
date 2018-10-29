@@ -1,7 +1,10 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-subTitle: "This is a sub title"
+title:  "Welcome to Jekyll! This is a really, really, super-long, unrealistic title for testing."
+subTitle: "And this is just the subtitle"
+thumbnail: "/assets/images/thumbnails/thumbnail--foxes-200px.png"
+thumbnailLow: "/assets/images/thumbnails/thumbnail--foxes-10px.png"
+thumbnailAlt:
 date:   2017-08-17 21:09:34 -0700
 categories: jekyll update
 ---

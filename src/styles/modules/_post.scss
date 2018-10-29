@@ -81,6 +81,7 @@
     /*typography*/
     font-size: 1.7rem;
     font-weight: 100;
+    line-height: 1.6;
     /*colors*/
     color: $color_neutralMed;
 
@@ -109,17 +110,18 @@
     /*display*/
     display: block;
     /*spacing*/
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     /*typography*/
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 100;
     /*colors*/
     color: $color_neutralDark;
 
     @include atSmall {
       /*spacing*/
-      margin-top: -.75rem;
+      margin-top: -5px;
+      margin-bottom: 0;
       /*typography*/
       font-size: 1.5rem;
     }
@@ -228,21 +230,14 @@
     display: block;
     /*position*/
     position: relative;
-    top: 50%;
     /*structure*/
     height: 100px;
     width: 100px;
-    /*transform*/
-    transform: translateY(-50%);
 
     @include atSmall {
       /*structure*/
       height: 150px;
       width: 150px;
-      /*spacing*/
-
-      top: 50%;
-      transform: translateY(-50%);
     }
   }
 
