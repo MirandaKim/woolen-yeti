@@ -124,7 +124,7 @@
     /*position*/
     position: relative;
     /*spacing*/
-    margin-bottom: 1rem;
+    margin-top: 40px;
     /*typography*/
     text-align: center;
     /*transitions*/
@@ -136,7 +136,8 @@
     ****************/
 
     /*hover*/
-    .has-no-touch &:hover {
+    .has-no-touch &:hover ,
+    .has-no-touch &:focus {
 
     }
 
@@ -145,8 +146,8 @@
     ****************/
 
     @include atSmall {
-      /*position*/
-      // top: 50%;
+      /*spacing*/
+      margin-top: 0;
       /*typography*/
       text-align: left;
       /*transform*/
@@ -182,11 +183,13 @@
     *  > On Hover   *
     ****************/
 
-    .has-no-touch &:hover {
+    .has-no-touch &:hover,
+    .has-no-touch &:focus {
       /*colors*/
       color: $color_offWhite;
     }
-    .has-no-touch &:hover:after {
+    .has-no-touch &:hover:after,
+    .has-no-touch &:focus:after {
       opacity: 1;
       border-color: $color_offWhite;
     }

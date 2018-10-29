@@ -93,7 +93,11 @@ $openclose_xHoverColor: $color_attentionHot;
     .has-no-touch .open-close-icon__wrapper:hover &::before,
     .has-no-touch .open-close-icon__wrapper:hover &::after,
     .has-no-touch &:hover::before,
-    .has-no-touch &:hover::after {
+    .has-no-touch &:hover::after,
+    .has-no-touch .open-close-icon__wrapper:focus &::before,
+    .has-no-touch .open-close-icon__wrapper:focus &::after,
+    .has-no-touch &:focus::before,
+    .has-no-touch &:focus::after {
       /*colors*/
       background-color: $openclose_arrowHoverColor;
     }
@@ -134,7 +138,9 @@ $openclose_xHoverColor: $color_attentionHot;
     *********************/
 
     .has-no-touch .open-close-icon__wrapper.on:hover &,
-    .has-no-touch &.on:hover & {
+    .has-no-touch &.on:hover & ,
+    .has-no-touch .open-close-icon__wrapper.on:focus &,
+    .has-no-touch &.on:focus & {
       &::before,
       &::after {
         /*colors*/

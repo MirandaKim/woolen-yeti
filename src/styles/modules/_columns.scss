@@ -83,6 +83,16 @@
         margin-top: 15px;
     }
 
+    &--expand-for-tiny {
+      /*position*/
+      left: 0;
+      /*structure*/
+      width: 100%;
+      /*spacing*/
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     @include forPortrait {
       &--not-for-tiny-portrait {
         display: block;
@@ -276,6 +286,9 @@
       .has-no-touch &:hover{
         transform: scale(1.05);
       }
+      .has-no-touch &:focus{
+        transform: scale(1.05);
+      }
     }
 
     /****************
@@ -285,6 +298,18 @@
     @include forTiny {
       &--bottom-padding-for-tiny {
           padding-bottom: 15px;
+      }
+
+      @include forPortrait {
+        .columns &--expand-for-tiny-portrait {
+          /*position*/
+          left: 0;
+          /*structure*/
+          width: calc(100vw - 10px);
+          /*spacing*/
+          margin-left: -20px;
+          margin-right: 0;
+        }
       }
     }
 
@@ -299,7 +324,7 @@
     &--center-vert {
       position: relative;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translate(0, -50%);
     }
 
     &--child-no-vert-spacing>* {

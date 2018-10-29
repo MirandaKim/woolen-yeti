@@ -63,7 +63,8 @@
     transition-property: transform;
     transition-duration: 200ms;
 
-    &:hover {
+    &:hover ,
+    &:focus-within {
       /*transform*/
       transform: scale(1.01);
     }
@@ -89,7 +90,8 @@
       transition-duration: 500ms;
     }
 
-    .has-no-touch .post--clickable:hover &{
+    .has-no-touch .post--clickable:hover &,
+    .has-no-touch .post--clickable:focus-within &{
       /*colors*/
       color: $color_accentMain;
     }
@@ -149,7 +151,8 @@
       /*spacing*/
       padding: $post-cover-link-padding;
     }
-    .has-no-touch &--cover:hover {
+    .has-no-touch &--cover:hover,
+    .has-no-touch &--cover:focus {
       /*shadows*/
       box-shadow: 3px 3px 15px rgba(0, 0, 0, .1);
     }
@@ -189,7 +192,8 @@
       transition-property: all;
       transition-duration: 200ms;
     }
-    &--arrow-on-hover:hover::after {
+    &--arrow-on-hover:hover::after,
+    &--arrow-on-hover:focus::after {
       /*variables*/
       $border-size-final: 20px;
       /*position*/

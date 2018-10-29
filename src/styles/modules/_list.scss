@@ -191,7 +191,8 @@
         @include dot($color_neutralMed, 8px);
       }
     }
-    a:hover {
+    a:hover,
+    a:focus {
       &::before {
       opacity: 1;
 

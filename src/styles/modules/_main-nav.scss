@@ -165,13 +165,15 @@
     *****************/
 
     /*style for all links when any link is moused over*/
-    .has-no-touch &:hover {
+    .has-no-touch &:hover,
+    .has-no-touch &:focus {
       a:not(.active) {
         // color: $color_neutralDark;
       }
     }
     /*style for specific link moused over*/
-    .has-no-touch & a:not(.active):hover {
+    .has-no-touch & a:not(.active):hover,
+    .has-no-touch & a:not(.active):focus {
       color: $color_offWhite;
 
       @include atSmall {

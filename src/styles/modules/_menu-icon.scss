@@ -35,6 +35,12 @@ $menu-icon__hover-color--x: hotpink;
   /*structure*/
   height: $menu-icon__height;
   width: $menu-icon__width;
+  /*spacing*/
+  padding: 0;
+  /*borders*/
+  border-style: none; //override button style
+  /*colors*/
+  background-color: unset; // override button style
 
   &::before {
     content: "";
@@ -50,7 +56,8 @@ $menu-icon__hover-color--x: hotpink;
     top: calc(3 * #{$menu-icon__line-height});
   }
 
-  .has-no-touch &:hover {
+  .has-no-touch &:hover,
+  .has-no-touch &:focus {
     &::before,
     &::after {
       background-color: $menu-icon__hover-color;

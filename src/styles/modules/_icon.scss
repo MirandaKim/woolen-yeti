@@ -34,6 +34,11 @@
         transform: scale(1.1);
       }
     }
+
+    .has-no-touch a:focus .icon &--scale-on-hover {
+      /*transform*/
+      transform: scale(1.1);
+    }
   }
 
   &__title {

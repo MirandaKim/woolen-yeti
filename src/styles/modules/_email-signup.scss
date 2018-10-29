@@ -90,6 +90,10 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
     position: relative;
     /*structure*/
     width: auto;
+    /*borders*/
+    border-style: none;
+    /*background-color*/
+    background-color: unset;
 
     /*****************
     *   > At Small   *
@@ -112,17 +116,22 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
     /*transform*/
     transition-property: color;
     transition-duration: 200ms;
+    /*typography*/
+    font-size: 1.5rem;
+    font-family: $font_sansSerif;
 
     @include atSmall {
       margin-left: 0;
     }
 
     /*title style when the wrapping toggle element is moused-over*/
-    .has-no-touch .email-signup__toggle:hover & {
+    .has-no-touch .email-signup__toggle:hover &,
+    .has-no-touch .email-signup__toggle:focus & {
       color: $color_accentSec;
     }
     /*title style when the wrapping toggle element is moused-over and the email-signup has the visisble class*/
-    .has-no-touch .email-signup--visible .email-signup__toggle:hover & {
+    .has-no-touch .email-signup--visible .email-signup__toggle:hover &,
+    .has-no-touch .email-signup--visible .email-signup__toggle:focus & {
       color: $color_attentionHot;
     }
   }
@@ -175,7 +184,8 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
     *   > Icon - On Hover   *
     ************************/
 
-    .has-no-touch .email-signup__toggle:hover & {
+    .has-no-touch .email-signup__toggle:hover &,
+    .has-no-touch .email-signup__toggle:focus & {
       /*transform*/
       transform: scale(.9);
     }
@@ -216,6 +226,8 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
     *************************/
 
     .email-signup--hidden-initially &{
+      /*display*/
+      display: none; // prevent tab through when hidden
       /*structure*/
       height: auto;
       max-height: 0;
@@ -234,6 +246,8 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
     ****************/
 
     .email-signup--hidden-initially.email-signup--visible &{
+      /*display*/
+      display: block;
       /*structure*/
       max-height: $email-signup_maxHeight;
       /*colors*/

@@ -43,16 +43,8 @@
   /*typography*/
   font-size: 1.2rem;
   letter-spacing: .3;
-  /*colors*/
-  background: $color_neutralLight;
-  opacity: .5;
-  /*shadows*/
-  // box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-  /*transform*/
-  transform: translateX(-101%);
-  /*transition*/
-  transition-property: all;
-  transition-duration: 1000ms;
+  text-indent: -200px;
+
 
   /*****************
   *   > At Small   *
@@ -70,16 +62,17 @@
 
   &:focus {
     /*colors*/
-    opacity: 1;
-    /*transform*/
-    transform: translateX(0);
+    text-indent: 0;
+    /*colors*/
+    background: $color_neutralLight;
   }
 
   /*****************
   *   > On Hover   *
   *****************/
 
-  &:hover {
+  &:hover,
+  &:focus {
     /*colors*/
     color: $color_red_med_01;
   }

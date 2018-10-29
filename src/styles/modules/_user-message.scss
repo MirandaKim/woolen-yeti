@@ -76,13 +76,16 @@
     *  > On Hover   *
     ****************/
 
-    .has-no-touch &:hover {
+    .has-no-touch &:hover,
+    .has-no-touch &:focus {
       /*transform*/
       transform: scale(1);
     }
 
     .has-no-touch &:hover::before,
-    .has-no-touch &:hover::after {
+    .has-no-touch &:hover::after,
+    .has-no-touch &:focus::before,
+    .has-no-touch &:focus::after {
       /*colors*/
       background-color: $color_attentionHot;
     }

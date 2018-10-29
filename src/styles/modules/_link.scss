@@ -70,7 +70,8 @@
     /*colors*/
     color: $color_button;
 
-    .has-no-touch &:hover {
+    .has-no-touch &:hover,
+    .has-no-touch &:focus {
       color: $color_button_hover;
     }
 
