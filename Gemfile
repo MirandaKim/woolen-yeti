@@ -32,7 +32,7 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 gem 'jekyll-autoprefixer'
 
 # babel
-gem 'jekyll-babel'
+# gem 'jekyll-babel'
 
 ###################
 # Jekyll Compose #
