@@ -92,8 +92,9 @@ $sh_sticky-transition-time: 500ms;
 
   &__sticky-trigger {
     /*position*/
-    position: relative;
+    position: absolute;
     top: 0;
+    height: 500px;
   }
 
   /**************************************/
