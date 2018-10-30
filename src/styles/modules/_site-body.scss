@@ -11,8 +11,7 @@
   padding-right: 25px;
 
   @include atSmall {
-    /*structure*/
-    min-height: calc(100vh - 360px);
+
     /*spacing*/
     padding-top: 50px;
     margin-bottom: 100px;
