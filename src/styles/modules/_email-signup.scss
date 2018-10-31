@@ -27,6 +27,7 @@
     > Icon - Has No JS
     > Icon - At Small
     > Icon - On Hover
+  # No JS Message 
   # Content
     > Has No JS
     > Hidden Initially
@@ -189,6 +190,21 @@ $email-signup_maxHeight: 40rem; //this value should be larger than the expected 
       /*transform*/
       transform: scale(.9);
     }
+  }
+
+  /**************************************/
+  /*   # No JS Message                 */
+  /************************************/
+
+  &__no-js-message {
+    /*display*/
+    display: inline-block;
+    /*spacing*/
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    /*colors*/
+    color: $color_attentionMed;
   }
 
   /**************************************/
