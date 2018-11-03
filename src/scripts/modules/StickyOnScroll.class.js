@@ -96,7 +96,7 @@ class StickyOnScroll {
      let target = $(targetSelector);
      let config = {
        element: this.triggerElement[0],
-       offset: revealOffset,
+       offset: 0,
        handler: (direction) => {
          if(direction == "down") {
            /*
