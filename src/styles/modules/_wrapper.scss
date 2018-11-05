@@ -3,12 +3,16 @@
   position: relative;
 
   &--more-p-space-bottom p {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   &--center-horiz {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  &--narrow {
+    max-width: 500px;
   }
 
   &--bottom-margin {
@@ -17,6 +21,15 @@
 
       @include atSmall {
         margin-bottom: 60px;
+      }
+  }
+
+  &--bottom-margin--less {
+
+    margin-bottom: 20px;
+
+      @include atSmall {
+        margin-bottom: 40px;
       }
   }
 

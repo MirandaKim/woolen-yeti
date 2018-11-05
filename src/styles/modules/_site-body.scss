@@ -13,7 +13,7 @@
   @include atSmall {
 
     /*spacing*/
-    padding-top: 50px;
+    padding-top: 30px;
     margin-bottom: 100px;
   }
 
@@ -37,12 +37,69 @@
   }
 
   /**************************************/
+  /*   # Hero                          */
+  /************************************/
+
+  &__hero-wrapper {
+    position: relative;
+    /*borders*/
+    border-style: solid;
+    border-color: $color_offWhite;
+    border-width: 5px;
+    /*shadow*/
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+
+    @include atSmall {
+      margin-top: -60px;
+    }
+  }
+
+
+
+  &__hero {
+    width: 100%;
+  }
+
+  /**************************************/
   /*   # Title                         */
   /************************************/
 
   &__title {
 
+    /*position*/
+    position: absolute;
+    bottom: 5px;
+    left: 8px;
+    /*structure*/
+    width: 50%;
+    /*typography*/
+    font-size: 2.3rem;
+    text-align: left;
+    line-height: 1;
 
+    /*colors*/
+    color: rgba(255, 255, 255, 1);
+    /*shadows*/
+    text-shadow: 0 0 15px rgba(0, 0, 0, 1);
+
+    @include atSmall {
+      /*position*/
+      top: auto;
+      bottom: 20px;
+      left: 30px;
+      /*structure*/
+      width: 50%;
+      /*spacing*/
+      margin-top: 0;
+      padding-top: 0;
+      /*typography*/
+      font-size: 4rem;
+      text-align: left;
+      line-height: 1;
+
+      /*shadows*/
+      text-shadow: 0 0 30px rgba(0, 0, 0, 1);
+    }
   }
 
   /**************************************/

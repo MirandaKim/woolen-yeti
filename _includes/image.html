@@ -1,6 +1,6 @@
 {% if include.lazy == false %}
   {% if include.srcset %}
-    {% include image-srcset.html srcset=include.srcset src=include.src height=include.height width=include.width alt=include.alt classStr=include.classStr %}
+    {% include image-srcset.html srcset=include.srcset height=include.height width=include.width alt=include.alt classStr=include.classStr %}
   {% else %}
     {% include image-standard.html src=include.src height=include.height width=include.width alt=include.alt classStr=include.classStr %}
   {% endif %}

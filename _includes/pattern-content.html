@@ -1,4 +1,4 @@
-<h2 class="headline">About This Pattern</h2>
+<h2 class="headline headline--center-align">About This Pattern</h2>
 <p>{{page.about}}</p>
 <div class="columns columns--not-for-tiny">
   <div class="columns__pillar columns__pillar--7o12 columns__pillar--right-padding">
@@ -20,21 +20,20 @@
   </div>
   <div class="columns__pillar columns__pillar--5o12 columns__pillar--no-side-margin">
     <h2 class="headline">Where to Purchase:</h2>
-    <ul class="list list--no-bullets list--remove-webkit-side-space">
-      <li>
-        <a href="{{ page.purchaseLinkRavelry }}" class="link--inline">Ravelry</a>
-      </li>
-      <li>
-        <a href="{{ page.purchaseLinkEtsy }}" class="link--inline">Etsy</a>
-      </li>
-    </ul>
+    <!-- <ul class="list list--no-bullets list--remove-webkit-side-space">
+      {% for purchaseLink in page.purchaseLinks %}
+      <li><a href="{{ purchaseLink.url }}" class="link link--inline">{{ purchaseLink.title }}</a></li>
+      {% endfor %}
+    </ul> -->
+    <strong>Listing will be up shortly.</strong>
     {% if page.similarPatterns %}
     <h2 class="headline">Similar Patterns:</h2>
-    <ul class="list list--no-bullets list--remove-webkit-side-space">
+    <!-- <ul class="list list--no-bullets list--remove-webkit-side-space">
       {% for pattern in page.similarPatterns %}
       <li><a href="{{ pattern.url }}" class="link link--inline">{{ pattern.title }}</a></li>
       {% endfor %}
-    </ul>
+    </ul> -->
+    <strong>More patterns coming soon!</strong>
     {% endif %}
   </div>
 </div>

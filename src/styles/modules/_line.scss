@@ -45,6 +45,11 @@
     bottom: 0;
   }
 
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &--center-below {
     /*position*/
     position: absolute;

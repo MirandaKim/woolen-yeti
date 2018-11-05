@@ -302,3 +302,13 @@ NOTE: the element and container must both have a position for this to work!
 @mixin dropShadow (){
   box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
 }
+
+@mixin shadowFrame($borderWidth:8px){
+  /*borders*/
+  border-width: $borderWidth;
+  border-style: solid;
+  /*colors*/
+  border-color: $color_offWhite;
+  /*shadows*/
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, .2);
+}

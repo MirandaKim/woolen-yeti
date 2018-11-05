@@ -24,6 +24,10 @@
     padding-top: 0;
   }
 
+  &--extra-top-space {
+    padding-top: 45px;
+  }
+
   &--less-bottom-space {
     margin-bottom: 5px;
   }
@@ -54,6 +58,18 @@
 
   &--light {
     color: $color_offWhite;
+  }
+
+  &--attentionMild {
+    color: $color_attentionMild;
+  }
+
+  &--attentionMed {
+    color: $color_attentionMed;
+  }
+
+  &--attentionHot {
+    color: $color_attentionHot;
   }
 
   &--shadow {

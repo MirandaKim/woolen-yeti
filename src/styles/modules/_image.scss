@@ -13,28 +13,15 @@
   * Contents: *
   *************
 
-  # Mixins
   # Wrapper
   # Image
   # Size
   # Style
   # Background
+  # Caption
 
 */
 
-/**************************************/
-/*   # Mixins                        */
-/************************************/
-
-@mixin shadowFrame($borderWidth:8px){
-  /*borders*/
-  border-width: $borderWidth;
-  border-style: solid;
-  /*colors*/
-  border-color: $color_offWhite;
-  /*shadows*/
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
-}
 
 /**************************************/
 /*   # Wrapper                       */
@@ -140,6 +127,22 @@
     background-image: url('images/watercolor.svg');
     background-size: cover;
     background-repeat: none;
+  }
+
+  /**************************************/
+  /*   # Caption                       */
+  /************************************/
+
+  &__caption {
+    /*spacing*/
+    margin-top: 5px;
+    /*typography*/
+    font-size: .9rem;
+    line-height: 1.4;
+    text-align: center;
+    /*colors*/
+    color: $color_neutralMed;
+
   }
 
 }

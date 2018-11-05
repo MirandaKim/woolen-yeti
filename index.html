@@ -6,44 +6,54 @@ restrictWidth: false
 ---
 
 <article>
-  <section class="wrapper wrapper--center-horiz wrapper--bottom-margin restrict-width  reveal-on-scroll">
+  <section class="wrapper wrapper--center-horiz wrapper--bottom-margin restrict-width reveal-on-scroll">
     <div class="wrapper wrapper--bottom-margin">
       <header class="site-body__header wrapper">
-        <h1 class="headline headline--medium headline--large--at-small headline--center-align headline--less-bottom-space site-body__title">Welcome to {{ site.title }}</h1>
-        <p class="headline headline--center-align headline--no-top-space headline--small">A Crochet Blog</p>
+        <div class="site-body__hero-wrapper image__wrapper">
+          {% include image.html srcLow="assets/images/heros/foxes-in-leaves--short--150px.jpg" src="assets/images/heros/foxes-in-leaves--short--500px.jpg 500w" srcset="assets/images/heros/foxes-in-leaves--short--500px.jpg 500w, assets/images/heros/foxes-in-leaves--short--800px.jpg 800w, assets/images/heros/foxes-in-leaves--short--1200px.jpg 1200w" classStr="image--hero site-body__hero"%}
+        </div>
+        <h1 class="headline headline--medium headline--large--at-small headline--center-align headline--less-bottom-space site-body__title site-body__title--center-below-hero">Coming Soon!</h1>
+        <a href="/patterns/fox-lovey" class="link link--cover" title="Go to the new fox lovey pattern page."></a>
       </header>
-      <p>
-        Praesent a sapien iaculis, consectetur nunc eu, varius erat. Aliquam vestibulum mi odio, eget pharetra felis pretium a. Nunc consectetur tellus nec erat feugiat, sit amet finibus sem tempus. Nunc sagittis ultricies metus ac gravida. Duis ultricies odio
-        vitae urna mattis pulvinar.
-      </p>
     </div>
+  </section>
+  <section class="wrapper wrapper--center-horiz wrapper--narrow wrapper--bottom-margin">
+    <h2 class="headline headline--center-align">Hello!</h2>
+    <p class="center-align">
+      Welcome to Woolen Yeti! This is a new site where I'll be sharing various crochet tips, techniques, and patterns. It's still a bit small, but more content will be coming soon!</p>
   </section>
   <section class="wrapper wrapper--center-horiz wrapper--bottom-margin restrict-width">
       <div class="columns columns--not-for-tiny-portrait wrapper wrapper--bottom-margin--more wrapper--center-horiz wrapper--narrow-for-tiny-portrait">
         <div class="columns__pillar columns__pillar--4o12 reveal-on-scroll">
-          <!-- {% include feature-link.html label="Patterns" href="/patterns" src="assets/images/thumbnails/thumbnail--grey-fox-on-notebook-200px.png" srcLow="thumbnail--grey-fox-on-notebook-50px.png" %} -->
           {% include feature-link.html label="Patterns" href="/patterns"
-          src="assets/images/thumbnails/thumbnail--grey-fox-on-notebook-200px.png"
-          srcLow="assets/images/thumbnails/thumbnail--grey-fox-on-notebook-10px.png" %}
+          src="assets/images/thumbnails/thumbnail--acorn-on-book-200px.jpg"
+          srcLow="assets/images/thumbnails/thumbnail--acorn-on-book-10px.jpg" %}
+        </div>
+        <div class="columns__pillar columns__pillar--4o12 columns__pillar--no-side-margin reveal-on-scroll">
+          {% include feature-link.html label="Techniques" href="/techniques"
+          src="assets/images/thumbnails/thumbnail--verticalCarry-200px.png"
+          srcLow="assets/images/thumbnails/thumbnail--verticalCarry-10px.png" %}
         </div>
         <div class="columns__pillar columns__pillar--4o12 reveal-on-scroll">
           {% include feature-link.html label="Posts" href="/posts"
           src="assets/images/thumbnails/thumbnail--grayson-eyedrop-yarn-200px.png"
           srcLow="assets/images/thumbnails/thumbnail--grayson-eyedrop-yarn-10px.png" %}
         </div>
-        <div class="columns__pillar columns__pillar--4o12 columns__pillar--no-side-margin reveal-on-scroll">
-          {% include feature-link.html label="Techniques" href="/techniques"
-          src="assets/images/thumbnails/thumbnail--invisible-join-step-200px.png"
-          srcLow="assets/images/thumbnails/thumbnail--invisible-join-step-10px.png" %}
-        </div>
       </div>
   </section>
-<div class="line"></div>
-  <section class="wrapper wrapper--center-horiz wrapper--vertical-margin restrict-width  reveal-on-scroll">
-    <h2 class="headline headline--center-align">Something</h2>
+  <div class="line line--center restrict-width"></div>
+<section class="wrapper wrapper--center-horiz wrapper--vertical-margin restrict-width reveal-on-scroll">
+  <h2 class="headline headline--center-align">What's New</h2>
+  <p>
+    The first two patterns almost here! They are fox lovies in two versions: standard and fuzzy. When they are released, you can find them by following the "Patterns" link below.
+    There are several other lovey patterns being developed and tested at the moment, they will be up and ready in time for this holiday season!
+  </p>
+</section>
+<div class="line line--center restrict-width"></div>
+  <section class="wrapper wrapper--center-horiz wrapper--vertical-margin restrict-width reveal-on-scroll">
+    <h2 class="headline headline--center-align">Still Growing</h2>
     <p>
-      Praesent a sapien iaculis, consectetur nunc eu, varius erat. Aliquam vestibulum mi odio, eget pharetra felis pretium a. Nunc consectetur tellus nec erat feugiat, sit amet finibus sem tempus. Nunc sagittis ultricies metus ac gravida. Duis ultricies odio
-      vitae urna mattis pulvinar. Curabitur consequat velit sit amet velit porttitor aliquam. Quisque eget iaculis lacus.
+      This is still a young site, but I hope to get it growing quickly. I'll be posting more tips, techniques, and patterns in the near future, so I hope to see you back here soon. You can sign up to receive email updates by filling out the subscribe form below.
     </p>
   </section>
 </article>

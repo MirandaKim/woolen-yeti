@@ -4,10 +4,18 @@ title: Posts
 permalink: /posts/
 ---
 
-<ul class="list list--posts list--no-bullets list--remove-webkit-side-space">
-  {% for post in site.categories["posts"] %}
-    <li>
-    {% include post-preview.html %}
-    </li>
-  {% endfor %}
-</ul>
+<section>
+  <ul class="list list--posts list--no-bullets list--remove-webkit-side-space">
+    {% for post in site.categories["posts"] %}
+      <li>
+      {% include post-preview.html %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <p class="center-align"><strong class="color-attentionMild">Posts coming soon!</strong></p>
+  <p>In the meantime, check out some techniques and the available patterns:</p>
+  <a href="/techniques/" class="link link--button">Go to Techniques</a> <a href="/patterns/" class="link link--button">Go to Patterns</a>
+</section>

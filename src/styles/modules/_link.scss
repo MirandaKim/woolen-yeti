@@ -15,6 +15,7 @@
     > Button
     > Inline
     > Fill
+    > Cover
 
 */
 
@@ -24,6 +25,8 @@
 
 
 .link {
+
+  cursor: pointer;
 
   /**************
   *  > Button   *
@@ -75,6 +78,23 @@
       color: $color_button_hover;
     }
 
+  }
+
+  /*************
+  *  > Cover   *
+  *************/
+
+  &--cover {
+    /*display*/
+    display: block;
+    /*position*/
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*structure*/
+    height: 100%;
+    width: 100%;
   }
 
 }
