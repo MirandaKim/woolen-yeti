@@ -6,10 +6,11 @@
   {% endif %}
 {% else %}
   <noscript>
+    {% assign classStrNoJS = include.classStr | append: " image--no-js"%}
     {% if include.srcset %}
-      {% include image-srcset.html srcset=include.srcset src=include.src height=include.height width=include.width alt=include.alt classStr=include.classStr %}
+      {% include image-srcset.html srcset=include.srcset src=include.src height=include.height width=include.width classStr=classStrNoJS %}
     {% else %}
-      {% include image-standard.html src=include.src height=include.height width=include.width alt=include.alt classStr=include.classStr %}
+      {% include image-standard.html src=include.src height=include.height width=include.width classStr=classStrNoJS %}
     {% endif %}
   </noscript>
   {% include image-lazy.html src=include.src srcLow=include.srcLow srcset=include.srcset height=include.height width=include.width alt=include.alt classStr=include.classStr %}

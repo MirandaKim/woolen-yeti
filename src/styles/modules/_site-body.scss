@@ -76,11 +76,11 @@
   /************************************/
 
   &__title {
-
     /*position*/
     position: absolute;
     bottom: 5px;
     left: 8px;
+    z-index: 10;
     /*structure*/
     width: 50%;
     /*typography*/
