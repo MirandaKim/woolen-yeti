@@ -57,7 +57,18 @@
 
 
   &__hero {
+    /*structure*/
     width: 100%;
+    /*colors*/
+    background-color: $color_neutralDark;
+
+    &:not(.lazyloaded) {
+      min-height: 150px;
+
+      @include atSmall {
+        min-height: 300px;
+      }
+    }
   }
 
   /**************************************/

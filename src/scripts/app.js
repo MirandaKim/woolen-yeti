@@ -1,3 +1,6 @@
+document.body.classList.remove('has-no-js');
+document.body.classList.add('has-js');
+
 require('./vendors');
 import $ from 'jquery';
 import CheckHasTouch from './modules/CheckHasTouch.class';
@@ -52,8 +55,7 @@ import FixLazyWaypoints from './modules/FixLazyWaypoints.class';
   a device may not be able to reach that element if js is
   not enabled.)
 */
-document.body.classList.remove('has-no-js');
-document.body.classList.add('has-js');
+// move to the top of the file so it's hit first.
 
 /**************************************/
 /*   # Common Vars                   */
