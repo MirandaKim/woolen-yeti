@@ -41,7 +41,10 @@
   /************************************/
 
   &__hero-wrapper {
+    /*position*/
     position: relative;
+    /*structure*/
+    max-height: 26rem;
     /*borders*/
     border-style: solid;
     border-color: $color_offWhite;
