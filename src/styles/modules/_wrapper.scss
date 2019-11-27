@@ -52,6 +52,17 @@
     }
   }
 
+
+  &--vertical-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include atSmall {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
   &--bottom-margin--more {
     margin-bottom: 60px;
 
