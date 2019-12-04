@@ -1,4 +1,6 @@
 .site-body {
+  /*display*/
+  display: block;
   /*position*/
   position: relative;
   /*spacing*/
@@ -6,14 +8,13 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 60px;
-  // padding-top: 10px;
   padding-left: 25px;
   padding-right: 25px;
 
   @include atSmall {
 
     /*spacing*/
-    padding-top: 30px;
+    margin-top: 185px;
     margin-bottom: 100px;
   }
 

@@ -28,8 +28,12 @@
 /************************************/
 
 .user-message__wrapper {
-  /*spacing*/
-  margin-bottom: 40px;
+  /*position*/
+  z-index: 500;
+  position: fixed;
+  top:  20px;
+  right: 20px;
+  
 }
 
 /**************************************/
@@ -50,8 +54,10 @@
   border-style: solid;
   border-width: 2px;
   border-color: $color_attentionMild;
+  /*colors*/
+  background-color: $color_offWhite;
   /*shadows*/
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
 
   /**************************************/
   /*   # Close                         */
