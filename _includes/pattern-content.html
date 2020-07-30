@@ -1,25 +1,27 @@
 <h2 class="headline headline--center-align">About This Pattern</h2>
 <p>{{page.about}}</p>
 <div class="columns columns--not-for-tiny">
-  {% if page.relatedTechniques || page.relatedResources %}
     <div class="columns__pillar columns__pillar--7o12 columns__pillar--right-padding">
-        {% if page.relatedTechniques %}
-        <h2 class="headline">Special Techniques:</h2>
-        <ul class="list list--no-bullets list--remove-webkit-side-space">
-          {% for technique in page.relatedTechniques %}
-          <li><a href="{{ technique.url }}" class="link--inline">{{ technique.title }}</a></li>
-          {% endfor %}
-        </ul>
-        {% endif %} {% if page.relatedResources %}
-        <h2 class="headline">Other Resources:</h2>
-        <ul class="list list--no-bullets list--remove-webkit-side-space">
-          {% for resource in page.relatedResources %}
-          <li><a href="{{ resource.url }}" class="link link--inline">{{ resource.title }}</a></li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </div>
-  {% endif %}
+      {% if page.skillLevel %}
+        <h2 class="headline">Skill Level</h2>
+        <strong>{{ page.skillLevel }}</strong>
+      {% endif %}
+      {% if page.relatedTechniques %}
+      <h2 class="headline">Special Techniques:</h2>
+      <ul class="list list--no-bullets list--remove-webkit-side-space">
+        {% for technique in page.relatedTechniques %}
+        <li><a href="{{ technique.url }}" class="link--inline">{{ technique.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% if page.relatedResources %}
+      <h2 class="headline">Other Resources:</h2>
+      <ul class="list list--no-bullets list--remove-webkit-side-space">
+        {% for resource in page.relatedResources %}
+        <li><a href="{{ resource.url }}" class="link link--inline">{{ resource.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
   <div class="columns__pillar columns__pillar--5o12 columns__pillar--no-side-margin">
     {% if page.purchaseLinks %}
       {% if page.freePattern %}
