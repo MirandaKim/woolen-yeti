@@ -28,7 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
-    "babel-loader": "^8.0.4",
+    "babel-loader": "^8.3.0",
     "browser-sync": "^2.26.7",
     "gulp-cssnano": "^1.1.0",
     "gulp-hash": "^4.2.2",
@@ -38,7 +38,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-shell": "^0.7.1",
     "gulp-watch": "^4.2.4",
-    "webpack": "^4.23.1",
+    "webpack": "^5.75.0",
     "webpack-merge": "^4.1.3"
   }
 }
